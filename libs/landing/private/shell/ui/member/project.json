@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/landing/private/shell/ui/member",
+  "sourceRoot": "libs/landing/private/shell/ui/member/src",
+  "prefix": "prive-landing-private",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/landing/private/shell/ui/member/src/test.ts",
+        "tsConfig": "libs/landing/private/shell/ui/member/tsconfig.spec.json",
+        "karmaConfig": "libs/landing/private/shell/ui/member/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/landing/private/shell/ui/member/src/**/*.ts",
+          "libs/landing/private/shell/ui/member/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

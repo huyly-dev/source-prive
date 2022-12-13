@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/landing/home/shell/ui/otc-preview",
+  "sourceRoot": "libs/landing/home/shell/ui/otc-preview/src",
+  "prefix": "prive-landing-home-otc-preview",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/landing/home/shell/ui/otc-preview/src/test.ts",
+        "tsConfig": "libs/landing/home/shell/ui/otc-preview/tsconfig.spec.json",
+        "karmaConfig": "libs/landing/home/shell/ui/otc-preview/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/landing/home/shell/ui/otc-preview/src/**/*.ts",
+          "libs/landing/home/shell/ui/otc-preview/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

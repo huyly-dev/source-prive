@@ -1,0 +1,156 @@
+@import "libs/shared/resources/assets/src/lib/styles/theme/typography";
+
+.wrapper-overlay-tooltip {
+  @apply flex items-center justify-center min-w-14.75 py-2 px-3 rounded-md fixed;
+  z-index: 998;
+
+  &.existed-modal {
+    z-index: 1000;
+  }
+
+  &:before {
+    @apply absolute block w-0 h-0 border-solid border-transparent;
+    content: "";
+  }
+
+  b {
+    @apply b4;
+  }
+
+  &--status {
+    &-information {
+      @apply bg-prive-neutral-800;
+      &:before {
+        @apply border-prive-neutral-800;
+      }
+
+      b {
+        @apply text-prive-neutral-white;
+      }
+    }
+
+    &-error {
+      @apply bg-prive-neutral-800;
+      &:before {
+        @apply border-prive-neutral-800;
+      }
+
+      b {
+        @apply text-prive-neutral-white;
+      }
+    }
+
+    &-success {
+      @apply bg-prive-neutral-800;
+      &:before {
+        @apply border-prive-neutral-800;
+      }
+
+      b {
+        @apply text-prive-neutral-white;
+      }
+    }
+
+    &-warning {
+      @apply bg-prive-neutral-800;
+      &:before {
+        @apply border-prive-neutral-800;
+      }
+
+      b {
+        @apply text-prive-neutral-white;
+      }
+    }
+
+    &-default {
+      @apply bg-prive-neutral-800;
+      &:before {
+        @apply border-prive-neutral-800;
+      }
+
+      b {
+        @apply text-prive-neutral-white;
+      }
+    }
+  }
+
+  &--position {
+    &-bottom {
+
+      &-center {
+        &:before {
+          @apply border-l-6 border-b-6 border-r-6 -top-1.5 left-1/2 -translate-x-1/2 transform;
+          border-left-color: transparent;
+          border-top-color: transparent;
+          border-right-color: transparent;
+        }
+      }
+
+      &-right {
+        &:before {
+          @apply border-l-6 border-b-6 border-r-6 -top-1.5 right-2.5;
+          border-left-color: transparent;
+          border-top-color: transparent;
+          border-right-color: transparent;
+        }
+      }
+
+      &-left {
+        &:before {
+          @apply border-l-6 border-b-6 border-r-6 -top-1.5 left-2.5;
+          border-left-color: transparent;
+          border-top-color: transparent;
+          border-right-color: transparent;
+        }
+      }
+    }
+
+    &-top {
+
+      &-center {
+        &:before {
+          @apply border-l-6 border-t-6 border-r-6 -bottom-1.5 left-1/2 -translate-x-1/2 transform;
+          border-left-color: transparent;
+          border-bottom-color: transparent;
+          border-right-color: transparent;
+        }
+      }
+
+      &-right {
+        &:before {
+          @apply border-l-6 border-t-6 border-r-6 -bottom-1.5 right-2.5;
+          border-left-color: transparent;
+          border-bottom-color: transparent;
+          border-right-color: transparent;
+        }
+      }
+
+      &-left {
+        &:before {
+          @apply border-l-6 border-t-6 border-r-6 -bottom-1.5 left-2.5;
+          border-left-color: transparent;
+          border-bottom-color: transparent;
+          border-right-color: transparent;
+        }
+      }
+    }
+
+    &-left {
+      &:before {
+        @apply border-t-6 border-b-6 border-l-6 -right-1.5;
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+        border-right-color: transparent;
+      }
+    }
+
+    &-right {
+      &:before {
+        @apply border-t-6 border-b-6 border-r-6 -left-1.5;
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+      }
+    }
+  }
+}

@@ -1,0 +1,197 @@
+@keyframes backInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-68px);
+  }
+
+  80% {
+    transform: translateY(0px);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.backInDown {
+  animation-name: backInDown;
+}
+
+@keyframes backInLeft {
+  0% {
+    transform: translateX(-2000px);
+    opacity: 0;
+  }
+
+  80% {
+    transform: translateX(0px);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.backInLeft {
+  animation-name: backInLeft;
+}
+
+@keyframes backInRight {
+  0% {
+    transform: translateX(2000px);
+    opacity: 0;
+  }
+
+  80% {
+    transform: translateX(0px);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.backInRight {
+  animation-name: backInRight;
+}
+
+@keyframes backInUp {
+  0% {
+    transform: translateY(68px);
+    opacity: 0;
+  }
+
+  80% {
+    transform: translateY(0px);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.backInUp {
+  animation-name: backInUp;
+}
+
+@keyframes backOutDown {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  20% {
+    transform: translateY(0px);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: translateY(700px);
+    opacity: 0;
+  }
+}
+
+.backOutDown {
+  animation-name: backOutDown;
+}
+
+@keyframes backOutLeft {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  20% {
+    transform: translateX(0px);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: translateX(-2000px);
+    opacity: 0;
+  }
+}
+
+.backOutLeft {
+  animation-name: backOutLeft;
+}
+
+@keyframes backOutRight {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  20% {
+    transform: translateX(0px);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: translateX(2000px);
+    opacity: 0;
+  }
+}
+
+.backOutRight {
+  animation-name: backOutRight;
+}
+
+@keyframes backOutUp {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  20% {
+    transform: translateY(0px);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: translateY(-700px);
+    opacity: 0;
+  }
+}
+
+.backOutUp {
+  animation-name: backOutUp;
+}
+
+@keyframes backOutUpShort {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  20% {
+    transform: translateY(0px);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: translateY(-68px);
+    opacity: 0;
+  }
+}
+
+.backOutUpShort {
+  animation-name: backOutUpShort;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}

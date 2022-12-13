@@ -1,0 +1,49 @@
+.wrapper-common-icon {
+  @apply flex items-center justify-center w-max;
+  &--size {
+    &-xs {
+      @apply h-4;
+
+      &.fixedWidth {
+        @apply w-4;
+      }
+    }
+
+    &-s {
+      @apply h-6;
+
+      &.fixedWidth {
+        @apply w-6;
+      }
+    }
+
+    &-m {
+      @apply h-8;
+
+      &.fixedWidth {
+        @apply w-8;
+      }
+    }
+
+    &-l {
+      @apply h-12;
+
+      &.fixedWidth {
+        @apply w-12;
+      }
+    }
+
+    &-xl {
+      @apply h-16;
+
+      &.fixedWidth {
+        @apply w-16;
+      }
+    }
+  }
+
+  svg {
+    @apply h-full;
+    width: unset;
+  }
+}

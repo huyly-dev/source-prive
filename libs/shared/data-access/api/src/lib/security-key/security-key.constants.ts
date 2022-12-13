@@ -1,0 +1,1 @@
+export const SECURITY_KEY_API_NAME = 'SECURITY_KEY';

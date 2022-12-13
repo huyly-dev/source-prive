@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/landing/otc/shared/utils/animations",
+  "sourceRoot": "libs/landing/otc/shared/utils/animations/src",
+  "prefix": "prive-landing-otc",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/landing/otc/shared/utils/animations/src/test.ts",
+        "tsConfig": "libs/landing/otc/shared/utils/animations/tsconfig.spec.json",
+        "karmaConfig": "libs/landing/otc/shared/utils/animations/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/landing/otc/shared/utils/animations/src/**/*.ts",
+          "libs/landing/otc/shared/utils/animations/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

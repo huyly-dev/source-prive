@@ -1,0 +1,18 @@
+<div class="wrapper-landing-swiper" *ngrxLet="vm$; let vm">
+
+  <swiper [config]="config"
+          #swiper>
+
+    <ng-container *ngFor="let item of vm.items; let i = index">
+      <ng-template swiperSlide>
+        <div class="wrapper-landing-swiper__template">
+          <ng-container *ngIf="!!templateRef">
+            <ng-container *ngTemplateOutlet="templateRef; context: {item: item, index: i, active: vm.currentActive}">
+            </ng-container>
+          </ng-container>
+        </div>
+      </ng-template>
+    </ng-container>
+
+  </swiper>
+</div>

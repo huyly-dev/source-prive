@@ -1,0 +1,285 @@
+@use "../font/ibm";
+@use "../font/dm";
+@use "tailwindcss/utilities";
+
+@layer utilities {
+  .h1 {
+    @apply font-ibm text-h1 font-normal;
+
+    &-medium {
+      @apply font-ibm text-h1 font-medium;
+    }
+
+    &-semibold {
+      @apply font-ibm text-h1 font-semibold;
+    }
+
+    &-bold {
+      @apply font-ibm text-h1 font-bold;
+    }
+  }
+
+  .h2 {
+    @apply font-ibm text-h2 font-normal;
+
+    &-medium {
+      @apply font-ibm text-h2 font-medium;
+    }
+
+    &-semibold {
+      @apply font-ibm text-h2 font-semibold;
+    }
+
+    &-bold {
+      @apply font-ibm text-h2 font-bold;
+    }
+  }
+
+  .h3 {
+    @apply font-ibm text-h3 font-normal;
+
+    &-medium {
+      @apply font-ibm text-h3 font-medium;
+    }
+
+    &-semibold {
+      @apply font-ibm text-h3 font-semibold;
+    }
+
+    &-bold {
+      @apply font-ibm text-h3 font-bold;
+    }
+  }
+
+  .h4 {
+    @apply font-ibm text-h4 font-normal;
+
+    &-medium {
+      @apply font-ibm text-h4 font-medium;
+    }
+
+    &-semibold {
+      @apply font-ibm text-h4 font-semibold;
+    }
+
+    &-bold {
+      @apply font-ibm text-h4 font-bold;
+    }
+  }
+
+  .h5 {
+    @apply font-ibm text-h5 font-normal;
+
+    &-medium {
+      @apply font-ibm text-h5 font-medium;
+    }
+
+    &-semibold {
+      @apply font-ibm text-h5 font-semibold;
+    }
+
+    &-bold {
+      @apply font-ibm text-h5 font-bold;
+    }
+  }
+
+  .h6 {
+    @apply font-ibm text-h6 font-normal;
+
+    &-medium {
+      @apply font-ibm text-h6 font-medium;
+    }
+
+    &-semibold {
+      @apply font-ibm text-h6 font-semibold;
+    }
+
+    &-bold {
+      @apply font-ibm text-h6 font-bold;
+    }
+  }
+
+  .h7 {
+    @apply font-ibm text-h7 font-normal;
+
+    &-medium {
+      @apply font-ibm text-h7 font-medium;
+    }
+
+    &-semibold {
+      @apply font-ibm text-h7 font-semibold;
+    }
+
+    &-bold {
+      @apply font-ibm text-h7 font-bold;
+    }
+  }
+
+  .h8 {
+    @apply font-ibm text-h8 font-normal;
+
+    &-medium {
+      @apply font-ibm text-h8 font-medium;
+    }
+
+    &-semibold {
+      @apply font-ibm text-h8 font-semibold;
+    }
+
+    &-bold {
+      @apply font-ibm text-h8 font-bold;
+    }
+  }
+
+  .h9 {
+    @apply font-ibm text-h9 font-normal;
+
+    &-medium {
+      @apply font-ibm text-h9 font-medium;
+    }
+
+    &-semibold {
+      @apply font-ibm text-h9 font-semibold;
+    }
+
+    &-bold {
+      @apply font-ibm text-h9 font-bold;
+    }
+  }
+
+  .h10 {
+    @apply font-ibm text-h10 font-normal;
+
+    &-medium {
+      @apply font-ibm text-h10 font-medium;
+    }
+
+    &-semibold {
+      @apply font-ibm text-h10 font-semibold;
+    }
+
+    &-bold {
+      @apply font-ibm text-h10 font-bold;
+    }
+  }
+
+  .b1 {
+    @apply font-ibm text-b1 font-normal;
+
+    &-medium {
+      @apply font-ibm text-b1 font-medium;
+    }
+
+    &-semibold {
+      @apply font-ibm text-b1 font-semibold;
+    }
+
+    &-bold {
+      @apply font-ibm text-b1 font-bold;
+    }
+  }
+
+  .b2 {
+    @apply font-ibm text-b2 font-normal;
+
+    &-medium {
+      @apply font-ibm text-b2 font-medium;
+    }
+
+    &-semibold {
+      @apply font-ibm text-b2 font-semibold;
+    }
+
+    &-bold {
+      @apply font-ibm text-b2 font-bold;
+    }
+  }
+
+  .b3 {
+    @apply font-ibm text-b3 font-normal;
+
+    &-medium {
+      @apply font-ibm text-b3 font-medium;
+    }
+
+    &-semibold {
+      @apply font-ibm text-b3 font-semibold;
+    }
+
+    &-bold {
+      @apply font-ibm text-b3 font-bold;
+    }
+  }
+
+  .b4 {
+    @apply font-ibm text-b4 font-normal;
+
+    &-medium {
+      @apply font-ibm text-b4 font-medium;
+    }
+
+    &-semibold {
+      @apply font-ibm text-b4 font-semibold;
+    }
+
+    &-bold {
+      @apply font-ibm text-b4 font-bold;
+    }
+  }
+
+  .b5 {
+    @apply font-ibm text-b5 font-normal;
+
+    &-medium {
+      @apply font-ibm text-b5 font-medium;
+    }
+
+    &-semibold {
+      @apply font-ibm text-b5 font-semibold;
+    }
+
+    &-bold {
+      @apply font-ibm text-b5 font-bold;
+    }
+  }
+
+  .l-h1 {
+    @apply font-dm text-l-h1 font-normal;
+
+    &-small {
+      @apply font-dm font-normal text-l-h1-sm;
+    }
+
+    &-large {
+      @apply font-dm font-normal text-l-h1-lg;
+    }
+  }
+
+  .l-h2 {
+    @apply font-dm text-l-h2 font-normal;
+
+    &-small {
+      @apply font-dm font-normal text-l-h2-sm;
+    }
+
+    &-large {
+      @apply font-dm font-normal text-l-h2-lg;
+    }
+  }
+
+  .l-h3 {
+    @apply font-dm text-l-h3 font-normal;
+
+    &-small {
+      @apply font-dm font-normal text-l-h3-sm;
+    }
+
+    &-large {
+      @apply font-dm font-normal text-l-h3-lg;
+    }
+
+    &-large-carousel {
+      @apply font-dm font-normal text-l-h3-lg-carousel;
+    }
+  }
+}

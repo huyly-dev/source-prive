@@ -1,0 +1,14 @@
+<button class="wrapper-landing-button__tertiary {{extraClass}}" [class.w-full]="fullWidth">
+  <div class="flex gap-3 items-center z-[1]" [class.pl-7]="icon">
+    <span class="b3-medium">{{content}}</span>
+    <prive-common-icon *ngIf="icon"
+                       [size]="CommonIconSize.XS"
+                       [icon]="icon"
+                       [package]="iconPackage"
+                       [extraClass]="'text-prive-neutral-white'"></prive-common-icon>
+  </div>
+  <div class="absolute line--top"></div>
+  <div class="absolute line--left"></div>
+  <div class="absolute line--bottom"></div>
+  <div class="absolute line--right"></div>
+</button>

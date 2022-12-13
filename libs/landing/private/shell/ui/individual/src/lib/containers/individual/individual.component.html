@@ -1,0 +1,38 @@
+<prive-landing-beach [titleLinear]="false"
+                     [reverse]="true"
+                     title="Individual account"
+                     buttonText="Find out more"
+                     src="prive-assets/images/landing/individual.png"
+                     [extraClasses]="'bg-prive-dark-blue-700 sm:py-0 md:py-0 md:bg-transparent lg:py-[2.5rem] xl:py-[3.75rem]'"
+                     (clickedBeachBtn)="scrollToLandingForm()">
+  <div class="wrapper-landing-private-individual b3 xl:b1">
+    <div class="wrapper-landing-private-individual__content">
+      <prive-common-icon extraClass="text-prive-neutral-500 transform -rotate-90"
+                         [package]="CommonIconPackage.Arrow"
+                         [icon]="CommonIconArrow.ArrowDropDown"
+                         [size]="CommonIconSize.M"></prive-common-icon>
+      <span class="">Set up under your corporate profile</span>
+    </div>
+    <div class="wrapper-landing-private-individual__content">
+      <prive-common-icon extraClass="text-prive-neutral-500 transform -rotate-90"
+                         [package]="CommonIconPackage.Arrow"
+                         [icon]="CommonIconArrow.ArrowDropDown"
+                         [size]="CommonIconSize.M"></prive-common-icon>
+      <span class="">Bank transactions via your entity’s bank account</span>
+    </div>
+    <div class="wrapper-landing-private-individual__content">
+      <prive-common-icon extraClass="text-prive-neutral-500 transform -rotate-90"
+                         [package]="CommonIconPackage.Arrow"
+                         [icon]="CommonIconArrow.ArrowDropDown"
+                         [size]="CommonIconSize.M"></prive-common-icon>
+      <span class="">Make trades under your corporate identity</span>
+    </div>
+    <div class="wrapper-landing-private-individual__content">
+      <prive-common-icon extraClass="text-prive-neutral-500 transform -rotate-90"
+                         [package]="CommonIconPackage.Arrow"
+                         [icon]="CommonIconArrow.ArrowDropDown"
+                         [size]="CommonIconSize.M"></prive-common-icon>
+      <span class="">Allow multiple user access to a single trading account</span>
+    </div>
+  </div>
+</prive-landing-beach>

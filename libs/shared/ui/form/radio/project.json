@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/shared/ui/form/radio",
+  "sourceRoot": "libs/shared/ui/form/radio/src",
+  "prefix": "prive-form-radio",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/shared/ui/form/radio/src/test.ts",
+        "tsConfig": "libs/shared/ui/form/radio/tsconfig.spec.json",
+        "karmaConfig": "libs/shared/ui/form/radio/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/ui/form/radio/src/**/*.ts",
+          "libs/shared/ui/form/radio/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/shared/ui/common/button",
+  "sourceRoot": "libs/shared/ui/common/button/src",
+  "prefix": "prive-common-button",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/shared/ui/common/button/src/test.ts",
+        "tsConfig": "libs/shared/ui/common/button/tsconfig.spec.json",
+        "karmaConfig": "libs/shared/ui/common/button/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/ui/common/button/src/**/*.ts",
+          "libs/shared/ui/common/button/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

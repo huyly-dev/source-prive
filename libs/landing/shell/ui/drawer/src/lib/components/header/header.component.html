@@ -1,0 +1,15 @@
+<div class="wrapper-landing-drawer__header">
+  <prive-common-icon
+    [icon]="CommonIconLogo.Light"
+    [package]="CommonIconPackage.Logo"
+    [size]="CommonIconSize.XS"
+    extraClass="text-prive-neutral-400 cursor-pointer"
+  ></prive-common-icon>
+  <prive-common-icon
+    [icon]="CommonIconGlobal.Close"
+    [package]="CommonIconPackage.Global"
+    [size]="CommonIconSize.S"
+    (click)="hiddenDrawer()"
+    extraClass="text-prive-neutral-400 cursor-pointer"
+  ></prive-common-icon>
+</div>

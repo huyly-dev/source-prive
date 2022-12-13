@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/shared/utils/validator",
+  "sourceRoot": "libs/shared/utils/validator/src",
+  "prefix": "prive",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/shared/utils/validator/src/test.ts",
+        "tsConfig": "libs/shared/utils/validator/tsconfig.spec.json",
+        "karmaConfig": "libs/shared/utils/validator/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/utils/validator/src/**/*.ts",
+          "libs/shared/utils/validator/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

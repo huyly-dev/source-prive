@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/documentation/shell/ui/layout",
+  "sourceRoot": "libs/documentation/shell/ui/layout/src",
+  "prefix": "prive-documentation-layout",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/documentation/shell/ui/layout/src/test.ts",
+        "tsConfig": "libs/documentation/shell/ui/layout/tsconfig.spec.json",
+        "karmaConfig": "libs/documentation/shell/ui/layout/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/documentation/shell/ui/layout/src/**/*.ts",
+          "libs/documentation/shell/ui/layout/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

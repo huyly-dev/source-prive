@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/shared/ui/common/mask",
+  "sourceRoot": "libs/shared/ui/common/mask/src",
+  "prefix": "prive-common-mask",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/shared/ui/common/mask/src/test.ts",
+        "tsConfig": "libs/shared/ui/common/mask/tsconfig.spec.json",
+        "karmaConfig": "libs/shared/ui/common/mask/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/ui/common/mask/src/**/*.ts",
+          "libs/shared/ui/common/mask/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

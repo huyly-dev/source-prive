@@ -1,0 +1,36 @@
+<div class="wrapper-landing-otc-how">
+
+  <h2 class="text-center l-h2 sm:l-h2-small md:l-h2-small lg:l-h2-large sm:max-w-[20.5rem]">
+    How to do OTC trading with Coinhako Privé?
+  </h2>
+
+  <div class="wrapper-landing-otc-how__items-container">
+    <ng-container *ngrxLet="vm$; let vm">
+      <div class="wrapper-landing-otc-how__item"
+           *ngFor="let item of vm.stepItems; let i = index">
+
+        <div [class.wrapper-landing-otc-how__item--activated]="vm.stepActivated === (i + 1)">
+          <prive-common-icon [size]="vm.stepActivated === (i + 1) ? CommonIconSize.S : CommonIconSize.M"
+                             [icon]="vm.stepActivated === (i + 1) ? CommonIconCheck.Check : CommonIconCheck.CheckCircleOutline"
+                             [package]="CommonIconPackage.Check"
+                             [extraClass]="vm.stepActivated === (i + 1) ? '' : 'text-prive-neutral-300'">
+          </prive-common-icon>
+        </div>
+
+        <p class="flex items-center h7-semibold xl:h6-semibold">
+          Step {{item.step}}
+        </p>
+
+        <div class="wrapper-landing-otc-how__vertical-line"
+             [class.wrapper-landing-otc-how__vertical-line--active]="item.step === vm.stepItems.length">
+          <div *ngIf="item.step !== vm.stepItems.length"></div>
+        </div>
+
+        <p class="wrapper-landing-otc-how__description b3 xl:b1"
+           [innerHTML]="item.description"></p>
+
+      </div>
+    </ng-container>
+  </div>
+
+</div>

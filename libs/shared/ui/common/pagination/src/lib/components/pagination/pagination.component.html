@@ -1,0 +1,64 @@
+<ng-container *ngrxLet="state$; let state">
+  <div class="{{state.wrapperClass}}">
+    <div class="{{state.wrapperClass}}__left">
+      <b class="md:hidden">{{(state.wrapperLocale + '.TEXTS.ITEMS_PER_PAGE') | translate}}</b>
+      <button [class.disabled]="state.total <= 0 || state.disabled"
+              [disabled]="state.total <= 0 || state.disabled"
+              [priveOverlayMenu]="options"
+              [priveOverlayMenuPosition]="OverlayCdkPosition.BottomLeft"
+      >
+        <b>{{state.selectedOption}}</b>
+        <prive-common-icon
+          [extraClass]="(state.total <= 0 || state.disabled) ? 'disabled' : ''"
+          [size]="CommonIconSize.S"
+          [icon]="CommonIconArrow.ArrowDropDown"
+          [package]="CommonIconPackage.Arrow"
+        >
+
+        </prive-common-icon>
+      </button>
+      <b>{{state.range}} {{(state.wrapperLocale + '.TEXTS.ITEMS_OF') | translate}} {{state.total}} {{(state.wrapperLocale + '.TEXTS.ITEMS') | translate}}</b>
+    </div>
+    <div class="{{state.wrapperClass}}__right">
+      <button [class.disabled]="state.total <= 0 || state.disabled" [disabled]="state.total <= 0 || state.disabled"
+              [priveOverlayMenu]="pages"
+              [priveOverlayMenuPosition]="OverlayCdkPosition.BottomLeft">
+        <b>{{state.selectedPage}}</b>
+        <prive-common-icon [icon]="CommonIconArrow.ArrowDropDown" [size]="CommonIconSize.S"
+                           [package]="CommonIconPackage.Arrow"></prive-common-icon>
+      </button>
+      <b
+        class="md:hidden">{{(state.wrapperLocale + '.TEXTS.ITEMS_OF') | translate}} {{state.page}} {{(state.wrapperLocale + '.TEXTS.PAGES') | translate}}</b>
+      <div class="{{state.wrapperClass}}__right__separator"></div>
+      <div class="{{state.wrapperClass}}__right__move">
+        <prive-common-icon [icon]="CommonIconArrow.ChevronLeft" [size]="CommonIconSize.S"
+                           [package]="CommonIconPackage.Arrow"
+                           [extraClass]="state.disabled || !state.canMovePrevious ? 'disabled' : ''"
+                           (click)="movePrevious()"></prive-common-icon>
+        <prive-common-icon [icon]="CommonIconArrow.ChevronRight" [size]="CommonIconSize.S"
+                           [package]="CommonIconPackage.Arrow"
+                           [extraClass]="state.disabled || !state.canMoveNext ? 'disabled' : ''"
+                           (click)="moveNext()"></prive-common-icon>
+      </div>
+    </div>
+
+    <ng-template #options>
+      <prive-form-dropdown-options
+        [type]="FormDropdownOptionType.Single
+"
+        [options]="state.optionArray"
+        [selected]="state.selectedOption.toString()"
+        (selectedChange)="selectOption($event.value)"
+      ></prive-form-dropdown-options>
+    </ng-template>
+
+    <ng-template #pages>
+      <prive-form-dropdown-options
+        [type]="FormDropdownOptionType.Single"
+        [options]="state.pageArray"
+        [selected]="state.selectedPage.toString()"
+        (selectedChange)="selectPage($event.value)"
+      ></prive-form-dropdown-options>
+    </ng-template>
+  </div>
+</ng-container>

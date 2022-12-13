@@ -1,0 +1,36 @@
+<ng-container *ngrxLet="state$; let state">
+  <div
+    class="{{state.wrapperClass}} {{state.animationClass}} {{state.wrapperClass}}--size-{{state.size}} {{state.wrapperClass}}--status-{{state.status}}">
+    <div *ngIf="state.title || header" class="{{state.wrapperClass}}__header">
+      <div class="{{state.wrapperClass}}__header__content">
+        <ng-container *ngIf="header">
+          <ng-container *ngTemplateOutlet="header"></ng-container>
+        </ng-container>
+        <ng-container *ngIf="!header">
+          <prive-common-icon
+            *ngIf="state.status"
+            [package]="state.status | modalPackage"
+            [icon]="state.status | priveOverlayModalIcon"
+            [size]="CommonIconSizeEnum.S"
+          ></prive-common-icon>
+          <b *ngIf="state.title">{{state.title | translate}}</b>
+        </ng-container>
+      </div>
+      <div class="{{state.wrapperClass}}__header__action">
+        <prive-common-icon
+          (click)="close.emit()"
+          extraClass="cursor-pointer"
+          [package]="CommonIconPackageEnum.Global"
+          [icon]="CommonIconGlobalEnum.Close"
+          [size]="CommonIconSizeEnum.S"
+        ></prive-common-icon>
+      </div>
+    </div>
+    <div *ngIf="body" class="{{state.wrapperClass}}__body">
+      <ng-container *ngTemplateOutlet="body"></ng-container>
+    </div>
+    <div *ngIf="footer" class="{{state.wrapperClass}}__footer">
+      <ng-container *ngTemplateOutlet="footer"></ng-container>
+    </div>
+  </div>
+</ng-container>

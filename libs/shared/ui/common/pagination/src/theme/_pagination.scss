@@ -1,0 +1,57 @@
+@import "libs/shared/resources/assets/src/lib/styles/theme/typography";
+
+.wrapper--common--pagination {
+  @apply flex items-center justify-between w-full max-w-90vw pl-4 pr-2 h-10;
+  b {
+    @apply b3 text-prive-neutral-400;
+  }
+
+  .wrapper-common-icon {
+    @apply text-prive-neutral-400 cursor-pointer;
+    &.disabled {
+      @apply text-prive-neutral-800 cursor-default;
+    }
+  }
+
+  button {
+    @apply py-1.5 px-2 flex items-center gap-2 h-10 border-2 border-solid rounded-sm border-transparent md:hidden;
+    &.disabled {
+      b {
+        @apply text-prive-neutral-800;
+      }
+    }
+
+    &:focus-within {
+      @apply bg-prive-dark-blue-600 border-prive-blue-900;
+      &:after {
+        @apply opacity-0;
+      }
+    }
+  }
+
+  &__left {
+    @apply flex items-center;
+    button {
+      @apply relative ml-2 mr-4;
+      &:after {
+        @apply absolute w-px h-6 bg-prive-dark-blue-200 -right-0.5 top-1.5;
+        content: "";
+      }
+    }
+  }
+
+  &__right {
+    @apply flex items-center;
+    button {
+      @apply mr-2;
+    }
+
+    &__separator {
+      @apply w-px h-6 bg-prive-dark-blue-200 ml-4 mr-2;
+    }
+
+    &__move {
+      @apply flex items-center gap-4;
+    }
+  }
+}

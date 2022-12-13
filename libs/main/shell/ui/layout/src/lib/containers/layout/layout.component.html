@@ -1,0 +1,16 @@
+<ng-container *ngrxLet="state$; let state">
+  <ng-container [ngSwitch]="state.type">
+    <ng-container *ngSwitchCase="PriveMainLayout.LANDING">
+      <prive-landing-layout></prive-landing-layout>
+    </ng-container>
+<!--    <ng-container *ngSwitchCase="PriveMainLayout.AUTH">-->
+<!--      <prive-auth-layout></prive-auth-layout>-->
+<!--    </ng-container>-->
+<!--    <ng-container *ngSwitchCase="PriveMainLayout.ORGS">-->
+<!--      <prive-orgs-layout></prive-orgs-layout>-->
+<!--    </ng-container>-->
+    <ng-container *ngSwitchCase="PriveMainLayout.DOCUMENTATION">
+      <router-outlet></router-outlet>
+    </ng-container>
+  </ng-container>
+</ng-container>

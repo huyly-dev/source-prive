@@ -1,0 +1,33 @@
+<ng-container *ngrxLet="state$; let state">
+  <button
+    class="{{state.wrapperClass}} {{state.wrapperClass}}--state-{{state.status}} {{state.wrapperClass}}--size-{{state.size}} {{state.wrapperClass}}--size-{{state.size}}--style-{{state.style}} {{state.wrapperClass}}--state-{{state.status}}--style-{{state.style}}"
+    [style.--navigation--item--quantity]="state.quantity"
+    [class.selected]="state.item | priveCommonNavigationSelected: {selected: state.selected, typeCheck: state.typeCheck}"
+    [class.expanded]="state.expanded"
+  >
+    <div class="{{state.wrapperClass}}__content {{state.wrapperClass}}__content--size-{{(!!state.item && !!state.item.items) || state.haveChild ? 'icon' : 'full'}}--style-{{state.style}} {{state.wrapperClass}}__content--size-{{(!!state.item && !!state.item.items) || state.haveChild ? 'icon' : 'full'}}">
+      <ng-container *ngIf="!state.isAvatar && state.item && state.item.icon && state.item.package">
+        <prive-common-icon
+          [icon]="state.item.icon"
+          [package]="state.item.package"
+          [size]="(state.style === CommonNavigationItemStyle.Dropdown || state.status === CommonNavigationItemStatus.Vertical) ? CommonIconSize.XS : CommonIconSize.S"
+        ></prive-common-icon>
+      </ng-container>
+      <ng-container *ngIf="state.isAvatar">
+        <prive-common-avatar
+          [style]="state.item ? state.item.style : undefined"
+          [size]="(state.style === CommonNavigationItemStyle.Dropdown || state.status === CommonNavigationItemStatus.Vertical) ? CommonAvatarSize.XS : CommonAvatarSize.S"
+          [textColor]="state.item ? state.item.color : undefined"
+          [backgroundColor]="state.item ? state.item.backgroundColor : undefined"
+          [shortName]="(state.item ? state.item.label : '') | priveCommonAvatarShortName: CommonAvatarType.StartEnd"
+        ></prive-common-avatar>
+      </ng-container>
+      <b class="{{state.wrapperClass}}__content__label">{{(state.item ? state.item.label : '') | translate}}</b>
+    </div>
+    <prive-common-icon
+      *ngIf="(state.item && state.item.items) || state.haveChild"
+      [size]="CommonIconSize.S"
+      [icon]="CommonIconArrow.ArrowDropDown"
+      [package]="CommonIconPackage.Arrow"></prive-common-icon>
+  </button>
+</ng-container>

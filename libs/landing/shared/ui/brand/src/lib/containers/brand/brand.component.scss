@@ -1,0 +1,26 @@
+.wrapper-landing-brand {
+  @apply w-screen flex items-center justify-center;
+  &__container {
+    @apply flex items-center flex-col;
+    @apply xl:w-300 xl:gap-20;
+    @apply lg:w-[59rem] lg:gap-10;
+    @apply md:w-[45rem] md:gap-10;
+    @apply sm:w-[20.5rem] sm:gap-10;
+    h2 {
+      &.linear {
+        @apply bg-s1;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    &__items {
+      @apply w-full;
+      @apply justify-between flex flex-wrap;
+      @apply sm:gap-6 md:gap-6;
+      &__couple {
+        @apply flex;
+      }
+    }
+  }
+}

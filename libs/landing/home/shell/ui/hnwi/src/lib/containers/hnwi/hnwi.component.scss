@@ -1,0 +1,81 @@
+.wrapper-landing-home__hnwi {
+  @apply w-screen flex flex-col justify-center items-center;
+  @apply xl:gap-25;
+  @apply lg:gap-10;
+  @apply md:gap-10;
+  @apply sm:gap-10;
+  h2 {
+    @apply text-center;
+    @apply bg-s1;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__box {
+    @apply relative;
+    @apply xl:w-[49.375rem] xl:h-[30rem];
+    @apply lg:w-[39rem] lg:h-[23.75rem];
+    @apply md:w-[23.4375rem] md:h-[22.5rem];
+    @apply sm:w-[23.4375rem] sm:h-[22.5rem];
+    &__left {
+      @apply absolute top-0 left-0 overflow-hidden z-[1] flex items-center;
+      @apply xl:w-[30rem] xl:h-[25rem];
+      @apply lg:w-[24rem] lg:h-[20rem];
+      @apply md:w-[20rem] md:h-[18.75rem];
+      @apply sm:w-[20rem] sm:h-[18.75rem];
+      img {
+        @apply w-full h-full;
+      }
+      &__content {
+        @apply absolute top-0 left-0 w-full h-full flex flex-col z-[1];
+        @apply xl:gap-10 xl:px-10 xl:py-10;
+        @apply lg:gap-10 lg:px-10 lg:py-10;
+        @apply md:gap-8 md:px-6 md:py-10;
+        @apply sm:gap-8 sm:px-6 sm:py-10;
+        &__information {
+          @apply w-full flex flex-col;
+          @apply xl:gap-6;
+          @apply lg:gap-6;
+          @apply md:gap-4;
+          @apply sm:gap-4;
+        }
+        &__animate {
+          @apply relative;
+          @apply xl:w-[23.25rem] xl:h-7.5;
+          @apply lg:w-[19rem] lg:h-7.5;
+          @apply md:w-[16.25rem] md:h-4.5;
+          @apply sm:w-[16.25rem] sm:h-4.5;
+          &:before {
+            @apply absolute content-[''] top-0 right-0;
+            @apply xl:w-[22.5rem] xl:h-5;
+            @apply lg:w-[18.5rem] lg:h-5;
+            @apply md:w-[15.625rem] md:h-3;
+            @apply sm:w-[15.625rem] sm:h-3;
+            background: linear-gradient(90deg, rgba(69, 125, 245, 0) 0%, rgba(69, 125, 245, 0.16) 100%);
+          }
+
+          &:after {
+            @apply absolute content-[''] bottom-0 left-0;
+            @apply xl:w-[22.5rem] xl:h-5;
+            @apply lg:w-[18.5rem] lg:h-5;
+            @apply md:w-[15.625rem] md:h-3;
+            @apply sm:w-[15.625rem] sm:h-3;
+            background: linear-gradient(90deg, rgba(69, 125, 245, 0) 0%, rgba(69, 125, 245, 0.16) 100%);
+
+          }
+        }
+      }
+    }
+
+    &__right {
+      @apply absolute bottom-0 right-0 overflow-hidden;
+      @apply xl:w-[32.25rem] xl:h-[25rem];
+      @apply lg:w-[25.75rem] lg:h-[20rem];
+      @apply md:w-[20rem] md:h-[18.75rem];
+      @apply sm:w-[20rem] sm:h-[18.75rem];
+      img {
+        @apply w-full h-full;
+      }
+    }
+  }
+}

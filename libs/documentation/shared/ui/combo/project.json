@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/documentation/shared/ui/combo",
+  "sourceRoot": "libs/documentation/shared/ui/combo/src",
+  "prefix": "prive-documentation-combo",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/documentation/shared/ui/combo/src/test.ts",
+        "tsConfig": "libs/documentation/shared/ui/combo/tsconfig.spec.json",
+        "karmaConfig": "libs/documentation/shared/ui/combo/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/documentation/shared/ui/combo/src/**/*.ts",
+          "libs/documentation/shared/ui/combo/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/landing/otc/shell/ui/how",
+  "sourceRoot": "libs/landing/otc/shell/ui/how/src",
+  "prefix": "prive-landing-otc-how",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/landing/otc/shell/ui/how/src/test.ts",
+        "tsConfig": "libs/landing/otc/shell/ui/how/tsconfig.spec.json",
+        "karmaConfig": "libs/landing/otc/shell/ui/how/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/landing/otc/shell/ui/how/src/**/*.ts",
+          "libs/landing/otc/shell/ui/how/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

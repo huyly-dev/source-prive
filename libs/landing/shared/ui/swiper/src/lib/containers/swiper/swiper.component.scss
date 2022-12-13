@@ -1,0 +1,51 @@
+.wrapper-landing-swiper {
+  @apply w-full h-full flex flex-col gap-y-6;
+
+  &__template {
+    @apply w-full h-full;
+  }
+
+  .swiper {
+    @apply w-full h-full flex flex-col-reverse gap-y-6;
+  }
+
+  .swiper-pagination {
+    @apply relative bottom-0;
+
+    .swiper-pagination-bullet {
+      @apply h-1 w-6 rounded-[0.125rem] bg-prive-neutral-w0.3
+    }
+
+    .swiper-pagination-bullet-active {
+      @apply bg-prive-blue-400;
+    }
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 328px;
+    height: 300px;
+  }
+
+  .swiper-slide-prev {
+    .swiper-slide-shadow-left {
+      border-radius: 0.75rem;
+    }
+  }
+
+  .swiper-slide-next {
+    .swiper-slide-shadow-right {
+      border-radius: 0.75rem;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+

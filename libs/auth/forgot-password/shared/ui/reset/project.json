@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/auth/forgot-password/shared/ui/reset",
+  "sourceRoot": "libs/auth/forgot-password/shared/ui/reset/src",
+  "prefix": "prive-auth-forgot-password-reset",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/auth/forgot-password/shared/ui/reset/src/test.ts",
+        "tsConfig": "libs/auth/forgot-password/shared/ui/reset/tsconfig.spec.json",
+        "karmaConfig": "libs/auth/forgot-password/shared/ui/reset/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/auth/forgot-password/shared/ui/reset/src/**/*.ts",
+          "libs/auth/forgot-password/shared/ui/reset/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

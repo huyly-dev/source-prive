@@ -1,0 +1,9 @@
+<ng-container *ngrxLet="state$; let state">
+  <div
+    class="{{state.wrapperClass}} {{state.wrapperClass}}--style-{{state.style}} {{state.wrapperClass}}--style-{{state.style}}--status-{{state.status}} {{state.animationClass}} {{state.wrapperClass}}--position-{{state.position}}"
+    [id]="'toast--zone--' + state.uuid"
+  >
+    <prive-common-icon [package]="state.status | priveOverlayToastBasePackage" [icon]="state.status | priveOverlayToastBaseIcon" [size]="CommonIconSize.S"></prive-common-icon>
+    <b>{{state.text | translate}}</b>
+  </div>
+</ng-container>

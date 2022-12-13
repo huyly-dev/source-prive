@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/shared/ui/form/slider",
+  "sourceRoot": "libs/shared/ui/form/slider/src",
+  "prefix": "prive-form-slider",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/shared/ui/form/slider/src/test.ts",
+        "tsConfig": "libs/shared/ui/form/slider/tsconfig.spec.json",
+        "karmaConfig": "libs/shared/ui/form/slider/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/ui/form/slider/src/**/*.ts",
+          "libs/shared/ui/form/slider/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

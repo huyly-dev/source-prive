@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/auth/login/shared/ui/two-factor",
+  "sourceRoot": "libs/auth/login/shared/ui/two-factor/src",
+  "prefix": "prive-auth-login-two-factor",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/auth/login/shared/ui/two-factor/src/test.ts",
+        "tsConfig": "libs/auth/login/shared/ui/two-factor/tsconfig.spec.json",
+        "karmaConfig": "libs/auth/login/shared/ui/two-factor/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/auth/login/shared/ui/two-factor/src/**/*.ts",
+          "libs/auth/login/shared/ui/two-factor/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

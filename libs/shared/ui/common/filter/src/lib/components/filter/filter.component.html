@@ -1,0 +1,22 @@
+<ng-container *ngrxLet="state$; let state">
+  <button
+    class="{{state.wrapperClass}} {{state.wrapperClass}}--size-{{state.size}} {{state.extraClass}} {{state.wrapperClass}}--status-{{state.status}}"
+    [class.active]="state.active && !state.disabled"
+    [class.disabled]="state.disabled"
+    [disabled]="state.disabled"
+  >
+    <prive-common-icon
+      *ngIf="state.iconLeft && state.packageIconLeft"
+      [icon]="state.iconLeft"
+      [package]="state.packageIconLeft"
+      [size]="state.size | priveCommonFilterIconSize"
+    ></prive-common-icon>
+    <b>{{state.content}}</b>
+    <prive-common-icon
+      *ngIf="state.iconRight && state.packageIconRight"
+      [icon]="state.iconRight"
+      [package]="state.packageIconRight"
+      [size]="state.size | priveCommonFilterIconSize"
+    ></prive-common-icon>
+  </button>
+</ng-container>

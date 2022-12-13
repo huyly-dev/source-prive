@@ -1,0 +1,42 @@
+<div class="bg-prive-dark-blue-700" #whyTradingRef>
+  <div class="wrapper-landing-otc-why-trading">
+    <h2 class="l-h2 text-center sm:l-h2-small md:l-h2-small lg:l-h2-large">
+      Why do crypto OTC trading?
+    </h2>
+
+    <div *ngrxLet="vm$; let vm">
+
+      <ng-container *ngFor="let item of vm.reasons; let i = index">
+        <div class="wrapper-landing-otc-why-trading__item"
+             (click)="toggleScaleImg(i)">
+          <img [src]="item.imgSrc"
+               alt="{{item.imgAlt}}"
+               width="100"
+               height="100"
+               class="object-contain object-top"
+               [@scaleImage]="{value: item.imgState,
+               params: {scaleUpRatio: vm.ratio.scaleUpRatio, scaleDownRatio: vm.ratio.scaleDownRatio}}">
+          <div class="w-full flex flex-col justify-center relative"
+               [class.wrapper-landing-otc-why-trading--active-description]="item.textState === 'expanded'">
+            <div class="flex items-center">
+              <span class="b4-medium xl:h4-medium text-prive-neutral-500">0{{i + 1}}</span>
+              <span class="l-h3 absolute sm:l-h3-small md:l-h3-small lg:l-h3-large"
+                    [@expandTitle]="{value: item.textState,
+                    params: {xAxis: vm.ratio.xAxis, yAxis: vm.ratio.yAxis}}">
+                {{item.title}}
+              </span>
+            </div>
+
+            <div class="b3 xl:b1 overflow-hidden"
+                 [innerHTML]="item.description"
+                 *ngIf="item.textState === 'expanded'"
+                 @fadeDescription>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+
+    </div>
+
+  </div>
+</div>

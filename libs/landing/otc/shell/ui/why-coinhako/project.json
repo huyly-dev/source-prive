@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/landing/otc/shell/ui/why-coinhako",
+  "sourceRoot": "libs/landing/otc/shell/ui/why-coinhako/src",
+  "prefix": "prive-landing-otc-why-coinhako",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/landing/otc/shell/ui/why-coinhako/src/test.ts",
+        "tsConfig": "libs/landing/otc/shell/ui/why-coinhako/tsconfig.spec.json",
+        "karmaConfig": "libs/landing/otc/shell/ui/why-coinhako/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/landing/otc/shell/ui/why-coinhako/src/**/*.ts",
+          "libs/landing/otc/shell/ui/why-coinhako/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

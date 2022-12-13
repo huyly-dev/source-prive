@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/shared/ui/common/toggle",
+  "sourceRoot": "libs/shared/ui/common/toggle/src",
+  "prefix": "prive-common-toggle",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/shared/ui/common/toggle/src/test.ts",
+        "tsConfig": "libs/shared/ui/common/toggle/tsconfig.spec.json",
+        "karmaConfig": "libs/shared/ui/common/toggle/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/ui/common/toggle/src/**/*.ts",
+          "libs/shared/ui/common/toggle/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

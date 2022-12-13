@@ -1,0 +1,28 @@
+.wrapper-carousel-slider {
+  @apply w-full px-10;
+
+  &__container {
+    @apply flex flex-col gap-y-8;
+    @apply lg:gap-y-6;
+  }
+
+  &__content {
+    @apply flex flex-col justify-between h-[460px] relative;
+    @apply lg:h-[392px];
+  }
+}
+
+.carousel {
+  &--active-item {
+    &:before {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+
+      content: '';
+      border-radius: 1rem;
+      background-color: rgba(0, 25, 78, 0.75);
+      z-index: 1;
+    }
+  }
+}

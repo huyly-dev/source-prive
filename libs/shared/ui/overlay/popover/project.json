@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/shared/ui/overlay/popover",
+  "sourceRoot": "libs/shared/ui/overlay/popover/src",
+  "prefix": "prive-overlay-popover",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/shared/ui/overlay/popover/src/test.ts",
+        "tsConfig": "libs/shared/ui/overlay/popover/tsconfig.spec.json",
+        "karmaConfig": "libs/shared/ui/overlay/popover/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/ui/overlay/popover/src/**/*.ts",
+          "libs/shared/ui/overlay/popover/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

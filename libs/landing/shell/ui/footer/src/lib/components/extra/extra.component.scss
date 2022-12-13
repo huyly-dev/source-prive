@@ -1,0 +1,25 @@
+.wrapper-landing-footer__extra {
+  @apply flex;
+  @apply xl:gap-21.5;
+  @apply lg:gap-13.5;
+  @apply sm:gap-16.5;
+  @apply md:gap-19.5;
+  &__section {
+    @apply flex flex-col gap-6;
+    @apply sm:gap-4 md:gap-4 lg:gap-4;
+
+    &__items {
+      @apply flex flex-col gap-4;
+      &__each {
+        @apply text-prive-blue-100;
+      }
+    }
+  }
+
+  &__second {
+    @apply flex xl:gap-25;
+    @apply sm:flex-col sm:gap-6;
+    @apply md:flex-col md:gap-6;
+    @apply lg:gap-18;
+  }
+}

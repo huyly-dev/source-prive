@@ -1,0 +1,16 @@
+<ng-container *ngrxLet="state$; let state">
+  <div class="{{state.wrapperClass}}">
+    <button class="{{state.wrapperClass}}__button {{state.wrapperClass}}__button--state-{{state.status}}" (click)="toggle()" [class.disabled]="state.disabled" [disabled]="state.disabled">
+      <ng-container [ngSwitch]="state.status">
+        <ng-container *ngSwitchCase="FormCheckBoxStatus.Checked">
+          <prive-common-icon [icon]="CommonIconGlobal.CheckBold" [package]="CommonIconPackage.Global"></prive-common-icon>
+        </ng-container>
+        <ng-container *ngSwitchCase="FormCheckBoxStatus.Indeterminate">
+          <prive-common-icon [icon]="CommonIconGlobal.RemoveBold" [package]="CommonIconPackage.Global"></prive-common-icon>
+        </ng-container>
+      </ng-container>
+    </button>
+    <b class="{{state.wrapperClass}}__label">{{state.label}}</b>
+  </div>
+
+</ng-container>

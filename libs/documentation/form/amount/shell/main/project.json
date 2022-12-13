@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/documentation/form/amount/shell/main",
+  "sourceRoot": "libs/documentation/form/amount/shell/main/src",
+  "prefix": "prive-documentation-form-amount",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/documentation/form/amount/shell/main/src/test.ts",
+        "tsConfig": "libs/documentation/form/amount/shell/main/tsconfig.spec.json",
+        "karmaConfig": "libs/documentation/form/amount/shell/main/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/documentation/form/amount/shell/main/src/**/*.ts",
+          "libs/documentation/form/amount/shell/main/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

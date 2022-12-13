@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/documentation/form/check-box/shared/data-access/store",
+  "sourceRoot": "libs/documentation/form/check-box/shared/data-access/store/src",
+  "prefix": "prive",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/documentation/form/check-box/shared/data-access/store/src/test.ts",
+        "tsConfig": "libs/documentation/form/check-box/shared/data-access/store/tsconfig.spec.json",
+        "karmaConfig": "libs/documentation/form/check-box/shared/data-access/store/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/documentation/form/check-box/shared/data-access/store/src/**/*.ts",
+          "libs/documentation/form/check-box/shared/data-access/store/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

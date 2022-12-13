@@ -1,0 +1,40 @@
+.wrapper-landing-otc-what {
+  @apply flex justify-between max-w-[75rem] mx-auto mt-[7.5rem] mb-[10rem] text-prive-neutral-50;
+  @apply sm:relative sm:grid-cols-1 sm:p-0 sm:my-[3.75rem];
+  @apply md:max-w-[48rem] md:my-[3.75rem];
+  @apply lg:max-w-[945px] md:my-[7.5rem] ;
+
+  &__content {
+    @apply flex flex-col w-[33rem] gap-y-[5rem];
+    @apply sm:w-[20.5rem] sm:h-full sm:mx-auto sm:py-[7.25rem] sm:gap-y-4 z-[1];
+    @apply md:w-[20.5rem] md:justify-center md:pl-6 md:gap-y-4;
+    @apply lg:w-[29rem] lg:justify-center lg:gap-y-4;
+  }
+
+  &__description-container {
+    @apply flex flex-col gap-y-[2.5rem];
+    @apply sm:gap-y-8;
+    @apply md:gap-y-8;
+    @apply lg:gap-y-8;
+  }
+
+  &__img {
+    @apply overflow-hidden;
+    @apply sm:absolute sm:h-full sm:w-full;
+
+    img {
+      @apply w-[479px] object-cover object-center transition-all ease-in-out duration-500;
+      @apply sm:w-full sm:h-full;
+      @apply md:w-[375px];
+      @apply lg:w-[385px];
+    }
+
+    &:hover img {
+      @apply lg:scale-125 xl:scale-125;
+    }
+
+    &:before {
+      @apply sm:absolute sm:w-full sm:h-full sm:content-[''] sm:bg-l-blur;
+    }
+  }
+}

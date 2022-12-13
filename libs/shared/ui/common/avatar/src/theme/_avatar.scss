@@ -1,0 +1,45 @@
+@import "libs/shared/resources/assets/src/lib/styles/theme/typography";
+
+.wrapper-common-avatar {
+  @apply items-center flex justify-center;
+  &--size {
+    &-xs {
+      @apply w-4 h-4;
+      b {
+        @apply b5-medium;
+      }
+    }
+    &-s {
+      @apply w-6 h-6;
+      b {
+        @apply b4-medium;
+      }
+    }
+    &-m {
+      @apply w-8 h-8;
+      b {
+        @apply b3-medium;
+      }
+    }
+    &-l {
+      @apply w-12 h-12;
+      b {
+        @apply b1-medium;
+      }
+    }
+    &-xl {
+      @apply w-16 h-16;
+      b {
+        @apply h5-semibold;
+      }
+    }
+  }
+  &--style {
+    &-circle {
+      @apply rounded-full;
+    }
+    &-square {
+      @apply rounded-sm;
+    }
+  }
+}

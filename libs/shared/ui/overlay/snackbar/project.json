@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/shared/ui/overlay/snackbar",
+  "sourceRoot": "libs/shared/ui/overlay/snackbar/src",
+  "prefix": "prive-overlay-snackbar",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/shared/ui/overlay/snackbar/src/test.ts",
+        "tsConfig": "libs/shared/ui/overlay/snackbar/tsconfig.spec.json",
+        "karmaConfig": "libs/shared/ui/overlay/snackbar/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/ui/overlay/snackbar/src/**/*.ts",
+          "libs/shared/ui/overlay/snackbar/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

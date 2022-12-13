@@ -1,0 +1,21 @@
+<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Type=ne-resize">
+<g id="cursor / resizenortheast">
+<g id="cursor / resizenortheast_2" filter="url(#filter_ne_resize_0_d)">
+<path id="cursor" fill-rule="evenodd" clip-rule="evenodd" d="M14 9.48631V1.00031H5.51504L8.34404 3.82931L3.39404 8.7793L6.22204 11.6073L11.172 6.65731L14 9.48631Z" fill="white"/>
+<path id="cursor_2" fill-rule="evenodd" clip-rule="evenodd" d="M4.80811 8.7793L9.75811 3.82831L7.93011 2.00031H13.0011V7.07131L11.1721 5.24231L6.22211 10.1933L4.80811 8.7793Z" fill="black"/>
+</g>
+</g>
+</g>
+<defs>
+<filter id="filter_ne_resize_0_d" x="0.394043" y="0.000305176" width="16.606" height="16.607" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="2"/>
+<feGaussianBlur stdDeviation="1.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.402655 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+</defs>
+</svg>

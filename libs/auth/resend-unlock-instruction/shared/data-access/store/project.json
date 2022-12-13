@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/auth/resend-unlock-instruction/shared/data-access/store",
+  "sourceRoot": "libs/auth/resend-unlock-instruction/shared/data-access/store/src",
+  "prefix": "prive",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/auth/resend-unlock-instruction/shared/data-access/store/src/test.ts",
+        "tsConfig": "libs/auth/resend-unlock-instruction/shared/data-access/store/tsconfig.spec.json",
+        "karmaConfig": "libs/auth/resend-unlock-instruction/shared/data-access/store/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/auth/resend-unlock-instruction/shared/data-access/store/src/**/*.ts",
+          "libs/auth/resend-unlock-instruction/shared/data-access/store/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

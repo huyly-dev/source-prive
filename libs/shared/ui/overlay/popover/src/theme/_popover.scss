@@ -1,0 +1,181 @@
+@import "libs/shared/resources/assets/src/lib/styles/theme/typography";
+
+.wrapper-overlay-popover {
+  @apply flex items-center justify-center border border-solid py-2 px-3 rounded-md fixed transition-all duration-100;
+  z-index: 998;
+
+  &.existed-modal {
+    z-index: 1000;
+  }
+
+  &:before {
+    @apply absolute block w-0 h-0 border-solid border-transparent;
+    content: "";
+    z-index: 1;
+  }
+
+  &:after {
+    @apply absolute block w-0 h-0 border-solid border-transparent;
+    content: "";
+  }
+
+  &--size {
+    &-default {
+      @apply w-70;
+    }
+    &-large {
+      @apply w-136;
+    }
+    &-cover {
+      width: var(--cover);
+    }
+    &-fit {
+      @apply w-auto;
+    }
+  }
+
+  &--status {
+    &-information {
+      @apply bg-prive-dark-blue-800 border-prive-dark-blue-200;
+      &:before {
+        @apply border-prive-dark-blue-800;
+      }
+      &:after {
+        @apply border-prive-dark-blue-200;
+      }
+    }
+  }
+
+  &.position {
+    &-bottom {
+
+      &-center {
+        &:before {
+          @apply border-l-7 border-b-7 border-r-7 -top-1.5 left-1/2 -translate-x-1/2 transform;
+          border-left-color: transparent;
+          border-top-color: transparent;
+          border-right-color: transparent;
+        }
+        &:after {
+          @apply border-l-7 border-b-7 border-r-7 -top-2 left-1/2 -translate-x-1/2 transform;
+          border-left-color: transparent;
+          border-top-color: transparent;
+          border-right-color: transparent;
+        }
+      }
+
+      &-right {
+        &:before {
+          @apply border-l-7 border-b-7 border-r-7 -top-1.5 right-5;
+          border-left-color: transparent;
+          border-top-color: transparent;
+          border-right-color: transparent;
+        }
+        &:after {
+          @apply border-l-7 border-b-7 border-r-7 -top-2 right-5;
+          border-left-color: transparent;
+          border-top-color: transparent;
+          border-right-color: transparent;
+        }
+      }
+
+      &-left {
+        &:before {
+          @apply border-l-7 border-b-7 border-r-7 -top-1.5 left-5;
+          border-left-color: transparent;
+          border-top-color: transparent;
+          border-right-color: transparent;
+        }
+        &:after {
+          @apply border-l-7 border-b-7 border-r-7 -top-2 left-5;
+          border-left-color: transparent;
+          border-top-color: transparent;
+          border-right-color: transparent;
+        }
+      }
+    }
+
+    &-top {
+
+      &-center {
+        &:before {
+          @apply border-l-7 border-t-7 border-r-7 -bottom-1.5 left-1/2 -translate-x-1/2 transform;
+          border-left-color: transparent;
+          border-bottom-color: transparent;
+          border-right-color: transparent;
+        }
+        &:after {
+          @apply border-l-7 border-t-7 border-r-7 -bottom-2 left-1/2 -translate-x-1/2 transform;
+          border-left-color: transparent;
+          border-bottom-color: transparent;
+          border-right-color: transparent;
+        }
+      }
+
+      &-right {
+        &:before {
+          @apply border-l-7 border-t-7 border-r-7 -bottom-1.5 right-5;
+          border-left-color: transparent;
+          border-bottom-color: transparent;
+          border-right-color: transparent;
+        }
+        &:after {
+          @apply border-l-7 border-t-7 border-r-7 -bottom-2 right-5;
+          border-left-color: transparent;
+          border-bottom-color: transparent;
+          border-right-color: transparent;
+        }
+      }
+
+      &-left {
+        &:before {
+          @apply border-l-7 border-t-7 border-r-7 -bottom-1.5 left-5;
+          border-left-color: transparent;
+          border-bottom-color: transparent;
+          border-right-color: transparent;
+        }
+        &:after {
+          @apply border-l-7 border-t-7 border-r-7 -bottom-2 left-5;
+          border-left-color: transparent;
+          border-bottom-color: transparent;
+          border-right-color: transparent;
+        }
+      }
+    }
+
+    &-left {
+      &:before {
+        @apply border-t-7 border-b-7 border-l-7 -right-1.5;
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+        border-right-color: transparent;
+      }
+      &:after {
+        @apply border-t-7 border-b-7 border-l-7 -right-2;
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+        border-right-color: transparent;
+      }
+    }
+
+    &-right {
+      &:before {
+        @apply border-t-7 border-b-7 border-r-7 -left-1.5;
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+      }
+      &:after {
+        @apply border-t-7 border-b-7 border-r-7 -left-2;
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+      }
+    }
+  }
+
+  &.show {
+    @apply opacity-100 visible;
+  }
+
+}

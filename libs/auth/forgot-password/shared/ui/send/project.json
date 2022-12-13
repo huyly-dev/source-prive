@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/auth/forgot-password/shared/ui/send",
+  "sourceRoot": "libs/auth/forgot-password/shared/ui/send/src",
+  "prefix": "prive-auth-forgot-password-send",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/auth/forgot-password/shared/ui/send/src/test.ts",
+        "tsConfig": "libs/auth/forgot-password/shared/ui/send/tsconfig.spec.json",
+        "karmaConfig": "libs/auth/forgot-password/shared/ui/send/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/auth/forgot-password/shared/ui/send/src/**/*.ts",
+          "libs/auth/forgot-password/shared/ui/send/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

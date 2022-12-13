@@ -1,0 +1,59 @@
+.wrapper-landing-button__primary {
+  @apply h-12 px-6 flex items-center justify-center relative;
+  .border-main {
+    @apply absolute border border-solid border-prive-sand-500 w-full h-full;
+  }
+  span {
+    @apply text-prive-sand-600 z-[1];
+  }
+
+  &:hover {
+    span {
+      @apply text-prive-neutral-white;
+    }
+
+    &:before {
+      @apply left-0 top-0 bg-prive-sand-300;
+    }
+
+    .line {
+      &--top {
+        @apply h-full;
+      }
+
+      &--left {
+        @apply w-full;
+      }
+
+      &--right {
+        @apply w-full;
+      }
+
+      &--bottom {
+        @apply h-full;
+      }
+    }
+  }
+
+  &:before {
+    @apply content-[''] h-full w-full absolute left-1 top-1 bg-prive-sand-100 transition-all ease-out duration-300;
+  }
+
+  .line {
+    &--top {
+      @apply w-px right-0 h-0 top-0 transform bg-prive-neutral-white transition-all ease-out duration-[250] z-[2] translate-x-1/2;
+    }
+
+    &--left {
+      @apply w-0 left-0 h-px bottom-0 transform bg-prive-neutral-white transition-all ease-out duration-[250] z-[2] translate-y-1/2;
+    }
+
+    &--right {
+      @apply w-0 right-0 h-px top-0 transform bg-prive-neutral-white transition-all ease-out duration-[250] z-[2] -translate-y-1/2;
+    }
+
+    &--bottom {
+      @apply w-px h-0 left-0 bottom-0 transform bg-prive-neutral-white transition-all ease-out duration-[250] z-[2] -translate-x-1/2;
+    }
+  }
+}

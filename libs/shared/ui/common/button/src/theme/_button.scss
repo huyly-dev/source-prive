@@ -1,0 +1,856 @@
+@import "libs/shared/resources/assets/src/lib/styles/theme/typography";
+
+.wrapper-common-button {
+  @apply flex items-center justify-center rounded-sm w-max outline-none;
+
+  b {
+    @apply h8-semibold;
+  }
+
+  &--size {
+    &-s {
+      @apply px-2 h-8;
+      &.is-icon {
+        @apply p-0 w-8;
+      }
+
+      &.is-side {
+        @apply gap-2;
+      }
+    }
+
+    &-as {
+      @apply px-1 py-0.5;
+      &.is-icon {
+        @apply p-0.5;
+      }
+
+      &.is-side {
+        @apply gap-1;
+      }
+    }
+
+    &-am {
+      @apply px-2 py-1;
+      &.is-icon {
+        @apply p-1;
+      }
+
+      &.is-side {
+        @apply gap-2;
+      }
+    }
+
+    &-m {
+      @apply px-4 h-10;
+      &.is-icon {
+        @apply p-0 w-10;
+      }
+
+      &.is-side {
+        @apply gap-2;
+      }
+    }
+
+    &-l {
+      @apply px-6 h-12;
+      &.is-icon {
+        @apply p-0 w-12;
+      }
+
+      &.is-side {
+        @apply gap-3;
+      }
+
+      b {
+        @apply h7-semibold;
+      }
+    }
+
+    &-xl {
+      @apply px-6 h-14;
+      &.is-icon {
+        @apply p-0 w-14;
+      }
+
+      &.is-side {
+        @apply gap-3;
+      }
+
+      b {
+        @apply h6-semibold;
+      }
+    }
+  }
+
+  &--status {
+    &-primary {
+      &-blue {
+        @apply bg-prive-blue-500 hover:bg-prive-blue-400 focus-within:bg-prive-blue-500 active:bg-prive-blue-600;
+        b {
+          @apply text-prive-neutral-white;
+        }
+
+        &:focus-visible {
+          box-shadow: 0 0 0 theme("spacing[0.75]") theme("colors[prive-blue].300");
+        }
+
+        &.loading {
+          @apply bg-prive-blue-500 hover:bg-prive-blue-500 focus-within:bg-prive-blue-500 active:bg-prive-blue-500 shadow-none;
+          b {
+            @apply text-prive-blue-100;
+          }
+
+          .wrapper-common-icon {
+            @apply text-prive-blue-100;
+          }
+        }
+
+        &.disabled {
+          @apply bg-prive-neutral-800 hover:bg-prive-neutral-800 focus-within:bg-prive-neutral-800 active:bg-prive-neutral-800 shadow-none;
+          b {
+            @apply text-prive-neutral-600;
+          }
+
+          .wrapper-common-icon {
+            @apply text-prive-neutral-600;
+          }
+        }
+      }
+
+      &-red {
+        @apply bg-prive-red-500 hover:bg-prive-red-400 focus-within:bg-prive-red-500 active:bg-prive-red-600;
+        b {
+          @apply text-prive-neutral-white;
+        }
+
+        &:focus-visible {
+          box-shadow: 0 0 0 theme("spacing[0.75]") theme("colors[prive-red].300");
+        }
+
+        &.loading {
+          @apply bg-prive-red-500 hover:bg-prive-red-500 focus-within:bg-prive-red-500 active:bg-prive-red-500 shadow-none;
+          b {
+            @apply text-prive-red-300;
+          }
+
+          .wrapper-common-icon {
+            @apply text-prive-red-300;
+          }
+        }
+
+        &.disabled {
+          @apply bg-prive-neutral-800 hover:bg-prive-neutral-800 focus-within:bg-prive-neutral-800 active:bg-prive-neutral-800 shadow-none;
+          b {
+            @apply text-prive-neutral-600;
+          }
+
+          .wrapper-common-icon {
+            @apply text-prive-neutral-600;
+          }
+        }
+      }
+
+      &-green {
+        @apply bg-prive-green-500 hover:bg-prive-green-400 focus-within:bg-prive-green-500 active:bg-prive-green-600;
+        b {
+          @apply text-prive-neutral-white;
+        }
+
+        &:focus-visible {
+          box-shadow: 0 0 0 theme("spacing[0.75]") theme("colors[prive-green].300");
+        }
+
+        &.loading {
+          @apply bg-prive-green-500 hover:bg-prive-green-500 focus-within:bg-prive-green-500 active:bg-prive-green-500 shadow-none;
+          b {
+            @apply text-prive-green-100;
+          }
+
+          .wrapper-common-icon {
+            @apply text-prive-green-100;
+          }
+        }
+
+        &.disabled {
+          @apply bg-prive-neutral-800 hover:bg-prive-neutral-800 focus-within:bg-prive-neutral-800 active:bg-prive-neutral-800 shadow-none;
+          b {
+            @apply text-prive-neutral-600;
+          }
+
+          .wrapper-common-icon {
+            @apply text-prive-neutral-600;
+          }
+        }
+      }
+    }
+
+    &-secondary {
+      @apply bg-prive-neutral-800 hover:bg-prive-neutral-700 focus-within:bg-prive-neutral-800 active:bg-prive-neutral-900;
+      b {
+        @apply text-prive-neutral-white;
+      }
+
+      &:focus-visible {
+        box-shadow: 0 0 0 theme("spacing[0.75]") theme("colors[prive-neutral].300");
+      }
+
+      &.loading {
+        @apply bg-prive-neutral-800 hover:bg-prive-neutral-800 focus-within:bg-prive-neutral-800 active:bg-prive-neutral-800 shadow-none;
+        b {
+          @apply text-prive-neutral-300;
+        }
+
+        .wrapper-common-icon {
+          @apply text-prive-neutral-300;
+        }
+      }
+
+      &.disabled {
+        @apply bg-prive-neutral-800 hover:bg-prive-neutral-800 focus-within:bg-prive-neutral-800 active:bg-prive-neutral-800 shadow-none;
+        b {
+          @apply text-prive-neutral-600;
+        }
+
+        .wrapper-common-icon {
+          @apply text-prive-neutral-600;
+        }
+      }
+    }
+
+    &-tertiary {
+      &-blue {
+        @apply bg-prive-blue-0.16 border-none;
+        box-shadow: 0 0 0 theme("spacing[px]") theme("colors[prive-blue][0.3]");
+
+        b {
+          @apply text-prive-blue-400;
+        }
+
+        .wrapper-common-icon {
+          @apply text-prive-blue-400;
+        }
+
+        &:hover {
+          @apply bg-prive-blue-500 border-prive-blue-500 shadow-none;
+          b {
+            @apply text-prive-neutral-white;
+          }
+
+          .wrapper-common-icon {
+            @apply text-prive-neutral-white;
+          }
+        }
+
+        &:focus-visible {
+          @apply bg-prive-blue-0.16 border-transparent;
+          box-shadow: 0 0 0 theme("spacing[0.75]") theme("colors[prive-blue].400");
+
+          b {
+            @apply text-prive-blue-300;
+          }
+
+          .wrapper-common-icon {
+            @apply text-prive-blue-300;
+          }
+        }
+
+        &:active {
+          @apply bg-prive-blue-700 shadow-none;
+          b {
+            @apply text-prive-neutral-white;
+          }
+
+          .wrapper-common-icon {
+            @apply text-prive-neutral-white;
+          }
+        }
+
+        &.loading {
+          @apply bg-prive-blue-0.16 hover:bg-prive-blue-0.16 focus-within:bg-prive-blue-0.16 active:bg-prive-blue-0.16;
+          box-shadow: 0 0 0 theme("spacing[px]") theme("colors[prive-blue][0.3]");
+
+          b {
+            @apply text-prive-blue-500;
+          }
+
+          .wrapper-common-icon {
+            @apply text-prive-blue-500;
+          }
+        }
+
+        &.disabled {
+          @apply bg-prive-neutral-0.16 hover:bg-prive-neutral-0.16 focus-within:bg-prive-neutral-0.16 active:bg-prive-neutral-0.16;
+          box-shadow: 0 0 0 theme("spacing[px]") theme("colors[prive-neutral][0.16]");
+
+          b {
+            @apply text-prive-neutral-600;
+          }
+
+          .wrapper-common-icon {
+            @apply text-prive-neutral-600;
+          }
+        }
+      }
+
+      &-red {
+        @apply bg-prive-red-0.16 border-none;
+        box-shadow: 0 0 0 theme("spacing[px]") theme("colors[prive-red][0.16]");
+
+        b {
+          @apply text-prive-red-500;
+        }
+
+        .wrapper-common-icon {
+          @apply text-prive-red-500;
+        }
+
+        &:hover {
+          @apply bg-prive-red-600 shadow-none;
+          b {
+            @apply text-prive-neutral-white;
+          }
+
+          .wrapper-common-icon {
+            @apply text-prive-red-50;
+          }
+        }
+
+        &:focus-visible {
+          @apply bg-prive-red-0.16;
+          box-shadow: 0 0 0 theme("spacing[0.75]") theme("colors[prive-red].300");
+
+          b {
+            @apply text-prive-red-500;
+          }
+
+          .wrapper-common-icon {
+            @apply text-prive-red-500;
+          }
+        }
+
+        &:active {
+          @apply bg-prive-red-800 shadow-none;
+          b {
+            @apply text-prive-neutral-white;
+          }
+
+          .wrapper-common-icon {
+            @apply text-prive-red-50;
+          }
+        }
+
+        &.loading {
+          @apply bg-prive-red-0.16 hover:bg-prive-red-0.16 focus-within:bg-prive-red-0.16 active:bg-prive-red-0.16;
+          box-shadow: 0 0 0 theme("spacing[px]") theme("colors[prive-red][0.16]");
+
+          b {
+            @apply text-prive-red-500;
+          }
+
+          .wrapper-common-icon {
+            @apply text-prive-red-600;
+          }
+        }
+
+        &.disabled {
+          @apply bg-prive-neutral-0.16 hover:bg-prive-neutral-0.16 focus-within:bg-prive-neutral-0.16 active:bg-prive-neutral-0.16;
+          box-shadow: 0 0 0 theme("spacing[px]") theme("colors[prive-neutral][0.16]");
+
+          b {
+            @apply text-prive-neutral-800;
+          }
+
+          .wrapper-common-icon {
+            @apply text-prive-neutral-800;
+          }
+        }
+      }
+
+      &-gray {
+        @apply bg-prive-neutral-0.16 border-none;
+        box-shadow: 0 0 0 theme("spacing[px]") theme("colors[prive-neutral][0.16]");
+
+        b {
+          @apply text-prive-neutral-400;
+        }
+
+        .wrapper-common-icon {
+          @apply text-prive-neutral-400;
+        }
+
+        &:hover {
+          @apply bg-prive-neutral-600 border-prive-neutral-600 shadow-none;
+          b {
+            @apply text-prive-neutral-50;
+          }
+
+          .wrapper-common-icon {
+            @apply text-prive-neutral-50;
+          }
+        }
+
+        &:focus-visible {
+          @apply bg-prive-neutral-0.16;
+          box-shadow: 0 0 0 theme("spacing[0.75]") theme("colors[prive-neutral].300");
+
+          b {
+            @apply text-prive-neutral-400;
+          }
+
+          .wrapper-common-icon {
+            @apply text-prive-neutral-400;
+          }
+        }
+
+        &:active {
+          @apply bg-prive-neutral-800 border-prive-neutral-800 shadow-none;
+          b {
+            @apply text-prive-neutral-50;
+          }
+
+          .wrapper-common-icon {
+            @apply text-prive-neutral-50;
+          }
+        }
+
+        &.loading {
+          @apply bg-prive-neutral-0.16 hover:bg-prive-neutral-0.16 focus-within:bg-prive-neutral-0.16 active:bg-prive-neutral-0.16;
+          box-shadow: 0 0 0 theme("spacing[px]") theme("colors[prive-neutral][0.16]");
+
+          b {
+            @apply text-prive-red-600;
+          }
+
+          .wrapper-common-icon {
+            @apply text-prive-neutral-600;
+          }
+        }
+
+        &.disabled {
+          @apply bg-prive-neutral-0.16 hover:bg-prive-neutral-0.16 focus-within:bg-prive-neutral-0.16 active:bg-prive-neutral-0.16;
+          box-shadow: 0 0 0 theme("spacing[px]") theme("colors[prive-neutral][0.16]");
+
+          b {
+            @apply text-prive-neutral-800;
+          }
+
+          .wrapper-common-icon {
+            @apply text-prive-neutral-800;
+          }
+        }
+      }
+    }
+
+    &-ghost {
+      &-blue {
+        @apply bg-transparent;
+        b {
+          @apply text-prive-blue-400;
+        }
+
+        .wrapper-common-icon {
+          @apply text-prive-blue-400;
+        }
+
+        &:hover {
+          @apply bg-prive-blue-0.16;
+        }
+
+        &:focus-visible {
+          @apply bg-transparent;
+          box-shadow: 0 0 0 theme("spacing[0.75]") theme("colors[prive-blue].300");
+        }
+
+        &:active {
+          @apply bg-prive-blue-0.16;
+          b {
+            @apply text-prive-blue-500;
+          }
+
+          .wrapper-common-icon {
+            @apply text-prive-blue-500;
+          }
+        }
+
+        &.loading {
+          @apply bg-transparent hover:bg-transparent focus-within:bg-transparent active:bg-transparent shadow-none;
+          b {
+            @apply text-prive-blue-600;
+          }
+
+          .wrapper-common-icon {
+            @apply text-prive-blue-600;
+          }
+        }
+
+        &.disabled {
+          @apply bg-transparent hover:bg-transparent focus-within:bg-transparent shadow-none;
+          b {
+            @apply text-prive-neutral-800;
+          }
+
+          .wrapper-common-icon {
+            @apply text-prive-neutral-800;
+          }
+        }
+      }
+
+      &-red {
+        @apply bg-transparent;
+        b {
+          @apply text-prive-red-500;
+        }
+
+        .wrapper-common-icon {
+          @apply text-prive-red-500;
+        }
+
+        &:hover {
+          @apply bg-prive-red-0.16;
+        }
+
+        &:focus-visible {
+          @apply bg-transparent;
+          box-shadow: 0 0 0 theme("spacing[0.75]") theme("colors[prive-red].300");
+        }
+
+        &:active {
+          @apply bg-prive-red-0.16;
+          b {
+            @apply text-prive-red-600;
+          }
+
+          .wrapper-common-icon {
+            @apply text-prive-red-600;
+          }
+        }
+
+        &.loading {
+          @apply bg-transparent hover:bg-transparent focus-within:bg-transparent active:bg-transparent shadow-none;
+          b {
+            @apply text-prive-red-600;
+          }
+
+          .wrapper-common-icon {
+            @apply text-prive-red-600;
+          }
+        }
+
+        &.disabled {
+          @apply bg-transparent hover:bg-transparent focus-within:bg-transparent active:bg-transparent shadow-none;
+          b {
+            @apply text-prive-neutral-800;
+          }
+
+          .wrapper-common-icon {
+            @apply text-prive-neutral-800;
+          }
+        }
+      }
+
+      &-gray {
+        @apply bg-transparent;
+        b {
+          @apply text-prive-neutral-400;
+        }
+
+        .wrapper-common-icon {
+          @apply text-prive-neutral-400;
+        }
+
+        &:hover {
+          @apply bg-prive-blue-0.16;
+        }
+
+        &:focus-visible {
+          @apply bg-transparent;
+          box-shadow: 0 0 0 theme("spacing[0.75]") theme("colors[prive-neutral].300");
+        }
+
+        &:active {
+          @apply bg-prive-blue-0.16;
+          b {
+            @apply text-prive-blue-600;
+          }
+
+          .wrapper-common-icon {
+            @apply text-prive-blue-600;
+          }
+        }
+
+        &.loading {
+          @apply bg-transparent hover:bg-transparent focus-within:bg-transparent active:bg-transparent shadow-none;
+          b {
+            @apply text-prive-blue-600;
+          }
+
+          .wrapper-common-icon {
+            @apply text-prive-blue-600;
+          }
+        }
+
+        &.disabled {
+          @apply bg-transparent hover:bg-transparent focus-within:bg-transparent active:bg-transparent shadow-none;
+          b {
+            @apply text-prive-neutral-800;
+          }
+
+          .wrapper-common-icon {
+            @apply text-prive-neutral-800;
+          }
+        }
+      }
+    }
+
+    &-action {
+      &-blue {
+        @apply bg-transparent;
+        b {
+          @apply text-prive-blue-400 b4-medium;
+        }
+
+        .wrapper-common-icon {
+          @apply text-prive-blue-400;
+        }
+
+        &:hover {
+          @apply bg-prive-neutral-0.16;
+          b {
+            @apply text-prive-blue-400;
+          }
+
+          .wrapper-common-icon {
+            @apply text-prive-blue-400;
+          }
+        }
+
+        &:focus-visible {
+          @apply bg-prive-neutral-0.16;
+          box-shadow: 0 0 0 theme("spacing[px]") theme("colors[prive-blue].400");
+        }
+
+        &:active {
+          @apply bg-prive-neutral-0.16;
+          b {
+            @apply text-prive-blue-600;
+          }
+
+          .wrapper-common-icon {
+            @apply text-prive-blue-600;
+          }
+        }
+
+        &.loading {
+          @apply bg-prive-neutral-0.16 hover:bg-prive-neutral-0.16 focus-within:bg-prive-neutral-0.16 active:bg-prive-neutral-0.16 shadow-none;
+          b {
+            @apply text-prive-blue-600;
+          }
+        }
+
+        &.disabled {
+          @apply bg-transparent hover:bg-transparent focus-within:bg-transparent shadow-none;
+          b {
+            @apply text-prive-neutral-800;
+          }
+
+          .wrapper-common-icon {
+            @apply text-prive-neutral-800;
+          }
+        }
+      }
+
+      &-red {
+        @apply bg-transparent;
+        b {
+          @apply text-prive-neutral-300 b4-medium;
+        }
+
+        .wrapper-common-icon {
+          @apply text-prive-neutral-300;
+        }
+
+        &:hover {
+          @apply bg-prive-neutral-0.16;
+          b {
+            @apply text-prive-red-500;
+          }
+
+          .wrapper-common-icon {
+            @apply text-prive-red-500;
+          }
+        }
+
+        &:focus-visible {
+          @apply bg-prive-neutral-0.16;
+          box-shadow: 0 0 0 theme("spacing[px]") theme("colors[prive-red].500");
+        }
+
+        &:active {
+          @apply bg-prive-neutral-0.16;
+          b {
+            @apply text-prive-red-700;
+          }
+
+          .wrapper-common-icon {
+            @apply text-prive-red-700;
+          }
+        }
+
+        &.loading {
+          @apply bg-prive-neutral-0.16 hover:bg-prive-neutral-0.16 focus-within:bg-prive-neutral-0.16 active:bg-prive-neutral-0.16 shadow-none;
+          b {
+            @apply text-prive-red-700;
+          }
+
+          .wrapper-common-icon {
+            @apply text-prive-red-700;
+          }
+        }
+
+        &.disabled {
+          @apply bg-transparent hover:bg-transparent focus-within:bg-transparent shadow-none;
+          b {
+            @apply text-prive-neutral-800;
+          }
+
+          .wrapper-common-icon {
+            @apply text-prive-neutral-800;
+          }
+        }
+
+      }
+
+      &-gray {
+        @apply bg-transparent;
+        b {
+          @apply text-prive-neutral-300 b4-medium;
+        }
+
+        .wrapper-common-icon {
+          @apply text-prive-neutral-300;
+        }
+
+        &:hover {
+          @apply bg-prive-neutral-0.16;
+          b {
+            @apply text-prive-blue-400;
+          }
+
+          .wrapper-common-icon {
+            @apply text-prive-blue-400;
+          }
+        }
+
+        &:focus-visible {
+          @apply bg-transparent;
+          box-shadow: 0 0 0 theme("spacing[px]") theme("colors[prive-blue].400");
+
+          b {
+            @apply text-prive-blue-400;
+          }
+
+          .wrapper-common-icon {
+            @apply text-prive-blue-400;
+          }
+        }
+
+        &:active {
+          @apply bg-prive-neutral-0.16;
+
+          b {
+            @apply text-prive-blue-600;
+          }
+
+          .wrapper-common-icon {
+            @apply text-prive-blue-600;
+          }
+        }
+
+        &.loading {
+          @apply bg-prive-neutral-0.16 hover:bg-prive-neutral-0.16 focus-within:bg-prive-neutral-0.16 active:bg-prive-neutral-0.16 shadow-none;
+          b {
+            @apply text-prive-blue-600;
+          }
+
+          .wrapper-common-icon {
+            @apply text-prive-neutral-600;
+          }
+        }
+
+        &.disabled {
+          @apply bg-transparent hover:bg-transparent focus-within:bg-transparent shadow-none;
+          b {
+            @apply text-prive-neutral-800;
+          }
+
+          .wrapper-common-icon {
+            @apply text-prive-neutral-800;
+          }
+        }
+      }
+
+      &-filled {
+        &-white {
+          @apply bg-prive-neutral-0.3;
+          b {
+            @apply text-prive-neutral-white b4-medium;
+          }
+
+          .wrapper-common-icon {
+            @apply text-prive-neutral-white;
+          }
+
+          &:hover {
+            @apply bg-prive-neutral-w0.3;
+            box-shadow: 0 0 0 theme("spacing[px]") theme("colors[prive-neutral].300");
+          }
+
+          &:focus-visible {
+            @apply bg-transparent;
+            box-shadow: 0 0 0 theme("spacing[px]") theme("colors[prive-neutral].300");
+          }
+
+          &:active {
+            @apply bg-prive-neutral-0.16;
+            b {
+              @apply text-prive-blue-600;
+            }
+
+            .wrapper-common-icon {
+              @apply text-prive-blue-600;
+            }
+          }
+
+          &.loading {
+            @apply bg-transparent hover:bg-transparent focus-within:bg-transparent active:bg-transparent shadow-none;
+            b {
+              @apply text-prive-red-700;
+            }
+
+            .wrapper-common-icon {
+              @apply text-prive-red-700;
+            }
+          }
+
+          &.disabled {
+            @apply bg-transparent hover:bg-transparent focus-within:bg-transparent shadow-none;
+            b {
+              @apply text-prive-neutral-800;
+            }
+
+            .wrapper-common-icon {
+              @apply text-prive-neutral-800;
+            }
+          }
+        }
+      }
+
+    }
+  }
+
+  &.full-width {
+    @apply w-full
+  }
+
+}

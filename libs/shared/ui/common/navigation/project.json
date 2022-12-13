@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/shared/ui/common/navigation",
+  "sourceRoot": "libs/shared/ui/common/navigation/src",
+  "prefix": "prive-common-navigation",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/shared/ui/common/navigation/src/test.ts",
+        "tsConfig": "libs/shared/ui/common/navigation/tsconfig.spec.json",
+        "karmaConfig": "libs/shared/ui/common/navigation/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/ui/common/navigation/src/**/*.ts",
+          "libs/shared/ui/common/navigation/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

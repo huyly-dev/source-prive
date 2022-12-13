@@ -1,0 +1,74 @@
+<ng-container *ngrxLet="state$; let state">
+  <table class="{{state.wrapperClass}}">
+    <thead class="{{state.wrapperClass}}__header">
+      <tr class="{{state.wrapperClass}}__header__row">
+        <ng-container *ngFor="let column of state.columns">
+          <th
+            [colSpan]="column.columnSpan || 1"
+            [rowSpan]="column.rowSpan || 1"
+            [style.width]="column.fixedWidth || ''"
+            class="{{state.wrapperClass}}__header__row__column"
+            (click)="headerClick.emit(column)"
+          >
+            <div class="{{state.wrapperClass}}__header__row__column__container">
+              <ng-container *ngIf="childrenKeys[column.key] as columnComponent; else noChildrenTemplate">
+                <ng-container *ngIf="columnComponent.header as headerTemplate; else noChildrenTemplate">
+                  <ng-container
+                    *ngTemplateOutlet="headerTemplate; context: {column: column}"
+                  >
+                  </ng-container>
+                </ng-container>
+              </ng-container>
+              <ng-template #noChildrenTemplate>
+                <span>{{column.title | translate}}</span>
+              </ng-template>
+              <ng-container *ngIf="column.sort as sort">
+                <ng-container *ngIf="(sort.direction | priveCommonTableSortIcon) as sortIcon">
+                  <prive-common-icon
+                    [size]="CommonIconSize.XS"
+                    [package]="CommonIconPackage.Global"
+                    [icon]="sortIcon"
+                    [extraClass]="'cursor-pointer'"
+                    (click)="columnSort(column)"
+                  ></prive-common-icon>
+                </ng-container>
+              </ng-container>
+            </div>
+          </th>
+        </ng-container>
+      </tr>
+    </thead>
+    <tbody class="{{state.wrapperClass}}__body">
+      <ng-container *ngFor="let row of state.rows">
+        <tr class="{{state.wrapperClass}}__body__row">
+          <ng-container *ngFor="let column of state.columns">
+            <td
+              [colSpan]="column.columnSpan || 1"
+              [rowSpan]="column.rowSpan || 1"
+              class="{{state.wrapperClass}}__body__row__column"
+              (click)="bodyClick.emit({data: row, column: column})"
+            >
+              <ng-container *ngIf="childrenKeys[column.key] as columnComponent">
+                <ng-container *ngIf="columnComponent.body as bodyTemplate">
+                  <ng-container
+                    *ngTemplateOutlet="bodyTemplate; context: {row: row, column: column}"
+                  >
+                  </ng-container>
+                </ng-container>
+              </ng-container>
+            </td>
+          </ng-container>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+  <ng-container *ngIf="state.rows.length === 0">
+    <div class="{{state.wrapperClass}}__empty">
+      <div *ngIf="state.emptySvg" class="mb-2" [inlineSVG]="state.emptySvg"></div>
+      <span>{{state.emptyMessage}}</span>
+      <ng-container *ngIf="emptyCustom">
+        <ng-container *ngTemplateOutlet="emptyCustom"></ng-container>
+      </ng-container>
+    </div>
+  </ng-container>
+</ng-container>

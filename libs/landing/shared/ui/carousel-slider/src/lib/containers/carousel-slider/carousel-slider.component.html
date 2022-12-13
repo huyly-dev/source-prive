@@ -1,0 +1,44 @@
+<div class="wrapper-carousel-slider" #container>
+  <ng-container *ngrxLet="vm$; let vm">
+
+    <div class="flex gap-x-4">
+
+      <div class="wrapper-carousel-slider__container"
+           *ngFor="let item of vm.items; let i = index">
+
+        <p class="h4-medium lg:b4-medium text-prive-neutral-500">0{{i + 1}}</p>
+
+        <div class="wrapper-carousel-slider__content"
+             [@expandWidth]="{value: vm.currentActive === i ? 'expandWidth' : 'collapseWidth',
+             params: {imgExpandWidth: vm.imgSize.imgExpandWidth, imgCollapseWidth: vm.imgSize.imgCollapseWidth}}"
+             (mouseenter)="mouseEnter(i)"
+             (mouseleave)="mouseLeave(i)">
+
+          <h3 *ngIf="vm.currentActive === i"
+              @fadeInOut
+              class="l-h3 lg:l-h3-large-carousel text-prive-neutral-50 break-words">
+            {{item.title}}
+          </h3>
+
+          <div class="absolute bottom-0"
+               [class]="item.extraClass">
+            <div class="flex bg-no-repeat bg-cover bg-center relative rounded-[1rem] overflow-hidden"
+                 [style.background-image]="getBgUrl(item.imageSrc)"
+                 [class.carousel--active-item]="vm.currentActive === i"
+                 [@expand]="{value: vm.currentActive === i ? 'expanded' : 'collapsed',
+                 params: {imgCollapseWidth: vm.imgSize.imgCollapseWidth, imgCollapseHeight: vm.imgSize.imgCollapseHeight,
+                 imgExpandWidth: vm.imgSize.imgExpandWidth, imgExpandHeight: vm.imgSize.imgExpandHeight}}">
+          <span [@fadeInOutDescription]="vm.currentActive === i ? 'fadeIn' : 'fadeOut'"
+                class="b1 lg:b3 text-prive-teal-50 z-[1] p-10 lg:p-6"
+                [innerHTML]="item.description">
+          </span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </ng-container>
+</div>

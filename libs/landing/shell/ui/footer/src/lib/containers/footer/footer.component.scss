@@ -1,0 +1,20 @@
+.wrapper-landing-footer {
+  @apply w-screen bg-prive-dark-blue-700;
+  @apply flex flex-col items-center pt-15;
+  @apply sm:pt-10;
+  @apply md:pt-10;
+  &__container {
+    @apply flex flex-col gap-6 relative;
+    @apply xl:w-[75rem] xl:pr-25;
+    @apply lg:w-[59rem] lg:pr-21;
+    @apply md:w-[45rem] md:pr-[5.125rem];
+    @apply sm:w-[20.5rem];
+    &__information {
+      @apply flex justify-between;
+      @apply sm:flex-col sm:justify-start sm:pb-20 sm:gap-6;
+      @apply md:pb-20;
+      @apply lg:pb-6;
+      @apply xl:pb-10;
+    }
+  }
+}

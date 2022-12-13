@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/shared/utils/observable",
+  "sourceRoot": "libs/shared/utils/observable/src",
+  "prefix": "prive",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/shared/utils/observable/src/test.ts",
+        "tsConfig": "libs/shared/utils/observable/tsconfig.spec.json",
+        "karmaConfig": "libs/shared/utils/observable/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/utils/observable/src/**/*.ts",
+          "libs/shared/utils/observable/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

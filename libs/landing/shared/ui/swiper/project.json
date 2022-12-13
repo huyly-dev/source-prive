@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/landing/shared/ui/swiper",
+  "sourceRoot": "libs/landing/shared/ui/swiper/src",
+  "prefix": "prive-landing-swiper",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/landing/shared/ui/swiper/src/test.ts",
+        "tsConfig": "libs/landing/shared/ui/swiper/tsconfig.spec.json",
+        "karmaConfig": "libs/landing/shared/ui/swiper/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/landing/shared/ui/swiper/src/**/*.ts",
+          "libs/landing/shared/ui/swiper/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

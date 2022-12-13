@@ -1,0 +1,16 @@
+.wrapper-landing-footer__copy-right {
+  @apply flex justify-center items-center;
+  @apply w-screen xl:h-18;
+  @apply lg:h-13;
+  @apply md:w-[45rem] md:h-12;
+  @apply sm:w-[20.5rem] sm:h-12;
+  @apply border-t border-prive-dark-blue-400;
+
+  &__container {
+    @apply flex justify-between items-center;
+    @apply xl:w-300;
+    @apply lg:w-[59rem];
+    @apply sm:w-full;
+    @apply md:w-full;
+  }
+}

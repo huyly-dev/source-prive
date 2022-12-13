@@ -1,0 +1,19 @@
+<ng-container *ngrxLet="state$; let state">
+  <div
+    class="wrapper-landing-drawer"
+    [class.show]="state.showDrawer"
+    [class.hide]="!state.showDrawer"
+    (click)="outsideClick($event)"
+  >
+    <div
+      class="wrapper-landing-drawer__content"
+      [class.show]="state.showDrawer"
+      [class.hide]="!state.showDrawer"
+      #content
+    >
+      <prive-landing-drawer-header></prive-landing-drawer-header>
+      <prive-landing-drawer-action></prive-landing-drawer-action>
+      <prive-landing-drawer-contact [sections]="state.sections"></prive-landing-drawer-contact>
+    </div>
+  </div>
+</ng-container>

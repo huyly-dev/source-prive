@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/shared/utils/generator",
+  "sourceRoot": "libs/shared/utils/generator/src",
+  "prefix": "prive",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/shared/utils/generator/src/test.ts",
+        "tsConfig": "libs/shared/utils/generator/tsconfig.spec.json",
+        "karmaConfig": "libs/shared/utils/generator/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/utils/generator/src/**/*.ts",
+          "libs/shared/utils/generator/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

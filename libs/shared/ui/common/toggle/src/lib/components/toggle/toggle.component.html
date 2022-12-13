@@ -1,0 +1,14 @@
+<ng-container *ngrxLet="state$; let state">
+  <button
+    class="{{state.wrapperClass}} {{state.wrapperClass}}--size-{{state.size}} {{state.wrapperClass}}--state-{{state.selected ? 'selected' : 'default'}} {{state.wrapperClass}}--state-{{state.selected ? 'selected' : 'default'}}--size-{{state.size}}"
+    [disabled]="state.loading || state.disabled"
+    [class.disabled]="state.disabled"
+    [class.loading]="state.loading"
+    (click)="toggle()"
+  >
+    <div class="{{state.wrapperClass}}__dot">
+      <prive-common-icon *ngIf="!state.loading" [package]="CommonIconPackage.Global" [icon]="CommonIconGlobal.CheckBold"></prive-common-icon>
+      <prive-common-icon *ngIf="state.loading" [package]="CommonIconPackage.Loading" [icon]="CommonIconLoading.SpinnerGap"></prive-common-icon>
+    </div>
+  </button>
+</ng-container>

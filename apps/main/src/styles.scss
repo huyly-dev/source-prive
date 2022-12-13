@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+@import "libs/shared/resources/assets/src/lib/styles/main";
+@import "~highlight.js/scss/androidstudio";
+@import "~swiper/css";
+@import "~swiper/css/pagination";
+@import "~swiper/css/navigation";
+@import "~swiper/css/effect-coverflow";
+
+::-webkit-scrollbar {
+  @apply bg-transparent w-0;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-prive-neutral-0.3 rounded-lg border-4 border-solid border-transparent hover:bg-prive-neutral-800;
+  background-clip: padding-box;
+}

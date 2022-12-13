@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/landing/shell/ui/drawer",
+  "sourceRoot": "libs/landing/shell/ui/drawer/src",
+  "prefix": "prive-landing-drawer",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/landing/shell/ui/drawer/src/test.ts",
+        "tsConfig": "libs/landing/shell/ui/drawer/tsconfig.spec.json",
+        "karmaConfig": "libs/landing/shell/ui/drawer/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/landing/shell/ui/drawer/src/**/*.ts",
+          "libs/landing/shell/ui/drawer/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

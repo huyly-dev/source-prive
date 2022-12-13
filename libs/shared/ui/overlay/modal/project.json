@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/shared/ui/overlay/modal",
+  "sourceRoot": "libs/shared/ui/overlay/modal/src",
+  "prefix": "prive-overlay-modal",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/shared/ui/overlay/modal/src/test.ts",
+        "tsConfig": "libs/shared/ui/overlay/modal/tsconfig.spec.json",
+        "karmaConfig": "libs/shared/ui/overlay/modal/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/ui/overlay/modal/src/**/*.ts",
+          "libs/shared/ui/overlay/modal/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

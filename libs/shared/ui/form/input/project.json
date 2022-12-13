@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/shared/ui/form/input",
+  "sourceRoot": "libs/shared/ui/form/input/src",
+  "prefix": "prive-form-input",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/shared/ui/form/input/src/test.ts",
+        "tsConfig": "libs/shared/ui/form/input/tsconfig.spec.json",
+        "karmaConfig": "libs/shared/ui/form/input/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/ui/form/input/src/**/*.ts",
+          "libs/shared/ui/form/input/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/shared/ui/overlay/alert",
+  "sourceRoot": "libs/shared/ui/overlay/alert/src",
+  "prefix": "prive-overlay-alert",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/shared/ui/overlay/alert/src/test.ts",
+        "tsConfig": "libs/shared/ui/overlay/alert/tsconfig.spec.json",
+        "karmaConfig": "libs/shared/ui/overlay/alert/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/ui/overlay/alert/src/**/*.ts",
+          "libs/shared/ui/overlay/alert/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,35 @@
+<ng-container *ngrxLet="state$; let state">
+  <div class="wrapper-landing-header"
+       [class.leave-top]="state.leaveTop"
+       [class.close-top]="state.closeTop">
+    <div class="wrapper-landing-header__container">
+      <prive-common-icon
+        [size]="CommonIconSize.CUSTOM"
+        [package]="CommonIconPackage.Logo"
+        [icon]="CommonIconLogo.Light"
+        extraClass="cursor-pointer xl:h-6 lg:h-4 sm:h-4 md:h-4"
+      ></prive-common-icon>
+      <div class="wrapper-landing-header__container__actions">
+        <prive-landing-button-tertiary [icon]="undefined"
+                                       (click)="scrollToLandingForm()"
+                                       [content]="'LIBS.LANDING.SHELL.UI.HEADER.BUTTONS.CONTACT' | translate">
+        </prive-landing-button-tertiary>
+        <prive-common-button
+          [status]="CommonButtonStatus.GhostGray"
+          [size]="CommonButtonSize.M"
+          [content]="'LIBS.LANDING.SHELL.UI.HEADER.BUTTONS.LOGIN' | translate"
+          (click)="login()"
+        ></prive-common-button>
+      </div>
+      <prive-common-icon
+              [size]="CommonIconSize.S"
+              [package]="CommonIconPackage.Navigation"
+              [icon]="CommonIconNavigation.Menu"
+              class="hidden sm:flex md:flex"
+              extraClass="cursor-pointer text-prive-neutral-400"
+              (click)="showDrawer()"
+      ></prive-common-icon>
+    </div>
+  </div>
+
+</ng-container>

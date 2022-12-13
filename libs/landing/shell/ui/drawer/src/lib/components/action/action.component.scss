@@ -1,0 +1,9 @@
+.wrapper-landing-drawer__action {
+  @apply w-full;
+  @apply flex flex-col gap-4;
+  .wrapper-common-button {
+    b {
+      @apply text-prive-sand-300;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/landing/home/shell/ui/experience",
+  "sourceRoot": "libs/landing/home/shell/ui/experience/src",
+  "prefix": "prive-landing-home-experience",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/landing/home/shell/ui/experience/src/test.ts",
+        "tsConfig": "libs/landing/home/shell/ui/experience/tsconfig.spec.json",
+        "karmaConfig": "libs/landing/home/shell/ui/experience/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/landing/home/shell/ui/experience/src/**/*.ts",
+          "libs/landing/home/shell/ui/experience/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

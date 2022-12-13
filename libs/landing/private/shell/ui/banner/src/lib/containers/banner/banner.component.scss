@@ -1,0 +1,29 @@
+.wrapper-landing-private-banner {
+  @apply h-[50.75rem] flex justify-center relative;
+  @apply sm:h-[37.25rem];
+  @apply md:h-[31.875rem];
+  @apply lg:h-[48rem];
+
+  &__img {
+    @apply w-full h-full absolute;
+
+    img {
+      @apply w-full h-full object-cover object-center;
+    }
+  }
+
+  &__content {
+    @apply max-w-[75rem] flex flex-col items-center gap-y-10 mt-70 text-prive-neutral-50 z-[1];
+    @apply sm:max-w-[20.5rem] sm:mt-[7.5rem] sm:gap-y-6;
+    @apply md:max-w-[33.5rem] md:mt-[8.75rem] md:gap-y-6;
+    @apply lg:max-w-[50.375rem] lg:mt-[16rem] lg:gap-y-8;
+  }
+
+
+  &__description {
+    @apply flex flex-col items-center gap-y-[2.5rem];
+    @apply sm:px-0 sm:gap-y-6;
+    @apply md:gap-y-8;
+    @apply lg:px-[5.6875rem] lg:gap-y-8;
+  }
+}

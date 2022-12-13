@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/shared/ui/overlay/tooltip",
+  "sourceRoot": "libs/shared/ui/overlay/tooltip/src",
+  "prefix": "prive-overlay-tooltip",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/shared/ui/overlay/tooltip/src/test.ts",
+        "tsConfig": "libs/shared/ui/overlay/tooltip/tsconfig.spec.json",
+        "karmaConfig": "libs/shared/ui/overlay/tooltip/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/ui/overlay/tooltip/src/**/*.ts",
+          "libs/shared/ui/overlay/tooltip/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

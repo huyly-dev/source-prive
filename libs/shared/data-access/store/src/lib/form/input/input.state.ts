@@ -1,0 +1,42 @@
+import { FormInputSizeModel, FormInputStatusModel, FormInputTypeModel, FormInputDirectionModel } from '@data-access-form';
+
+export interface FormInputState {
+  canShowError: boolean;
+  canShowErrorMessage: boolean;
+  canShowSuccess: boolean;
+  canShowSuccessMessage: boolean;
+  canShowWarning: boolean;
+  successMessage: string;
+  warningMessage: string;
+  errorMessage: string;
+  canShowWarningMessage: boolean;
+  existWhite: boolean;
+  label: string;
+  size: FormInputSizeModel;
+  status: FormInputStatusModel;
+  direction: FormInputDirectionModel;
+  className: string;
+  canResize: boolean;
+  inputExisted: boolean;
+  length: number;
+  maxlength: number | string;
+  minlength: number | string;
+  timeSleep: number;
+  id: string;
+  name: string;
+  placeholder: string;
+  nodeName: 'input' | 'textarea' | string;
+  required: boolean;
+  value: string | number | undefined;
+  focused: boolean;
+  valid: boolean;
+  hardValid: boolean;
+  touched: boolean;
+  dirty: boolean;
+  disabled: boolean;
+  readonly: boolean;
+  inputType: FormInputTypeModel | string;
+  customClass: string;
+  wrapperClass: string;
+  wrapperLocale: string;
+}

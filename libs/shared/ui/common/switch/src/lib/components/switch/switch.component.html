@@ -1,0 +1,19 @@
+<ng-container *ngrxLet="state$; let state">
+  <div class="{{state.wrapperClass}}">
+    <ng-container *ngFor="let option of state.options; let i = index">
+      <button
+        class="{{state.wrapperClass}}__item"
+        [class.selected]="option.key === state.selected && !option.disabled"
+        [class.disabled]="option.disabled"
+        (click)="selectItem(option)"
+      >
+        <b>{{option.label}}</b>
+      </button>
+      <div
+        *ngIf="i !== state.options.length - 1"
+        class="{{state.wrapperClass}}__separator"
+        [class.show]="option.key !== state.selected && state.options[i + 1] && state.options[i + 1].key !== state.selected"
+      ></div>
+    </ng-container>
+  </div>
+</ng-container>

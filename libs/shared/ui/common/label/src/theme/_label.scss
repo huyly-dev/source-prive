@@ -1,0 +1,394 @@
+@import "libs/shared/resources/assets/src/lib/styles/theme/typography";
+
+.wrapper-common-label {
+  &__lozenges {
+    @apply flex items-center rounded w-max gap-0.5;
+
+    &--style {
+      &-transparent {
+        &--status {
+          &-neutral {
+            @apply bg-prive-neutral-0.3;
+            b {
+              @apply text-prive-neutral-white;
+            }
+
+            .wrapper-common-icon {
+              @apply text-prive-neutral-white;
+            }
+          }
+
+          &-success {
+            @apply bg-prive-green-0.3;
+            b {
+              @apply text-prive-green-400;
+            }
+
+            .wrapper-common-icon {
+              @apply text-prive-green-400;
+            }
+          }
+
+          &-in-progress {
+            @apply bg-prive-blue-0.3;
+            b {
+              @apply text-prive-blue-100;
+            }
+
+            .wrapper-common-icon {
+              @apply text-prive-blue-100;
+            }
+          }
+
+          &-warning {
+            @apply bg-prive-yellow-0.3;
+            b {
+              @apply text-prive-yellow-500;
+            }
+
+            .wrapper-common-icon {
+              @apply text-prive-yellow-500;
+            }
+          }
+
+          &-error {
+            @apply bg-prive-red-0.3;
+            b {
+              @apply text-prive-red-400;
+            }
+
+            .wrapper-common-icon {
+              @apply text-prive-red-400;
+            }
+          }
+
+          &-note {
+            @apply bg-prive-purple-0.3;
+            b {
+              @apply text-prive-purple-100;
+            }
+
+            .wrapper-common-icon {
+              @apply text-prive-purple-100;
+            }
+          }
+        }
+
+        &--size {
+          &-xs {
+            @apply py-0 px-1;
+            b {
+              @apply b5;
+            }
+          }
+
+          &-s {
+            &-medium {
+              @apply py-px px-1.5;
+              b {
+                @apply b5-medium;
+              }
+            }
+          }
+
+          &-m {
+            @apply py-0 px-1;
+            b {
+              @apply h10-semibold uppercase;
+            }
+          }
+
+          &-l {
+            @apply py-px px-1.5;
+            b {
+              @apply b4;
+            }
+          }
+
+          &-xl {
+            &-medium {
+              @apply py-px px-1.5;
+              b {
+                @apply b3-medium;
+              }
+            }
+          }
+        }
+      }
+
+      &-solid {
+        &--status {
+          &-neutral {
+            @apply bg-prive-neutral-200;
+            b {
+              @apply text-prive-neutral-800;
+            }
+
+            .wrapper-common-icon {
+              @apply text-prive-neutral-800;
+            }
+          }
+
+          &-success {
+            @apply bg-prive-green-700;
+            b {
+              @apply text-prive-green-50;
+            }
+
+            .wrapper-common-icon {
+              @apply text-prive-green-50;
+            }
+          }
+
+          &-in-progress {
+            @apply bg-prive-blue-700;
+            b {
+              @apply text-prive-blue-50;
+            }
+
+            .wrapper-common-icon {
+              @apply text-prive-blue-50;
+            }
+          }
+
+          &-warning {
+            @apply bg-prive-yellow-500;
+            b {
+              @apply text-prive-neutral-800;
+            }
+
+            .wrapper-common-icon {
+              @apply text-prive-neutral-800;
+            }
+          }
+
+          &-error {
+            @apply bg-prive-red-800;
+            b {
+              @apply text-prive-red-50;
+            }
+
+            .wrapper-common-icon {
+              @apply text-prive-red-50;
+            }
+          }
+
+          &-note {
+            @apply bg-prive-purple-800;
+            b {
+              @apply text-prive-purple-50;
+            }
+
+            .wrapper-common-icon {
+              @apply text-prive-purple-50;
+            }
+          }
+        }
+
+        &--size {
+          &-s {
+            &-regular {
+              @apply py-0 px-1.5;
+              b {
+                @apply b5;
+              }
+            }
+
+            &-medium {
+              @apply py-px px-1.5;
+              b {
+                @apply b5-medium;
+              }
+            }
+          }
+
+          &-m {
+            @apply py-px px-1.5;
+            b {
+              @apply h10-semibold uppercase;
+            }
+          }
+
+          &-l {
+            @apply py-px px-1.5;
+            b {
+              @apply b4;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__tag {
+    @apply flex gap-2 h-8 items-center bg-prive-dark-blue-500 outline-none;
+
+    b {
+      @apply b3-medium;
+    }
+
+    span {
+      @apply w-4 h-4 flex items-center justify-center rounded-full;
+    }
+
+    &--state {
+      &-removable {
+        @apply px-2.5;
+      }
+
+      &-non {
+        @apply px-3;
+      }
+    }
+
+    &--shape {
+      &-oval {
+        @apply rounded-full;
+      }
+
+      &-square {
+        @apply rounded;
+      }
+    }
+
+    &.active {
+      b {
+        @apply text-prive-neutral-50;
+      }
+
+      .wrapper-common-icon {
+        @apply text-prive-neutral-400;
+      }
+
+      span {
+        @apply bg-prive-dark-blue-200;
+        .wrapper-common-icon {
+          @apply text-prive-neutral-white;
+        }
+      }
+
+      &:hover {
+        b {
+          @apply text-prive-blue-300;
+        }
+
+        .wrapper-common-icon {
+          @apply text-prive-blue-300;
+        }
+
+        span {
+          @apply bg-prive-blue-300;
+          .wrapper-common-icon {
+            @apply text-prive-dark-blue-500;
+          }
+        }
+      }
+
+      &:focus-visible {
+        box-shadow: 0 0 0 theme("spacing[px]") theme("colors[prive-blue].500");
+
+        b {
+          @apply text-prive-blue-500;
+        }
+
+        .wrapper-common-icon {
+          @apply text-prive-blue-500;
+        }
+
+        span {
+          @apply bg-prive-blue-500;
+          .wrapper-common-icon {
+            @apply text-prive-dark-blue-500;
+          }
+        }
+      }
+
+      &:active {
+        b {
+          @apply text-prive-blue-500;
+        }
+
+        .wrapper-common-icon {
+          @apply text-prive-blue-500;
+        }
+
+        span {
+          @apply bg-prive-blue-500;
+          .wrapper-common-icon {
+            @apply text-prive-dark-blue-500;
+          }
+        }
+      }
+    }
+
+    &.disabled {
+      b {
+        @apply text-prive-neutral-600;
+      }
+
+      .wrapper-common-icon {
+        @apply text-prive-neutral-600;
+      }
+
+      span {
+        @apply bg-prive-dark-blue-200;
+        .wrapper-common-icon {
+          @apply text-prive-neutral-600;
+        }
+      }
+    }
+  }
+
+  &__badge {
+    &--label {
+      @apply h-4 px-1.5 rounded-full items-center justify-center flex;
+      box-shadow: 0 0 0 theme("spacing[0.5]") theme("colors[prive-dark-blue].800");
+
+      b {
+        @apply b5-medium;
+      }
+
+      &--status {
+        &-default {
+          @apply bg-prive-neutral-800;
+          b {
+            @apply text-prive-neutral-white;
+          }
+        }
+
+        &-neutral {
+          @apply bg-prive-blue-400;
+          b {
+            @apply text-prive-neutral-white;
+          }
+        }
+
+        &-important {
+          @apply bg-prive-red-700;
+          b {
+            @apply text-prive-neutral-white;
+          }
+        }
+
+        &-added {
+          @apply bg-prive-green-900;
+          b {
+            @apply text-prive-green-300;
+          }
+        }
+
+        &-removed {
+          @apply bg-prive-red-900;
+          b {
+            @apply text-prive-red-300;
+          }
+        }
+      }
+    }
+
+    &--dot {
+      @apply w-2 h-2 rounded-full bg-prive-red-700;
+      box-shadow: 0 0 0 theme("spacing[0.5]") theme("colors[prive-dark-blue].800");
+    }
+  }
+}

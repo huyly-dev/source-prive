@@ -1,0 +1,160 @@
+@import "libs/shared/resources/assets/src/lib/styles/theme/typography";
+
+.wrapper-common-link {
+  @apply flex items-center justify-between gap-2 w-max no-underline border-transparent relative cursor-pointer outline-none;
+  &__underline {
+    @apply w-0 h-px absolute left-0 bottom-px bg-prive-blue-400;
+    transition: width .3s ease-in-out;
+  }
+
+  &--status {
+    &-standalone {
+      b {
+        @apply text-prive-blue-400;
+      }
+
+      .wrapper-common-icon {
+        @apply text-prive-blue-400;
+      }
+
+      &:hover {
+        .wrapper-common-link__underline {
+          @apply w-full;
+        }
+      }
+
+      &:active {
+        b {
+          @apply text-prive-blue-300;
+        }
+
+        .wrapper-common-link__underline {
+          @apply w-full;
+        }
+
+        .wrapper-common-icon {
+          @apply text-prive-blue-300;
+        }
+      }
+
+      &:visited {
+        b {
+          @apply text-prive-purple-400;
+        }
+
+        .wrapper-common-link__underline {
+          @apply w-full bg-prive-purple-400;
+        }
+
+        .wrapper-common-icon {
+          @apply text-prive-purple-400;
+        }
+      }
+
+      &.disabled {
+        @apply cursor-default;
+        b {
+          @apply text-prive-neutral-400;
+        }
+
+        .wrapper-common-icon {
+          @apply text-prive-neutral-400;
+        }
+      }
+
+      &--size {
+        &-xs {
+
+          b {
+            @apply h9-semibold;
+          }
+        }
+
+        &-s {
+          b {
+            @apply h8-semibold;
+          }
+        }
+
+        &-m {
+          b {
+            @apply h7-semibold;
+          }
+        }
+
+        &-l {
+          b {
+            @apply h7-semibold;
+          }
+        }
+      }
+    }
+
+    &-inline {
+      b {
+        @apply text-prive-blue-400 font-normal;
+      }
+
+      .wrapper-common-icon {
+        @apply text-prive-blue-400;
+      }
+
+      &:hover {
+        .wrapper-common-link--underline {
+          @apply block;
+        }
+      }
+
+      &:active {
+        b {
+          @apply text-prive-blue-300;
+        }
+
+        .wrapper-common-link--underline {
+          @apply block;
+        }
+      }
+
+      &:visited {
+        b {
+          @apply text-prive-purple-400;
+        }
+      }
+
+      &.disabled {
+        @apply cursor-default;
+        b {
+          @apply text-prive-neutral-400;
+        }
+      }
+
+      &--size {
+        &-xs {
+
+          b {
+            @apply b4;
+          }
+        }
+
+        &-s {
+          b {
+            @apply b3;
+          }
+        }
+
+        &-m {
+          b {
+            @apply b2;
+          }
+        }
+
+        &-l {
+          b {
+            @apply b1;
+          }
+        }
+      }
+    }
+  }
+}
+

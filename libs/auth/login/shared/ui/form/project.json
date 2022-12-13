@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/auth/login/shared/ui/form",
+  "sourceRoot": "libs/auth/login/shared/ui/form/src",
+  "prefix": "prive-auth-login-form",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/auth/login/shared/ui/form/src/test.ts",
+        "tsConfig": "libs/auth/login/shared/ui/form/tsconfig.spec.json",
+        "karmaConfig": "libs/auth/login/shared/ui/form/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/auth/login/shared/ui/form/src/**/*.ts",
+          "libs/auth/login/shared/ui/form/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

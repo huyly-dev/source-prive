@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/documentation/form/calendar/shell/main",
+  "sourceRoot": "libs/documentation/form/calendar/shell/main/src",
+  "prefix": "prive-documentation-form-calendar",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/documentation/form/calendar/shell/main/src/test.ts",
+        "tsConfig": "libs/documentation/form/calendar/shell/main/tsconfig.spec.json",
+        "karmaConfig": "libs/documentation/form/calendar/shell/main/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/documentation/form/calendar/shell/main/src/**/*.ts",
+          "libs/documentation/form/calendar/shell/main/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

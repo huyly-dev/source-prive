@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/landing/shared/ui/beach",
+  "sourceRoot": "libs/landing/shared/ui/beach/src",
+  "prefix": "prive-landing-beach",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/landing/shared/ui/beach/src/test.ts",
+        "tsConfig": "libs/landing/shared/ui/beach/tsconfig.spec.json",
+        "karmaConfig": "libs/landing/shared/ui/beach/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/landing/shared/ui/beach/src/**/*.ts",
+          "libs/landing/shared/ui/beach/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

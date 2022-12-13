@@ -1,0 +1,274 @@
+@import "libs/shared/resources/assets/src/lib/styles/theme/typography";
+
+.wrapper-form-input {
+  @apply w-full flex;
+
+  &--direction {
+    &-row {
+      @apply flex-row gap-2 items-center;
+    }
+
+    &-column {
+      @apply flex-col gap-2;
+
+      .wrapper-form-input__container {
+        @apply min-w-full;
+      }
+    }
+  }
+
+  &__label {
+    @apply flex gap-1;
+    b {
+      @apply h9-semibold text-prive-neutral-400 w-max;
+      &.white {
+        @apply text-prive-neutral-200;
+      }
+    }
+
+    &__required {
+      @apply h-full flex;
+      b {
+        @apply text-prive-red-600;
+        &.white {
+          @apply text-prive-neutral-200;
+        }
+      }
+    }
+  }
+
+  &__container {
+    @apply rounded-sm flex;
+    width: inherit;
+
+    .input-outline {
+      @apply flex items-center justify-between w-full max-w-full rounded-sm border border-solid;
+      box-shadow: inset 0 1px 2px rgba(27, 31, 35, 0.075);
+
+      input, textarea {
+        @apply outline-none bg-transparent text-prive-neutral-50 b4 w-full border-transparent border-0 resize-none p-0 m-0;
+        box-shadow: none !important;
+
+        &::placeholder {
+          @apply text-prive-neutral-400;
+        }
+
+        &::-ms-input-placeholder {
+          @apply text-prive-neutral-400;
+        }
+
+        &::after, &::after {
+          @apply outline-none border-none;
+        }
+      }
+
+      .wrapper-common-icon {
+        @apply text-prive-neutral-400;
+      }
+
+      &.node {
+        &-textarea {
+          @apply w-full px-2 pt-2 pb-7.5 relative;
+          textarea {
+            @apply b3 h-21.5;
+          }
+
+          .count-letter {
+            @apply absolute bottom-1 left-2 select-none;
+            b {
+              @apply b4 text-prive-neutral-800;
+            }
+          }
+
+          .drag-resize {
+            @apply absolute bottom-1 right-1;
+            cursor: row-resize;
+          }
+
+          &:focus-within {
+            .count-letter {
+              b {
+                @apply b4 text-prive-neutral-400;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &--size {
+      &-xs {
+        .input-outline {
+          @apply gap-1 p-1;
+          input {
+            @apply b4;
+          }
+
+          .wrapper-common-icon {
+            @apply w-4 h-4
+          }
+        }
+      }
+
+      &-s {
+        .input-outline {
+          @apply gap-1 p-1.5;
+          input {
+            @apply b4;
+          }
+
+          .wrapper-common-icon {
+            @apply w-4 h-4
+          }
+        }
+      }
+
+      &-m {
+        .input-outline {
+          @apply gap-2 p-1.75;
+          input {
+            @apply b3;
+          }
+
+          .wrapper-common-icon {
+            @apply w-6 h-6
+          }
+        }
+      }
+
+      &-l {
+        .input-outline {
+          @apply gap-2 p-2.75;
+          input {
+            @apply b3;
+          }
+
+          .wrapper-common-icon {
+            @apply w-6 h-6
+          }
+        }
+      }
+
+      &-xl {
+        .input-outline {
+          @apply gap-3 p-2.75;
+          input {
+            @apply b3;
+          }
+
+          .wrapper-common-icon {
+            @apply w-8 h-8
+          }
+        }
+      }
+    }
+
+    &--status {
+      &-white {
+        box-shadow: inset 0px 1px 2px rgba(27, 31, 35, 0.075);
+
+        .input-outline {
+          @apply bg-transparent border-prive-dark-blue-200 hover:border-prive-blue-200 focus-within:border-prive-blue-200;
+        }
+      }
+
+      &-neutral {
+        &:focus-within {
+          box-shadow: 0 0 0 theme("spacing[0.5]") theme("colors[prive-blue].900");
+        }
+
+        .input-outline {
+          @apply bg-prive-dark-blue-700 border-prive-dark-blue-200 hover:bg-prive-dark-blue-600 hover:border-prive-blue-400 focus-within:bg-prive-dark-blue-700 focus-within:border-prive-blue-400;
+        }
+      }
+
+      &-warning {
+        &:focus-within {
+          box-shadow: 0 0 0 theme("spacing[0.5]") theme("colors[prive-yellow].900");
+        }
+
+        .input-outline {
+          @apply bg-prive-yellow-0.3 border-prive-yellow-500 hover:bg-prive-yellow-0.3 hover:border-prive-yellow-500 focus-within:bg-prive-dark-blue-700 focus-within:border-prive-yellow-500;
+        }
+      }
+
+      &-error {
+        &:focus-within {
+          box-shadow: 0 0 0 theme("spacing[0.5]") theme("colors[prive-red].900");
+        }
+
+        .input-outline {
+          @apply bg-prive-red-0.3 border-prive-red-500 hover:bg-prive-red-0.3 hover:border-prive-red-500 focus-within:bg-prive-dark-blue-700 focus-within:border-prive-red-500;
+        }
+      }
+
+      &-success {
+        &:focus-within {
+          box-shadow: 0 0 0 theme("spacing[0.5]") theme("colors[prive-green].900");
+        }
+
+        .input-outline {
+          @apply bg-prive-green-0.3 border-prive-green-500 hover:bg-prive-green-0.3 hover:border-prive-green-500 focus-within:bg-prive-dark-blue-700 focus-within:border-prive-green-500;
+        }
+      }
+    }
+
+    &.disabled {
+      .input-outline {
+        @apply bg-prive-dark-blue-700 border-prive-neutral-700 hover:bg-prive-dark-blue-700 hover:border-prive-neutral-700 focus-within:bg-prive-dark-blue-700 focus-within:border-prive-neutral-700;
+        input, textarea {
+          @apply text-prive-neutral-500;
+        }
+
+        &.node {
+          &-textarea {
+            .count-letter {
+              b {
+                @apply b4 text-prive-neutral-800;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__message {
+    @apply mt-1 flex gap-1 items-center h-4.5;
+    b {
+      @apply b3;
+    }
+
+    &--status {
+      &-warning {
+        b {
+          @apply text-prive-yellow-400;
+        }
+
+        .wrapper-common-icon {
+          @apply text-prive-yellow-400;
+        }
+      }
+
+      &-error {
+        b {
+          @apply text-prive-red-500;
+        }
+
+        .wrapper-common-icon {
+          @apply text-prive-red-500;
+        }
+      }
+
+      &-success {
+        b {
+          @apply text-prive-green-400;
+        }
+
+        .wrapper-common-icon {
+          @apply text-prive-green-400;
+        }
+      }
+    }
+  }
+}

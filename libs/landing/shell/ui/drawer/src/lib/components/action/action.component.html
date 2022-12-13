@@ -1,0 +1,10 @@
+<div class="wrapper-landing-drawer__action">
+  <prive-landing-button-tertiary [fullWidth]="true" [icon]="undefined" (click)="scrollToLandingForm()" [content]="'LIBS.LANDING.SHELL.UI.HEADER.BUTTONS.CONTACT' | translate"></prive-landing-button-tertiary>
+  <prive-common-button
+    [content]="'LIBS.LANDING.HOME.SHARED.UI.DRAWER.BUTTONS.LOGIN' | translate"
+    [size]="CommonButtonSize.M"
+    [status]="CommonButtonStatus.TertiaryGray"
+    [fullWidth]="true"
+    (click)="login()"
+  ></prive-common-button>
+</div>

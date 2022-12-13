@@ -1,0 +1,10 @@
+<ng-container *ngrxLet="state$; let state">
+  <div class="{{state.wrapperClass}} {{state.wrapperClass}}--direction-{{state.direction}}">
+    <ng-container *ngFor="let option of state.options; let i = index">
+      <div class="{{state.wrapperClass}}__item" (click)="selectOption(option)">
+        <button class="{{state.wrapperClass}}__item__button {{state.wrapperClass}}__item__button--state-{{option.key === state.selected ? 'checked' : 'un-check'}}" [disabled]="option.disabled" [class.disabled]="option.disabled"></button>
+        <b class="{{state.wrapperClass}}--item__label">{{option.label}}</b>
+      </div>
+    </ng-container>
+  </div>
+</ng-container>

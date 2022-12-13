@@ -1,0 +1,86 @@
+.wrapper-landing-form__contact {
+  @apply flex justify-center items-center;
+  @apply xl:w-[38.625rem] xl:h-[47.75rem] xl:px-15 xl:py-10;
+  @apply lg:w-[32.5rem] lg:h-[47.75rem] lg:px-10 lg:py-10;
+  @apply md:w-screen md:h-auto md:py-10;
+  @apply sm:w-screen sm:h-[48.25rem];
+  background: linear-gradient(150.88deg, #2B3F88 0%, #243D7B 44.53%, #1B2857 100%);
+
+  &__container {
+    @apply flex flex-col relative;
+    @apply w-full;
+    @apply sm:w-[20.5rem];
+    @apply md:w-[33.5rem];
+
+    &__header {
+      @apply w-full flex flex-col gap-2;
+    }
+
+    &__body {
+      @apply flex flex-col gap-6;
+      @apply xl:mb-6 xl:mt-12;
+      @apply lg:mt-14.5 lg:mb-6;
+      @apply sm:mt-6 sm:mb-8;
+      @apply md:mt-6 md:mb-8;
+    }
+
+    &__footer {
+      @apply flex flex-col;
+      @apply xl:gap-4;
+      @apply lg:gap-4;
+      @apply md:gap-3;
+      @apply sm:gap-3;
+    }
+
+    h2 {
+      &.linear {
+        @apply bg-s1;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+  }
+
+  .wrapper-form-check-box__button {
+    &--state {
+      &-checked {
+        @apply bg-transparent hover:bg-transparent border-prive-neutral-white;
+      }
+
+      &-un-check {
+        @apply bg-transparent hover:bg-transparent border-prive-neutral-white;
+      }
+    }
+  }
+
+  &__countdown {
+    @apply w-12 h-12 relative rounded-full bg-transparent;
+    span {
+      @apply absolute bg-transparent w-full h-full border-8 border-solid border-t-prive-blue-400 border-l-transparent border-r-transparent border-b-transparent rounded-full;
+      animation: rota 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    }
+
+    span:nth-child(1) {
+      animation-delay: -0.45s;
+    }
+
+    span:nth-child(2) {
+      animation-delay: -0.3s;
+    }
+
+    span:nth-child(3) {
+      animation-delay: -0.15s;
+    }
+  }
+}
+
+
+@keyframes rota {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

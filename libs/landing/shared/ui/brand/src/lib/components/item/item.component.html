@@ -1,0 +1,13 @@
+<div
+  class="wrapper-landing-brand__item"
+  [class.active]="brand.active"
+>
+  <div
+    [setSVGAttributes]="{class: brand.extraClass}"
+    [inlineSVG]="brand.src + '/default.svg'"
+  ></div>
+  <span class="left-top"></span>
+  <span class="left-bottom"></span>
+  <span class="right-top"></span>
+  <span class="right-bottom"></span>
+</div>

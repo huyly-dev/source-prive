@@ -1,0 +1,50 @@
+<div class="wrapper-landing-private-wealth">
+  <div class="wrapper-landing-private-wealth__img">
+    <img src="prive-assets/images/landing/landing-private-wealth.jpg"
+         alt="Private wealth management for digital assets"
+         height="732"
+         width="1440"
+         class="h-full w-full object-cover object-center sm:object-right">
+  </div>
+
+  <div class="wrapper-landing-private-wealth__content">
+
+    <p class="l-h2 sm:l-h2-small md:l-h2-small lg:l-h2-large">
+      Private wealth management for digital assets
+    </p>
+
+    <div class="wrapper-landing-private-wealth__text-container">
+
+      <div class="wrapper-landing-private-wealth__types-digital">
+        <p class="l-h3 sm:l-h3-small md:l-h3-small lg:l-h3-large">
+          Types of digital asset management platforms include (but not limited
+          to):
+        </p>
+
+        <div class="flex flex-col gap-y-4 xl:gap-y-6">
+
+          <div class="wrapper-landing-private-wealth__type"
+               *ngFor="let type of digitalTypes">
+            <prive-common-icon [size]="IconSize.M"
+                               [icon]="IconCheck.CheckCircleOutline"
+                               [package]="IconPackage.Check"
+                               [extraClass]="'text-prive-neutral-300'">
+            </prive-common-icon>
+            <p class="b3 xl:b1" [innerHTML]="type"></p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="wrapper-landing-private-wealth__descriptions">
+        <p class="b3 xl:b1"
+           *ngFor="let description of descriptions">
+          {{description}}
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

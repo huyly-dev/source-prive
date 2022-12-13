@@ -1,0 +1,19 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="theta">
+<path id="Vector" d="M32 64C49.6731 64 64 49.6731 64 32C64 14.3269 49.6731 0 32 0C14.3269 0 0 14.3269 0 32C0 49.6731 14.3269 64 32 64Z" fill="#282E3F"/>
+<path id="Vector_2" fill-rule="evenodd" clip-rule="evenodd" d="M19.3333 13.7605L21.3451 11.7487H42.4651L44.4769 13.7605V50.2405L42.4651 52.2523H21.3451L19.3333 50.2405V13.7605ZM23.3569 15.7723V48.2287H40.4533V15.7723H23.3569Z" fill="url(#paint_theta_0_linear)"/>
+<path id="Vector_3" d="M38.3051 37.7597H33.9326V42.3421H29.9851V37.7597H25.6126V33.8122H38.3051V37.7597ZM38.3051 26.4522H33.9326V21.8698H29.9851V26.4522H25.6126V30.3997H38.3051V26.4522Z" fill="url(#paint_theta_1_linear)"/>
+</g>
+<defs>
+<linearGradient id="paint_theta_0_linear" x1="16.4998" y1="16.5933" x2="47.3116" y2="47.4051" gradientUnits="userSpaceOnUse">
+<stop stop-color="#2AB8E6"/>
+<stop offset="0.53" stop-color="#29CAD2"/>
+<stop offset="1" stop-color="#2EE4BE"/>
+</linearGradient>
+<linearGradient id="paint_theta_1_linear" x1="25.8545" y1="26.0004" x2="38.0633" y2="38.2092" gradientUnits="userSpaceOnUse">
+<stop stop-color="#2AB8E6"/>
+<stop offset="0.53" stop-color="#29CAD2"/>
+<stop offset="1" stop-color="#2EE4BE"/>
+</linearGradient>
+</defs>
+</svg>

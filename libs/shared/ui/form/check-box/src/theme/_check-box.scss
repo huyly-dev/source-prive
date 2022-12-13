@@ -1,0 +1,100 @@
+@import "libs/shared/resources/assets/src/lib/styles/theme/typography";
+
+.wrapper-form-check-box {
+  @apply flex items-center gap-3.5 py-0.5 pl-0.5 w-max outline-none;
+  &__button {
+    @apply flex items-center justify-center w-4 h-4 border-2 border-solid rounded-sm;
+    .wrapper-common-icon {
+      @apply w-3.5 h-3.5;
+    }
+
+    &--state {
+      &-checked {
+        @apply border-prive-blue-500 bg-prive-blue-500;
+        .wrapper-common-icon {
+          @apply text-prive-neutral-white;
+        }
+
+        &:hover {
+          @apply border-prive-blue-400 bg-prive-blue-400;
+        }
+
+        &:active {
+          @apply border-prive-blue-100 bg-prive-blue-100;
+          .wrapper-common-icon {
+            @apply text-prive-blue-500;
+          }
+        }
+
+        &:focus-visible {
+          @apply bg-prive-blue-500 border-prive-blue-500;
+          box-shadow: 0 0 0 theme("spacing[0.75]") theme("colors[prive-blue].300");
+          outline: none;
+        }
+
+
+        &:disabled {
+          @apply bg-prive-neutral-800 border-prive-neutral-800;
+          .wrapper-common-icon {
+            @apply text-prive-neutral-600;
+          }
+        }
+      }
+
+      &-un-check {
+        @apply border-prive-dark-blue-50 bg-prive-dark-blue-700;
+        &:hover {
+          @apply border-prive-dark-blue-200 bg-prive-dark-blue-400;
+        }
+
+        &:active {
+          @apply border-prive-blue-100 bg-prive-blue-100;
+        }
+
+        &:focus-visible {
+          @apply bg-prive-dark-blue-700 border-prive-dark-blue-700;
+          box-shadow: 0 0 0 theme("spacing[0.75]") theme("colors[prive-blue].400");
+          outline: none;
+        }
+
+        &:disabled {
+          @apply bg-prive-neutral-800 border-prive-neutral-800;
+        }
+      }
+
+      &-indeterminate {
+        @apply border-prive-blue-500 bg-prive-blue-500;
+        .wrapper-common-icon {
+          @apply text-prive-neutral-white;
+        }
+
+        &:hover {
+          @apply border-prive-blue-400 bg-prive-blue-400;
+        }
+
+        &:active {
+          @apply border-prive-blue-100 bg-prive-blue-100;
+          .wrapper-common-icon {
+            @apply text-prive-blue-500;
+          }
+        }
+
+        &:focus-visible {
+          @apply bg-prive-blue-500 border-prive-blue-500;
+          box-shadow: 0 0 0 theme("spacing[0.75]") theme("colors[prive-blue].300");
+        }
+
+        &:disabled {
+          @apply bg-prive-neutral-800 border-prive-neutral-800;
+          .wrapper-common-icon {
+            @apply text-prive-neutral-600;
+          }
+        }
+      }
+    }
+  }
+
+  &__label {
+    @apply b3 text-prive-neutral-100;
+  }
+}

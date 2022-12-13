@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/shared/ui/overlay/menu",
+  "sourceRoot": "libs/shared/ui/overlay/menu/src",
+  "prefix": "prive-overlay-menu",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/shared/ui/overlay/menu/src/test.ts",
+        "tsConfig": "libs/shared/ui/overlay/menu/tsconfig.spec.json",
+        "karmaConfig": "libs/shared/ui/overlay/menu/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/ui/overlay/menu/src/**/*.ts",
+          "libs/shared/ui/overlay/menu/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

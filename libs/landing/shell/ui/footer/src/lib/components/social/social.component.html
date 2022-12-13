@@ -1,0 +1,7 @@
+<div class="wrapper-landing-footer__social">
+  <ng-container *ngFor="let social of socials">
+    <a [href]="social.href" class="wrapper-landing-footer__social__item">
+      <div [inlineSVG]="social.src"></div>
+    </a>
+  </ng-container>
+</div>

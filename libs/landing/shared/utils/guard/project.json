@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/landing/shared/utils/guard",
+  "sourceRoot": "libs/landing/shared/utils/guard/src",
+  "prefix": "prive-landing",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/landing/shared/utils/guard/src/test.ts",
+        "tsConfig": "libs/landing/shared/utils/guard/tsconfig.spec.json",
+        "karmaConfig": "libs/landing/shared/utils/guard/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/landing/shared/utils/guard/src/**/*.ts",
+          "libs/landing/shared/utils/guard/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

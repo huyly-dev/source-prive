@@ -1,0 +1,24 @@
+<ng-container *ngrxLet="state$; let state">
+  <div class="wrapper-landing-footer">
+    <div class="wrapper-landing-footer__container">
+      <prive-common-icon
+        [icon]="CommonIconLogo.Light"
+        [package]="CommonIconPackage.Logo"
+        [size]="CommonIconSize.CUSTOM"
+        extraClass="xl:h-6 lg:h-4 sm:h-4 md:h-4"
+      ></prive-common-icon>
+      <div class="wrapper-landing-footer__container__information">
+        <prive-landing-footer-contact
+          [sections]="state.contact"
+        ></prive-landing-footer-contact>
+        <prive-landing-footer-extra
+          [sections]="state.extra"
+        ></prive-landing-footer-extra>
+      </div>
+      <prive-landing-footer-social
+        [socials]="state.socials"
+      ></prive-landing-footer-social>
+    </div>
+    <prive-landing-footer-copy-right></prive-landing-footer-copy-right>
+  </div>
+</ng-container>

@@ -1,0 +1,38 @@
+.wrapper-landing-home__coin {
+  @apply w-screen flex flex-col;
+  @apply xl:gap-15;
+  @apply lg:gap-10;
+  @apply md:gap-6;
+  @apply sm:gap-6;
+  &__run {
+    @apply flex items-center overflow-hidden w-full;
+    &__content {
+      @apply flex items-center;
+      @apply xl:gap-10;
+      @apply lg:gap-6;
+      @apply md:gap-6;
+      @apply sm:gap-6;
+      transform: translateX(0%);
+      animation: marquee 20s linear infinite;
+      &__each {
+        @apply flex items-center;
+        @apply xl:gap-6;
+        @apply lg:gap-3;
+        @apply md:gap-3;
+        @apply sm:gap-3;
+        &__label {
+          @apply flex items-center;
+          p {
+            @apply text-prive-neutral-white w-max;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes marquee {
+  100% {
+    transform: translateX(-50%);
+  }
+}

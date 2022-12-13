@@ -1,0 +1,44 @@
+<ng-container *ngrxLet="state$; let state">
+  <div class="{{state.wrapperClass}} {{state.wrapperClass}}--direction-{{state.direction}}">
+    <div class="{{state.wrapperClass}}__label" *ngIf="state.label">
+      <b [class.white]="state.status === FormInputStatus.White">{{state.label}}</b>
+      <span class="{{state.wrapperClass}}__label__required" *ngIf="state.required">
+        <b [class.white]="state.status === FormInputStatus.White">*</b>
+      </span>
+    </div>
+    <div
+      class="{{state.wrapperClass}}__container {{state.wrapperClass}}__container--size-{{state.nodeName === 'textarea' ? 'area' : state.size}} {{state.wrapperClass}}__container--status-{{state.status}} {{state.className}}">
+      <div class="input-outline node-{{state.nodeName}}">
+        <ng-container *ngIf="prefixChildren && state.nodeName !== 'textarea'">
+          <ng-content select="[priveFormInputPrefix]"></ng-content>
+        </ng-container>
+        <ng-container *ngIf="inputExisted">
+          <ng-content select="[priveFormInput]"></ng-content>
+        </ng-container>
+        <ng-container *ngIf="suffixChildren && state.nodeName !== 'textarea'">
+          <ng-content select="[priveFormInputSuffix]"></ng-content>
+        </ng-container>
+        <ng-container *ngIf="state.nodeName === 'textarea'">
+          <div class="count-letter">
+            <b>{{state.length}}{{state.maxlength ? '/' + state.maxlength : ''}} characters</b>
+          </div>
+          <div class="drag-resize" (mousedown)="canResize = true">
+            <prive-common-icon [size]="IconSize.XS" [icon]="IconGlobal.Resize" [package]="IconPackage.Global"></prive-common-icon>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+    <div class="{{state.wrapperClass}}__message {{state.wrapperClass}}__message--status-error" *ngIf="state.canShowErrorMessage">
+      <prive-common-icon [size]="IconSize.XS" [icon]="IconAlert.Report" [package]="IconPackage.Alert"></prive-common-icon>
+      <b>{{state.errorMessage}}</b>
+    </div>
+    <div class="{{state.wrapperClass}}__message {{state.wrapperClass}}__message--status-success" *ngIf="state.canShowSuccessMessage">
+      <prive-common-icon [size]="IconSize.XS" [icon]="IconCheck.CheckCircle" [package]="IconPackage.Check"></prive-common-icon>
+      <b>{{state.successMessage}}</b>
+    </div>
+    <div class="{{state.wrapperClass}}__message {{state.wrapperClass}}__message--status-warning" *ngIf="state.canShowWarningMessage">
+      <prive-common-icon [size]="IconSize.XS" [icon]="IconAlert.Warning" [package]="IconPackage.Alert"></prive-common-icon>
+      <b>{{state.warningMessage}}</b>
+    </div>
+  </div>
+</ng-container>

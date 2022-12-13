@@ -1,0 +1,56 @@
+<ng-container *ngrxLet="state$; let state">
+  <div class="{{state.wrapperClass}} {{state.wrapperClass}}--direction-{{state.direction}}">
+    <div class="{{state.wrapperClass}}__label">
+      <b>{{state.label}}</b>
+    </div>
+    <div class="{{state.wrapperClass}}__container {{state.wrapperClass}}__container--size-{{state.size}}"
+         [class.disabled]="state.disabled"
+         [priveOverlayMenu]="menuOptions"
+         [priveOverlayMenuPosition]="OverlayCdkPosition.BottomLeft"
+         [priveOverlayMenuDisabled]="state.disabled"
+         [priveOverlayMenuCloseOnClick]="true"
+         (menuShowed)="expanded = true"
+         (menuClosed)="expanded = false"
+         (click)="focus(state.disabled)"
+    >
+      <div class="{{state.wrapperClass}}__container__label">
+        <prive-common-icon
+          *ngIf="state.icon && state.iconPackage"
+          [package]="state.iconPackage"
+          [icon]="state.icon"
+          [size]="state.size === FormDropdownSize.M ? CommonIconSize.XS : CommonIconSize.S"
+        ></prive-common-icon>
+        <ng-container *ngIf="state.value">
+          <ng-container *ngIf="template">
+            <ng-container *ngTemplateOutlet="template; context: {option: state.value, type: 'label', iconSize: state.size === FormDropdownSize.M ? CommonIconSize.XS : CommonIconSize.S}"></ng-container>
+          </ng-container>
+          <ng-container *ngIf="!template">
+            <input [value]="state.text" readonly>
+          </ng-container>
+        </ng-container>
+        <ng-container *ngIf="!state.value">
+          <input [value]="state.placeholder" readonly>
+        </ng-container>
+      </div>
+      <prive-common-icon
+        class="{{state.wrapperClass}}__container__arrow"
+        [package]="CommonIconPackage.Arrow"
+        [icon]="CommonIconArrow.ArrowDropDown"
+        [class.expanded]="state.expanded"
+        [size]="CommonIconSize.S"
+      ></prive-common-icon>
+    </div>
+    <ng-template #menuOptions>
+      <prive-form-dropdown-options
+        [type]="FormDropdownOptionType.Single"
+        [selected]="state.selected"
+        [size]="state.size"
+        [disabled]="state.disabled"
+        [options]="state.options"
+        [loading]="state.loading"
+        [template]="template"
+        (selectedChange)="selectOption($event)"
+      ></prive-form-dropdown-options>
+    </ng-template>
+  </div>
+</ng-container>

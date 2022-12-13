@@ -1,0 +1,153 @@
+<ng-container *ngrxLet="state$; let state">
+  <div class="{{state.wrapperClass}}">
+    <div class="{{state.wrapperClass}}__left">
+      <prive-common-icon [icon]="CommonIconLogo.Light" [package]="CommonIconPackage.Logo" [size]="CommonIconSize.XS"></prive-common-icon>
+      <div *ngIf="state.isLogin" class="{{state.wrapperClass}}__left__list">
+        <ng-container *ngFor="let item of state.items">
+          <ng-container *ngIf="item.items">
+            <prive-common-navigation-item
+              [status]="CommonNavigationItemStatus.Horizontal"
+              [style]="CommonNavigationItemStyle.Inline"
+              [size]="CommonNavigationItemSize.Cover"
+              [item]="item"
+              [expanded]="!!item.showDropdown"
+              [selected]="state.selected"
+              [priveOverlayPopover]="template"
+              [priveOverlayPopoverPosition]="OverlayCdkPosition.Bottom"
+              [priveOverlayPopoverTrigger]="OverlayCdkTrigger.Click"
+              [priveOverlayPopoverCondition]="false"
+              [priveOverlayPopoverSize]="OverlayPopoverSize.Fit"
+              [priveOverlayPopoverFixed]="true"
+              (popoverShowed)="item.showDropdown = true"
+              (popoverClosed)="item.showDropdown = false"
+              (click)="selectItem(item)"
+            ></prive-common-navigation-item>
+          </ng-container>
+          <ng-container *ngIf="!item.items">
+            <prive-common-navigation-item
+              [status]="CommonNavigationItemStatus.Horizontal"
+              [style]="CommonNavigationItemStyle.Inline"
+              [size]="CommonNavigationItemSize.Cover"
+              [item]="item"
+              [expanded]="!!item.showDropdown"
+              [selected]="state.selected"
+              (click)="selectItem(item)"
+            ></prive-common-navigation-item>
+          </ng-container>
+          <ng-template #template>
+            <div *ngIf="item.items" class="{{state.wrapperClass}}__left__list__child">
+              <ng-container *ngFor="let child of item.items">
+                <prive-common-navigation-item
+                  [status]="CommonNavigationItemStatus.Horizontal"
+                  [style]="CommonNavigationItemStyle.Dropdown"
+                  [size]="CommonNavigationItemSize.Full"
+                  [item]="child"
+                  [selected]="state.selected"
+                  (click)="selectItem(child)"
+                ></prive-common-navigation-item>
+              </ng-container>
+            </div>
+          </ng-template>
+        </ng-container>
+      </div>
+    </div>
+    <div class="{{state.wrapperClass}}__right">
+      <ng-container *ngIf="!state.isLogin">
+        <div class="{{state.wrapperClass}}__right__actions">
+          <prive-common-button [status]="CommonButtonStatus.GhostGray"
+                               [content]="(state.wrapperLocale + '.BUTTONS.LOGIN') | translate"></prive-common-button>
+          <prive-common-button [status]="CommonButtonStatus.Primary"
+                               [content]="(state.wrapperLocale + '.BUTTONS.REGISTER') | translate"></prive-common-button>
+        </div>
+        <prive-common-button-icon [icon]="CommonIconGlobal.Language" [iconPackage]="CommonIconPackage.Global"
+                                  [status]="CommonButtonStatus.GhostGray"></prive-common-button-icon>
+      </ng-container>
+      <ng-container *ngIf="state.isLogin">
+        <div class="{{state.wrapperClass}}__right__actions">
+          <div class="{{state.wrapperClass}}__right__actions__org">
+            <prive-common-navigation-item
+              [status]="CommonNavigationItemStatus.Horizontal"
+              [style]="CommonNavigationItemStyle.Inline"
+              [size]="CommonNavigationItemSize.Full"
+              [expanded]="state.showDropdownOrg"
+              [item]="state.selectedOrgData"
+              [haveChild]="true"
+              [isAvatar]="true"
+              [priveOverlayPopover]="template"
+              [priveOverlayPopoverPosition]="OverlayCdkPosition.Bottom"
+              [priveOverlayPopoverTrigger]="OverlayCdkTrigger.Click"
+              [priveOverlayPopoverCondition]="false"
+              [priveOverlayPopoverFixed]="true"
+              [priveOverlayPopoverSize]="OverlayPopoverSize.Cover"
+              (popoverShowed)="updateShowDropdownOrg(true)"
+              (popoverClosed)="updateShowDropdownOrg(false)"
+            ></prive-common-navigation-item>
+          </div>
+          <ng-template #template>
+            <div class="{{state.wrapperClass}}__right__actions__org__list">
+              <ng-container *ngFor="let org of state.orgs">
+                <prive-common-navigation-item
+                  [status]="CommonNavigationItemStatus.Horizontal"
+                  [style]="CommonNavigationItemStyle.Dropdown"
+                  [size]="CommonNavigationItemSize.Full"
+                  [item]="org"
+                  [isAvatar]="true"
+                  [typeCheck]="'selected'"
+                  [selected]="state.selectedOrg"
+                  (click)="selectOrg(org)"
+                ></prive-common-navigation-item>
+              </ng-container>
+            </div>
+          </ng-template>
+          <prive-common-button-icon
+            [icon]="CommonIconAlert.Notifications"
+            [iconPackage]="CommonIconPackage.Alert"
+            [status]="CommonButtonStatus.GhostGray"
+          ></prive-common-button-icon>
+          <prive-common-button-icon
+            [icon]="CommonIconPerson.AccountCircleOutline"
+            [iconPackage]="CommonIconPackage.Person"
+            [status]="CommonButtonStatus.GhostGray"
+            [priveOverlayPopover]="templatePart"
+            [priveOverlayPopoverPosition]="OverlayCdkPosition.BottomRight"
+            [priveOverlayPopoverSize]="OverlayPopoverSize.Fit"
+            [priveOverlayPopoverFixed]="true"
+            [priveOverlayPopoverOffsetRight]="-7"
+            [priveOverlayPopoverTrigger]="OverlayCdkTrigger.Click"
+          ></prive-common-button-icon>
+          <ng-template #templatePart>
+            <div class="{{state.wrapperClass}}__right__actions__part">
+              <ng-container *ngFor="let part of state.parts; let partIndex = index">
+                <div class="{{state.wrapperClass}}__right__actions__part__item" [class.last]="partIndex === state.parts.length
+ - 1">
+                  <div class="{{state.wrapperClass}}__right__actions__part__item__header">
+                    <b>{{part.label | translate}}</b>
+                  </div>
+                  <div class="{{state.wrapperClass}}__right__actions__part__item__child">
+                    <ng-container *ngFor="let item of part.items">
+                      <prive-common-navigation-item
+                        [status]="CommonNavigationItemStatus.Horizontal"
+                        [style]="CommonNavigationItemStyle.Dropdown"
+                        [size]="CommonNavigationItemSize.Full"
+                        [item]="item"
+                        [selected]="state.selected"
+                        (click)="selectItem(item)"
+                      ></prive-common-navigation-item>
+                    </ng-container>
+                  </div>
+                </div>
+              </ng-container>
+              <prive-common-navigation-item
+                [status]="CommonNavigationItemStatus.Horizontal"
+                [style]="CommonNavigationItemStyle.Dropdown"
+                [size]="CommonNavigationItemSize.Full"
+                [item]="state.logout"
+                (click)="selectItem(state.logout)"
+              ></prive-common-navigation-item>
+            </div>
+          </ng-template>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</ng-container>

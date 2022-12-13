@@ -1,0 +1,110 @@
+@import "libs/shared/resources/assets/src/lib/styles/theme/typography";
+
+.wrapper-common-toggle {
+  @apply p-0.5 relative rounded-full transition-all outline-none;
+  &__dot {
+    @apply rounded-full bg-prive-neutral-white flex items-center justify-center absolute transition-all top-0.5 left-0.5;
+    .wrapper-common-icon {
+      @apply text-transparent;
+    }
+  }
+
+  &:after {
+    @apply rounded-full absolute p-0.5 border-2 border-solid border-prive-blue-300 opacity-0 -top-1 -left-1 content-[''];
+  }
+
+  &:focus-visible {
+    &:after {
+      @apply opacity-100;
+    }
+  }
+
+  &--size {
+    &-s {
+      @apply w-8 h-4;
+      &:after {
+        @apply w-9 h-5;
+      }
+
+      .wrapper-common-toggle__dot {
+        @apply w-3 h-3;
+        .wrapper-common-icon {
+          @apply w-2 h-2;
+        }
+      }
+    }
+
+    &-m {
+      @apply w-12 h-6;
+      &:after {
+        @apply w-12.5 h-7;
+      }
+
+      .wrapper-common-toggle__dot {
+        @apply w-5 h-5;
+        .wrapper-common-icon {
+          @apply w-2.5 h-2.5;
+        }
+      }
+    }
+  }
+
+  &--state {
+    &-default {
+      @apply bg-prive-neutral-700 hover:bg-prive-neutral-500;
+      &.loading {
+        @apply opacity-60;
+      }
+
+      &.disabled {
+        @apply bg-prive-neutral-800 hover:bg-prive-neutral-800;
+        .wrapper-common-toggle__dot {
+          @apply bg-prive-neutral-400;
+        }
+      }
+    }
+
+    &-selected {
+      @apply bg-prive-blue-600 hover:bg-prive-blue-400;
+      .wrapper-common-toggle__dot {
+        .wrapper-common-icon {
+          @apply text-prive-blue-500;
+        }
+      }
+
+      &.size {
+        &-s {
+          .wrapper-common-toggle__dot {
+            @apply left-4.5;
+          }
+        }
+
+        &-m {
+          .wrapper-common-toggle__dot {
+            @apply left-6;
+          }
+        }
+      }
+
+      &.disabled {
+        @apply bg-prive-neutral-800 hover:bg-prive-neutral-800;
+        .wrapper-common-toggle__dot {
+          @apply bg-prive-neutral-400;
+          .wrapper-common-icon {
+            @apply text-prive-neutral-200;
+          }
+        }
+      }
+
+      &.loading {
+        @apply opacity-60;
+        .wrapper-common-toggle__dot {
+          .wrapper-common-icon {
+            @apply text-prive-neutral-400 animate-spin;
+          }
+        }
+      }
+    }
+  }
+
+}

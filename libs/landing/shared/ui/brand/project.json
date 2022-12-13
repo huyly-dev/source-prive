@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/landing/shared/ui/brand",
+  "sourceRoot": "libs/landing/shared/ui/brand/src",
+  "prefix": "prive-landing-brand",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/landing/shared/ui/brand/src/test.ts",
+        "tsConfig": "libs/landing/shared/ui/brand/tsconfig.spec.json",
+        "karmaConfig": "libs/landing/shared/ui/brand/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/landing/shared/ui/brand/src/**/*.ts",
+          "libs/landing/shared/ui/brand/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

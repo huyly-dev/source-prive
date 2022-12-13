@@ -1,0 +1,50 @@
+<div class="wrapper-landing-private-digital">
+
+  <div class="wrapper-landing-private-digital__content">
+    <h2 class="l-h2 sm:l-h2-small md:l-h2-small lg:l-h2-large">
+      Private digital assets management for accredited investors (HNWIs and
+      institutions)<br class="sm:hidden md:hidden lg:block xl:hidden" /> at
+      Coinhako Privé
+    </h2>
+
+    <p class="b3 xl:b1">
+      Whether its the transfer of funds, growing your portfolio or simply
+      trading, working with a large amount of assets can be very complex even
+      for some of the most sophisticated financiers out there.
+      <br><br>
+
+      Partnering up with a platform like Coinhako Privé can provide you with the
+      necessary tools and the right team for you to better navigate the digital
+      assets space.
+    </p>
+  </div>
+
+  <div class="w-[90rem] m-auto sm:w-full md:w-full lg:w-[64rem]">
+    <div class="sm:hidden md:hidden">
+      <prive-landing-carousel-slider [images]="images"></prive-landing-carousel-slider>
+    </div>
+
+    <div class="lg:hidden xl:hidden">
+      <prive-landing-swiper [items]="images">
+        <ng-template let-item="item" let-index="index" let-active="active">
+          <div class="wrapper-landing-private-digital__template">
+            <picture class="wrapper-landing-private-digital__img-slider">
+              <img [lazyLoad]="item['imageSrc']" [alt]="item.title" />
+            </picture>
+
+            <div class="wrapper-landing-private-digital__content-slider"
+                 *ngIf="active === index">
+              <h3 class="l-h3-small">
+                {{item.title}}
+              </h3>
+              <p class="b3" [innerHTML]="item.description"></p>
+            </div>
+          </div>
+        </ng-template>
+      </prive-landing-swiper>
+    </div>
+  </div>
+
+</div>
+
+

@@ -1,0 +1,85 @@
+<div class="wrapper-landing-form__contact" id="landing-contact">
+  <ng-container *ngrxLet="state$; let state">
+    <re-captcha class="invisible h-0" size="invisible" #captchaRef="reCaptcha"
+                (resolved)="resolveCaptcha($event)"></re-captcha>
+    <div class="wrapper-landing-form__contact__container">
+      <div class="absolute top-0 left-0 w-full" *ngIf="state.type === LandingFormContactType.DONE">
+        <div class="w-full flex flex-col gap-2">
+          <h2 class="xl:l-h2 lg:l-h2-large md:l-h2-small sm:l-h2-small {{titleLinear ? 'linear' : 'text-prive-neutral-50'}}">Thank you</h2>
+          <p class="b3 text-prive-neutral-50">Your request is submitted successfully.<br>
+            Our team will be in touch with you shortly on the next steps.</p>
+        </div>
+
+        <div class="wrapper-landing-form__contact__countdown mt-12 sm:mt-6">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="wrapper-landing-form__contact__container__header" [class.opacity-0]="state.type === LandingFormContactType.DONE">
+        <h2 class="xl:l-h2 lg:l-h2-large md:l-h2-small sm:l-h2-small {{titleLinear ? 'linear' : 'text-prive-neutral-50'}}">Let us contact you</h2>
+        <p class="b3 text-prive-neutral-50">Our representative will get in touch with you within 1 working day.</p>
+      </div>
+      <form class="wrapper-landing-form__contact__container__body"
+            [class.opacity-0]="state.type === LandingFormContactType.DONE" [formGroup]="form">
+        <div class="flex gap-4 sm:gap-6 md:gap-6 md:flex-col sm:flex-col">
+          <prive-form-input
+            [priveOverlayTooltip]="'LIBS.LANDING.HOME.SHARED.UI.INFORMATION.INPUTS.FULL_NAME.ERROR'"
+            [priveOverlayTooltipTrigger]="OverlayCdkTrigger.Condition"
+            [priveOverlayTooltipCondition]="form.controls['name'].invalid && state.showError"
+            [priveOverlayTooltipStatus]="OverlayTooltipStatus.Error"
+            [priveOverlayTooltipPosition]="OverlayCdkPosition.BottomLeft"
+            [size]="FormInputSize.L"
+            [status]="FormInputStatus.White"
+            [required]="true"
+            label="Name"
+            class="flex-grow-[1]"
+          >
+            <input formControlName="name" placeholder="Your name" priveFormInput>
+          </prive-form-input>
+          <prive-form-input
+            [priveOverlayTooltip]="'LIBS.LANDING.HOME.SHARED.UI.INFORMATION.INPUTS.PHONE_NUMBER.ERROR'"
+            [priveOverlayTooltipTrigger]="OverlayCdkTrigger.Condition"
+            [priveOverlayTooltipCondition]="form.controls['phone_number'].invalid && state.showError"
+            [priveOverlayTooltipStatus]="OverlayTooltipStatus.Error"
+            [priveOverlayTooltipPosition]="OverlayCdkPosition.BottomLeft"
+            [size]="FormInputSize.L"
+            [status]="FormInputStatus.White"
+            [required]="true"
+            label="Phone number"
+            class="flex-grow-[1]"
+          >
+            <input formControlName="phone_number" placeholder="Phone number" priveFormInput>
+          </prive-form-input>
+        </div>
+        <prive-form-input
+          [priveOverlayTooltip]="'LIBS.LANDING.HOME.SHARED.UI.INFORMATION.INPUTS.EMAIL_ADDRESS.ERROR'"
+          [priveOverlayTooltipTrigger]="OverlayCdkTrigger.Condition"
+          [priveOverlayTooltipCondition]="form.controls['email'].invalid && state.showError"
+          [priveOverlayTooltipStatus]="OverlayTooltipStatus.Error"
+          [priveOverlayTooltipPosition]="OverlayCdkPosition.BottomLeft"
+          [size]="FormInputSize.L"
+          [status]="FormInputStatus.White"
+          label="Email address"
+          [required]="true"
+        >
+          <input formControlName="email" placeholder="Email address" priveFormInput>
+        </prive-form-input>
+        <prive-form-input [size]="FormInputSize.L" [status]="FormInputStatus.White" label="Tell us more">
+            <textarea formControlName="note" [maxlength]="200"
+                      placeholder="For personalized assistance, we appreciate if you could tell us more about your needs"
+                      priveFormInput></textarea>
+        </prive-form-input>
+        <prive-form-check-box formControlName="is_coinhako_user"
+                              label="I'm an existing Coinhako user"></prive-form-check-box>
+      </form>
+      <div class="wrapper-landing-form__contact__container__footer" [class.opacity-0]="state.type === LandingFormContactType.DONE">
+        <prive-landing-button-primary (click)="submit()" [fullWidth]="true"
+                                      content="Request a callback"></prive-landing-button-primary>
+        <p class="xl:b3 lg:b3 md:b4 sm:b4 text-prive-neutral-50">* The information shared via this form will be solely used for the
+          purpose of connecting you to our representative to respond to your query in the best way possible. </p>
+      </div>
+    </div>
+  </ng-container>
+</div>

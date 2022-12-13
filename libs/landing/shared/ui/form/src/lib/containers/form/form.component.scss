@@ -1,0 +1,10 @@
+.wrapper-landing-form {
+  @apply w-screen flex items-center justify-center;
+  &__container {
+    @apply flex items-center;
+    @apply xl:w-[75rem] xl:justify-between;
+    @apply lg:w-[59rem] lg:justify-between;
+    @apply md:w-screen md:gap-15 md:justify-center md:flex-col;
+    @apply sm:w-screen sm:gap-15 sm:justify-center sm:flex-col
+  }
+}

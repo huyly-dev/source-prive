@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/landing/shell/ui/footer",
+  "sourceRoot": "libs/landing/shell/ui/footer/src",
+  "prefix": "prive-landing-footer",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/landing/shell/ui/footer/src/test.ts",
+        "tsConfig": "libs/landing/shell/ui/footer/tsconfig.spec.json",
+        "karmaConfig": "libs/landing/shell/ui/footer/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/landing/shell/ui/footer/src/**/*.ts",
+          "libs/landing/shell/ui/footer/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

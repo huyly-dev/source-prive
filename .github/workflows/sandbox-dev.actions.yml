@@ -1,0 +1,133 @@
+name: Hako prive frontend - sandbox-dev
+on:
+  push:
+    branches:
+      - "env/sandbox-dev"
+jobs:
+  docker-build:
+    runs-on: hako-default
+    # runs-on: ubuntu-20.04
+    steps:
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+      
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - name: Set outputs
+        id: vars
+        run: echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.CI_SANDBOX_ECR_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.CI_SANDBOX_ECR_SECRET_ACCESS_KEY }}
+          aws-region: ap-southeast-1
+
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v1
+
+      - name: Build, tag, and push image to Amazon ECR
+        id: build-image
+        env:
+          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          ECR_REPOSITORY: ch-prive-fe-dev
+          IMAGE_TAG: ${{ github.run_number }}-${{ steps.vars.outputs.sha_short }}
+        run: |
+          # Build a docker container and push it to ECR
+
+          rm libs/shared/resources/environments/src/lib/environment.prod.ts
+          cp libs/shared/resources/environments/src/lib/environment.dev.ts libs/shared/resources/environments/src/lib/environment.prod.ts
+          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+          echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
+          echo "::set-output name=image_tag::$ECR_REPOSITORY:$IMAGE_TAG"
+      
+
+      - name: Slack Notification
+        uses: rtCamp/action-slack-notify@v2
+        if: success()
+        env:
+          SLACK_WEBHOOK: ${{ secrets.CI_SLACK_NOTI_WEBHOOK }}
+          SLACK_CHANNEL: cicd-alerts-sandbox-ch-prive
+          SLACK_COLOR: ${{ job.status }} # or a specific color like 'green' or '#ff00ff'
+          SLACK_FOOTER: Coinhako
+          SLACK_USERNAME: ch-prive-frontend
+          SLACK_TITLE: Build success
+          SLACK_MESSAGE: |
+            Docker image: ${{ steps.build-image.outputs.image_tag }}
+            Commit message: ${{ github.event.head_commit.message }}
+
+      - name: Slack Notification
+        uses: rtCamp/action-slack-notify@v2
+        if: failure()
+        env:
+          SLACK_WEBHOOK: ${{ secrets.CI_SLACK_NOTI_WEBHOOK }}
+          SLACK_CHANNEL: cicd-alerts-sandbox-ch-prive
+          SLACK_COLOR: ${{ job.status }} # or a specific color like 'green' or '#ff00ff'
+          SLACK_FOOTER: Coinhako
+          SLACK_USERNAME: ch-prive-frontend
+          SLACK_TITLE: Build failure
+          SLACK_MESSAGE: |
+            Commit message: ${{ github.event.head_commit.message }}
+
+  Test:
+    runs-on: ubuntu-20.04
+    steps:
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+
+  deploy-to-sandbox:
+    needs: docker-build
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+
+      - name: Set outputs
+        id: vars
+        run: |
+          echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
+
+      - name: Deploy to sandbox
+        env:
+          IMAGE_TAG: ${{ github.run_number }}-${{ steps.vars.outputs.sha_short }}
+          CI_SANDBOX_ARGOCD_URL: ${{ secrets.CI_SANDBOX_ARGOCD_URL }}
+          CI_SANDBOX_ARGOCD_PASSWORD: ${{ secrets.CI_SANDBOX_ARGOCD_PASSWORD }}
+          CI_SANDBOX_ARGOCD_USER: ${{ secrets.CI_SANDBOX_ARGOCD_USER }}
+          
+        run: |
+          curl -sSL -o /usr/local/bin/argocd https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64
+          chmod +x /usr/local/bin/argocd
+          argocd login $CI_SANDBOX_ARGOCD_URL --username $CI_SANDBOX_ARGOCD_USER --password $CI_SANDBOX_ARGOCD_PASSWORD
+          argocd app set ch-prive-dev -p applications[3].image.tag=${IMAGE_TAG}
+          argocd app sync ch-prive-dev --async --timeout 30
+
+      - name: Slack Notification
+        uses: rtCamp/action-slack-notify@v2
+        if: success()
+        env:
+          SLACK_WEBHOOK: ${{ secrets.CI_SLACK_NOTI_WEBHOOK }}
+          SLACK_CHANNEL: cicd-alerts-sandbox-ch-prive
+          SLACK_COLOR: ${{ job.status }} # or a specific color like 'green' or '#ff00ff'
+          SLACK_FOOTER: Coinhako
+          SLACK_USERNAME: ch-prive-frontend
+          SLACK_TITLE: Deploy to sandbox
+          SLACK_MESSAGE: |
+            Docker image: ${{ github.run_number }}-${{ steps.vars.outputs.sha_short }}
+            Commit message: ${{ github.event.head_commit.message }}
+
+      - name: Slack Notification
+        uses: rtCamp/action-slack-notify@v2
+        if: failure()
+        env:
+          SLACK_WEBHOOK: ${{ secrets.CI_SLACK_NOTI_WEBHOOK }}
+          SLACK_CHANNEL: cicd-alerts-sandbox-ch-prive
+          SLACK_COLOR: ${{ job.status }} # or a specific color like 'green' or '#ff00ff'
+          SLACK_FOOTER: Coinhako
+          SLACK_USERNAME: ch-prive-frontend
+          SLACK_TITLE: Deploy to sandbox failure
+          SLACK_MESSAGE: |
+            Docker image: ${{ github.run_number }}-${{ steps.vars.outputs.sha_short }}
+            Commit message: ${{ github.event.head_commit.message }}

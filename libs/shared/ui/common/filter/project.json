@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/shared/ui/common/filter",
+  "sourceRoot": "libs/shared/ui/common/filter/src",
+  "prefix": "prive-common-filter",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/shared/ui/common/filter/src/test.ts",
+        "tsConfig": "libs/shared/ui/common/filter/tsconfig.spec.json",
+        "karmaConfig": "libs/shared/ui/common/filter/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/ui/common/filter/src/**/*.ts",
+          "libs/shared/ui/common/filter/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

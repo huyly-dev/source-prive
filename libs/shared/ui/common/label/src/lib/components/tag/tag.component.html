@@ -1,0 +1,25 @@
+<ng-container *ngrxLet="state$; let state">
+  <div
+    class="{{state.wrapperClass}} {{state.extraClass}} {{state.wrapperClass}}--shape-{{state.oval ? 'oval' : 'square'}} {{state.wrapperClass}}--state-{{state.removable ? 'removable' : 'non'}}"
+    [class.disabled]="state.disabled"
+    [class.active]="!state.disabled"
+  >
+    <prive-common-icon
+      *ngIf="state.icon && state.iconPackage"
+      [icon]="state.icon"
+      [package]="state.iconPackage"
+      [size]="IconSize.XS"
+    ></prive-common-icon>
+    <b>{{state.label}}</b>
+    <span
+      *ngIf="state.removable"
+      (click)="remove.emit()"
+    >
+      <prive-common-icon
+        [icon]="IconGlobal.Close"
+        [package]="IconPackage.Global"
+        [size]="IconSize.XS"
+      ></prive-common-icon>
+    </span>
+  </div>
+</ng-container>

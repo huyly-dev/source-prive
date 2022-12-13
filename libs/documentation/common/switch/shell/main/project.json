@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/documentation/common/switch/shell/main",
+  "sourceRoot": "libs/documentation/common/switch/shell/main/src",
+  "prefix": "prive-documentation-common-switch",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/documentation/common/switch/shell/main/src/test.ts",
+        "tsConfig": "libs/documentation/common/switch/shell/main/tsconfig.spec.json",
+        "karmaConfig": "libs/documentation/common/switch/shell/main/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/documentation/common/switch/shell/main/src/**/*.ts",
+          "libs/documentation/common/switch/shell/main/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

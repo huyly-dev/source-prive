@@ -1,0 +1,205 @@
+@import "libs/shared/resources/assets/src/lib/styles/theme/typography";
+
+.wrapper-overlay-snackbar {
+  @apply px-4 py-3 rounded-sm;
+  &__header {
+    @apply flex justify-between items-center h-6 mb-3;
+    &__content {
+      @apply flex items-center gap-3;
+      b {
+        @apply h7-semibold text-prive-neutral-800;
+      }
+    }
+
+    &__action {
+      @apply flex;
+      .wrapper-common-icon {
+        @apply text-prive-neutral-500;
+      }
+    }
+  }
+
+  &__body {
+    @apply px-9;
+    &__content {
+      p {
+        @apply b3 text-prive-neutral-700;
+      }
+    }
+
+    &__action {
+      @apply mt-2 flex items-center gap-2;
+      &__separator {
+        @apply w-0.5 h-0.5 bg-prive-blue-500 rounded-full;
+      }
+    }
+  }
+
+  &--style {
+    &-light {
+      @apply bg-prive-neutral-100 shadow-lv-2;
+      &--status {
+        &-neutral {
+          .wrapper-overlay-snackbar__header__content {
+            .wrapper-common-icon {
+              @apply text-prive-blue-400;
+            }
+
+            b {
+              @apply text-prive-blue-400;
+            }
+          }
+        }
+
+        &-success {
+          .wrapper-overlay-snackbar__header__content {
+            .wrapper-common-icon {
+              @apply text-prive-green-500;
+            }
+
+            b {
+              @apply text-prive-green-500;
+            }
+          }
+        }
+
+        &-error {
+          .wrapper-overlay-snackbar__header__content {
+            .wrapper-common-icon {
+              @apply text-prive-red-500;
+            }
+
+            b {
+              @apply text-prive-red-500;
+            }
+          }
+        }
+
+        &-information {
+          .wrapper-overlay-snackbar__header__content {
+            .wrapper-common-icon {
+              @apply text-prive-neutral-700;
+            }
+
+            b {
+              @apply text-prive-neutral-700;
+            }
+          }
+        }
+
+        &-note {
+          .wrapper-overlay-snackbar__header__content {
+            .wrapper-common-icon {
+              @apply text-prive-purple-500;
+            }
+
+            b {
+              @apply text-prive-purple-500;
+            }
+          }
+        }
+
+        &-warning {
+          .wrapper-overlay-snackbar__header__content {
+            .wrapper-common-icon {
+              @apply text-prive-yellow-600;
+            }
+
+            b {
+              @apply text-prive-yellow-600;
+            }
+          }
+        }
+      }
+    }
+
+    &-dark {
+      @apply bg-prive-neutral-100;
+      box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.2);
+
+      &--status {
+        &-neutral {
+          .wrapper-overlay-snackbar__header__content {
+            .wrapper-common-icon {
+              @apply text-prive-blue-400;
+            }
+
+            b {
+              @apply text-prive-blue-400;
+            }
+          }
+        }
+
+        &-success {
+          .wrapper-overlay-snackbar__header__content {
+            .wrapper-common-icon {
+              @apply text-prive-green-500;
+            }
+
+            b {
+              @apply text-prive-green-500;
+            }
+          }
+        }
+
+        &-error {
+          .wrapper-overlay-snackbar__header__content {
+            .wrapper-common-icon {
+              @apply text-prive-red-500;
+            }
+
+            b {
+              @apply text-prive-red-500;
+            }
+          }
+        }
+
+        &-information {
+          .wrapper-overlay-snackbar__header__content {
+            .wrapper-common-icon {
+              @apply text-prive-neutral-700;
+            }
+
+            b {
+              @apply text-prive-neutral-700;
+            }
+          }
+        }
+
+        &-note {
+          .wrapper-overlay-snackbar__header__content {
+            .wrapper-common-icon {
+              @apply text-prive-purple-500;
+            }
+
+            b {
+              @apply text-prive-purple-500;
+            }
+          }
+        }
+
+        &-warning {
+          .wrapper-overlay-snackbar__header__content {
+            .wrapper-common-icon {
+              @apply text-prive-yellow-600;
+            }
+
+            b {
+              @apply text-prive-yellow-600;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &--size {
+    &-short {
+      @apply w-100;
+    }
+
+    &-long {
+      @apply w-200;
+    }
+  }
+}

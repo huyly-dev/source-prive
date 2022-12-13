@@ -1,0 +1,45 @@
+<ng-container *ngrxLet="state$; let state">
+  <div class="{{state.wrapperClass}}">
+    <div class="{{state.wrapperClass}}__header">
+      <div class="{{state.wrapperClass}}__header__info">
+        <b class="{{state.wrapperClass}}__header__info__label">{{state.name}}</b>
+        <prive-common-lozenges
+          [size]="CommonLabelLozengesSize.SMedium"
+          [status]="CommonLabelLozengesStatus.Note"
+          [style]="CommonLabelLozengesStyle.Solid"
+          [label]="state.role"
+        ></prive-common-lozenges>
+      </div>
+      <b class="{{state.wrapperClass}}__header__label">{{state.org}}</b>
+    </div>
+    <div class="{{state.wrapperClass}}__content">
+      <div class="{{state.wrapperClass}}__content__part">
+        <ng-container *ngFor="let part of state.parts; let partIndex = index">
+          <div class="{{state.wrapperClass}}__content__part__item" [class.last]="partIndex === state.parts.length
+ - 1">
+            <div class="{{state.wrapperClass}}__content__part__item__header">
+              <b>{{part.label | translate}}</b>
+            </div>
+            <div class="{{state.wrapperClass}}__content__part__item__child">
+              <ng-container *ngFor="let item of part.items">
+                <prive-common-navigation-item
+                  [status]="CommonNavigationItemStatus.Vertical"
+                  [size]="CommonNavigationItemSize.Full"
+                  [item]="item"
+                  [selected]="state.selected"
+                  (click)="selectItem(item)"
+                ></prive-common-navigation-item>
+              </ng-container>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+      <prive-common-navigation-item
+        [status]="CommonNavigationItemStatus.Vertical"
+        [size]="CommonNavigationItemSize.Full"
+        [item]="state.logout"
+        (click)="selectItem(state.logout)"
+      ></prive-common-navigation-item>
+    </div>
+  </div>
+</ng-container>

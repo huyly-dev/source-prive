@@ -1,0 +1,14 @@
+<div class="wrapper-landing-layout" (scroll)="scrolling($event)">
+  <div #top></div>
+  <prive-landing-drawer></prive-landing-drawer>
+  <prive-landing-header></prive-landing-header>
+  <router-outlet></router-outlet>
+  <prive-landing-footer></prive-landing-footer>
+  <ng-container *ngrxLet="showBottomButton$ as showBottomButton">
+    <ng-container>
+      <div (click)="scrollTop()" [class.translate-x-0]="showBottomButton" [class.translate-x-20]="!showBottomButton" class="flex z-[10] cursor-pointer transform transition-all justify-center items-center fixed right-10 bottom-25 w-10 h-10 rounded-full bg-prive-dark-blue-100 border border-solid border-prive-dark-blue-50" style="filter: drop-shadow(0px 8px 24px rgba(0, 0, 0, 0.2))">
+        <prive-common-icon extraClass="transform rotate-90 text-prive-neutral-50" [package]="CommonIconPackage.Arrow" [icon]="CommonIconArrow.ChevronLeft"></prive-common-icon>
+      </div>
+    </ng-container>
+  </ng-container>
+</div>

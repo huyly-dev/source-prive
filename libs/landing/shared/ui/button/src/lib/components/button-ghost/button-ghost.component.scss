@@ -1,0 +1,24 @@
+.wrapper-landing-button__ghost {
+  @apply h-8 px-2 flex items-center justify-center relative;
+  span {
+    @apply text-prive-neutral-white;
+  }
+
+  .wrapper-common-icon {
+    @apply transform transition-transform delay-[250] duration-150 -translate-x-1;
+  }
+
+  &:hover {
+    .wrapper-common-icon {
+      @apply translate-x-0 opacity-100;
+    }
+
+    &:before {
+      @apply w-full;
+    }
+  }
+
+  &:before {
+    @apply content-[''] h-full w-8 absolute left-0 top-0 bg-prive-sand-300 transform transition-all delay-[50] duration-300;
+  }
+}

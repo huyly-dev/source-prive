@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/landing/crypto/shell/main",
+  "sourceRoot": "libs/landing/crypto/shell/main/src",
+  "prefix": "prive-landing-crypto",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/landing/crypto/shell/main/src/test.ts",
+        "tsConfig": "libs/landing/crypto/shell/main/tsconfig.spec.json",
+        "karmaConfig": "libs/landing/crypto/shell/main/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/landing/crypto/shell/main/src/**/*.ts",
+          "libs/landing/crypto/shell/main/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/landing/otc/shell/ui/why-trading",
+  "sourceRoot": "libs/landing/otc/shell/ui/why-trading/src",
+  "prefix": "prive-landing-otc-why-trading",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/landing/otc/shell/ui/why-trading/src/test.ts",
+        "tsConfig": "libs/landing/otc/shell/ui/why-trading/tsconfig.spec.json",
+        "karmaConfig": "libs/landing/otc/shell/ui/why-trading/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/landing/otc/shell/ui/why-trading/src/**/*.ts",
+          "libs/landing/otc/shell/ui/why-trading/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,21 @@
+.wrapper-landing-member {
+  @apply w-screen flex flex-col justify-center gap-10 items-center px-6;
+  @apply sm:gap-6;
+  @apply md:gap-6;
+  h2 {
+    @apply md:w-[27.75rem] md:text-left;
+    @apply sm:w-[20.5rem] sm:text-left;
+    &.linear {
+      @apply bg-s1;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  p {
+    @apply text-prive-neutral-50 text-left;
+    @apply xl:w-[36.375rem];
+    @apply lg:w-[29rem];
+    @apply md:w-[27.75rem];
+    @apply sm:w-[20.5rem];
+  }
+}

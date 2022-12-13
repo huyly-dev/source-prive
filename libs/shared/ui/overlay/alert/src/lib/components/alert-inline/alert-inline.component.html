@@ -1,0 +1,7 @@
+<ng-container *ngrxLet="state$; let state">
+  <div class="{{state.wrapperClass}} {{state.wrapperClass}}--status-{{state.status}} {{state.wrapperClass}}--size-{{state.size}}">
+    <prive-common-icon [icon]="state.status | priveOverlayAlertInlineIcon" [package]="state.status | priveOverlayAlertInlinePackage"
+                       [size]="CommonIconSize.XS"></prive-common-icon>
+    <p>{{state.text}}</p>
+  </div>
+</ng-container>

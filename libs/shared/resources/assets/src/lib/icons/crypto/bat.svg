@@ -1,0 +1,12 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="bat">
+<circle id="Ellipse 343" cx="32" cy="32" r="31" fill="#FEFEFE" stroke="#CBD5E1" stroke-width="2"/>
+<g id="Group 3397">
+<path id="Vector" d="M52 46.3328L32.0958 34.9356L12 46.38L52 46.3328Z" fill="#662D91"/>
+<path id="Vector_2" d="M32.1022 12L32.0958 34.9356L52 46.3328L32.1022 12Z" fill="#9E1F63"/>
+<path id="Vector_3" d="M12 46.38L32.0958 34.9356L32.1022 12L12 46.38Z" fill="#FF5000"/>
+<path id="Vector_4" d="M32.0549 25.9133L23.838 39.6383H40.3087L32.0549 25.9133Z" fill="white"/>
+<path id="Vector (Stroke)" fill-rule="evenodd" clip-rule="evenodd" d="M32.2692 25.7845L40.7509 39.8884H23.3969L31.8405 25.7849L32.055 25.9134L32.2692 25.7845ZM32.0555 26.3993L39.8667 39.3884H24.279L32.0555 26.3993Z" fill="#FF5000"/>
+</g>
+</g>
+</svg>

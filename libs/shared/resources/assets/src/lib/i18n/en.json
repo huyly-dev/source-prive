@@ -1,0 +1,879 @@
+{
+  "APPS": {
+    "AUTH": {
+    },
+    "DAD": {
+    },
+    "LANDING": {
+    },
+    "ORGS": {
+    }
+  },
+  "LIBS": {
+    "SHARED": {
+      "UI": {
+        "COMMON": {
+          "BUTTON": {
+          },
+          "ICON": {
+          },
+          "LABEL": {
+          },
+          "PAGINATION": {
+            "TEXTS": {
+              "ITEMS_PER_PAGE": "Items per page:",
+              "ITEMS_OF": "of",
+              "ITEMS": "items",
+              "PAGES": "pages"
+            }
+          },
+          "NAVIGATION": {
+            "ITEMS": {
+              "REQUEST_FOR_QUOTE": "Request for quote",
+              "SETTLEMENTS": "Settlements",
+              "WITHDRAW": "Withdrawal",
+              "DEPOSIT": "Deposit",
+              "FUNDS": "Funds",
+              "EARN": "Earn",
+              "PRODUCTS": "Products",
+              "MY_PORTFOLIO": "My Portfolio",
+              "HISTORY": "History",
+              "LOGOUT": "Log out"
+            },
+            "PARTS": {
+              "ACCOUNT": {
+                "LABEL": "Account",
+                "ITEMS": {
+                  "PERSONAL_INFO": "Personal info",
+                  "SECURITY": "Security"
+                }
+              },
+              "ORGANIZATION": {
+                "LABEL": "Organization",
+                "ITEMS": {
+                  "API_TOKEN": "API token",
+                  "BANK_ACCOUNT": "Bank account",
+                  "CRYPTO_ADDRESS": "Crypto address",
+                  "USER_MANAGEMENT": "User management",
+                  "ROLE": "Role"
+                }
+              }
+            },
+            "BUTTONS": {
+              "LOGIN": "Login",
+              "REGISTER": "Register"
+            }
+          }
+        },
+        "OVERLAY": {
+          "ALERT": {
+          },
+          "TOOLTIP": {
+          },
+          "TOAST": {
+          },
+          "POPOVER": {
+          },
+          "MODAL": {
+            "COMPONENTS": {
+              "BASE": {
+                "BUTTONS": {
+                  "CANCEL": "Cancel",
+                  "SAVE": "Save"
+                }
+              }
+            }
+          },
+          "CDK": {
+          },
+          "SNACKBAR": {
+            "COMPONENTS": {
+              "BASE": {
+                "LINKS": {
+                  "UNDERSTOOD": "Understood",
+                  "NO_THANKS": "No thanks"
+                }
+              }
+            }
+          }
+        },
+        "FORM": {
+          "CHECK_BOX": {
+          },
+          "COMBO_BOX": {
+          },
+          "DATE_PICKER": {
+          },
+          "DROPDOWN": {
+          },
+          "INPUT": {
+          },
+          "RADIO": {
+          },
+          "SLIDER": {
+          },
+          "TIME_PICKER": {
+          }
+        }
+      }
+    },
+    "AUTH": {
+      "LOGIN": {
+        "SHARED": {
+          "UI": {
+            "BASIC": {
+              "TITLE": "Login to Coinhako Privé",
+              "SUB_TITLE": "Welcome back!",
+              "INPUTS": {
+                "USERNAME": {
+                  "LABEL": "Username",
+                  "PLACEHOLDER": "Enter your username"
+                },
+                "PASSWORD": {
+                  "LABEL": "Password",
+                  "PLACEHOLDER": "Enter your password"
+                }
+              },
+              "BUTTONS": {
+                "LOGIN": "Login"
+              },
+              "LINKS": {
+                "FORGOT": "Forgot password?",
+                "INSTRUCTION": "Didn’t receive unlock instruction?",
+                "CONTACT": "Contact us"
+              }
+            },
+            "TWO_FACTOR": {
+              "TITLE": "2-Step Verification",
+              "SUB_TITLE": "This extra step shows it’s really you trying to sign in",
+              "VERIFY": {
+                "LOADING": {
+                  "TEXT": "Verifying it’s you...",
+                  "SUB_TEXT": "Complete signing-in using your security key"
+                },
+                "FAIL": {
+                  "TEXT": "There was a problem",
+                  "SUB_TEXT": "Try using your security key again or contact us to verify it’s you",
+                  "LINKS": {
+                    "CONTACT": "Contact us"
+                  },
+                  "BUTTONS": {
+                    "TRY_AGAIN": "Try again"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "MESSAGES": {
+          "PASSWORD_CHANGE": {
+            "SUCCESS": "Your password has been changed successfully"
+          },
+          "UNLOCK_INSTRUCTION_SEND": {
+            "SUCCESS": "If your account exists, you will receive an email with further instructions in a few minutes"
+          }
+        },
+        "TOASTS": {
+          "VISITING": "You are visiting:"
+        }
+      },
+      "FORGOT_PASSWORD": {
+        "SHARED": {
+          "UI": {
+            "RESET": {
+              "TITLE": "Reset your password",
+              "SUB_TITLE": "Enter new password for your account",
+              "INPUTS": {
+                "NEW_PASSWORD": {
+                  "LABEL": "New password",
+                  "PLACEHOLDER": "Enter your new password"
+                },
+                "CONFIRM_PASSWORD": {
+                  "LABEL": "Confirm password",
+                  "PLACEHOLDER": "Confirm new password",
+                  "VALIDATIONS": {
+                    "MATCH": "Passwords don’t match"
+                  }
+                }
+              },
+              "POPOVERS": {
+                "VALIDATIONS": {
+                  "UPPERCASE": "An uppercase letter",
+                  "LOWERCASE": "A lowercase letter",
+                  "SPECIAL": "A special character",
+                  "NUMBER": "A number",
+                  "MINIMUM": "Minimum 10 characters"
+                }
+              },
+              "BUTTONS": {
+                "CHANGE": "Change password"
+              }
+            },
+            "CONFIRM": {
+              "TITLE": "Please check your email",
+              "SUB_TITLE": "We have sent you a reset password link in your registered email address.",
+              "BUTTONS": {
+                "BACK_TO_HOME": "Back to home",
+                "SIGN_IN": "Sign in"
+              }
+            },
+            "SEND": {
+              "TITLE": "Reset your password",
+              "SUB_TITLE": "Don’t worry, type in your email so that we can send you a reset password instruction.",
+              "INPUTS": {
+                "EMAIL": {
+                  "LABEL": "Email",
+                  "PLACEHOLDER": "email.address@example.com"
+                }
+              },
+              "BUTTONS": {
+                "SEND": "Send reset password link"
+              }
+            },
+            "EXPIRED": {
+              "TITLE": "Reset password link expired",
+              "SUB_TITLE": "So sorry, the link you followed has expired.",
+              "BUTTONS": {
+                "SEND": "Send me a new reset password link"
+              }
+            }
+          }
+        }
+      },
+      "RESEND_UNLOCK_INSTRUCTION": {
+        "TITLE": "Resend unlock instruction",
+        "SUB_TITLE": "Type in your registered email so that we can send you an unlock instruction.",
+        "INPUTS": {
+          "EMAIL": {
+            "LABEL": "Email",
+            "PLACEHOLDER": "email.address@example.com"
+          }
+        },
+        "BUTTONS": {
+          "SEND": "Send unlock instruction"
+        }
+      },
+      "SHELL": {
+        "UI": {
+          "LAYOUT": {
+            "COMPONENTS": {
+              "FOOTER": {
+                "COPY_RIGHT": "© 2021 Coinhako. All rights reserved."
+              }
+            }
+          }
+        }
+      }
+    },
+    "LANDING": {
+      "HOME": {
+        "SHARED": {
+          "UI": {
+            "HEADER": {
+              "BUTTONS": {
+                "LOGIN": "Login",
+                "CONTACT": "Contact Us"
+              }
+            },
+            "EARTH": {
+              "TITLE": {
+                "BOLD": "Trusted Digital Assets Management Platform",
+                "NORMAL": "for HNWIs and Institutions in Asia"
+              },
+              "DESCRIPTION": "Coinhako Privé is a bespoke service provider for Digital Assets management  that is focused on serving world-class institutions and high-net worth individuals (HNWIs). Embark on a partnership with Singapore's household  Digital Assets platform when you come onboard Coinhako Privé.",
+              "SCROLL": "Scroll to see what we do"
+            },
+            "BRAND": {
+              "TITLE": {
+                "ANIMATION": {
+                  "LEFT": "We’ve been ",
+                  "MAIN": "featured",
+                  "RIGHT": " in"
+                }
+              }
+            },
+            "DIGITAL": {
+              "SUPPORTED_INSTRUMENTS": "Supported instruments:",
+              "TITLE": {
+                "BOLD": "Earn Interests and Better Yields",
+                "NORMAL": "on your Digital Assets"
+              },
+              "SUB_TITLE": "Our esteemed partners enjoy optimal rewards  and better APYs on crypto they hold with Privé Earn from a specially selected set of staking, lending and other yield based products."
+            },
+            "CHART": {
+              "TITLE": {
+                "BOLD": "Earn",
+                "NORMAL": "Fixed"
+              },
+              "SUB_TITLE": "Think of it as a 'Cryptocurrency fixed deposit' in a dynamic market. Fixed Earn lets you earn steady interest rates on your Digital Assets for better gains.",
+              "EXPECTED": {
+                "BEFORE": "EXPECTED ",
+                "AFTER": " INTERESTS",
+                "YEAR": "1-YEAR",
+                "3MONTHS": "3-MONTHS",
+                "6MONTHS": "6-MONTHS",
+                "9MONTHS": "9-MONTHS"
+              },
+              "AMOUNT": "EARN AMOUNT",
+              "VARY": "Interest rates may vary.",
+              "VALUE": "VALUE",
+              "CALCULATED": {
+                "BEFORE": "Calculated based on the current ",
+                "AFTER": " price of "
+              },
+              "TIMES": {
+                "0M": "0",
+                "3M": "3 MONTHS",
+                "6M": "6 MONTHS",
+                "9M": "9 MONTHS",
+                "1Y": "1 YEAR"
+              }
+            },
+            "EXPERIENCE": {
+              "TITLE": {
+                "BOLD": "Experience",
+                "NORMAL": "The Privé"
+              },
+              "REASONS": {
+                "ZERO": {
+                  "TITLE": "Zero fee trading",
+                  "DESCRIPTION": "Elevate your trading experience with competitive prices and no trading fees."
+                },
+                "API": {
+                  "TITLE": "API trading",
+                  "DESCRIPTION": "Connect your business or personal platforms for a seamless trading experience with Coinhako Privé."
+                },
+                "TRADE": {
+                  "TITLE": "Trade now\nsettle later",
+                  "DESCRIPTION": "Focus on securing the best positions when you trade on Coinhako Privé and pay later."
+                },
+                "PREMIUM": {
+                  "TITLE": "Dedicated team of industry experts",
+                  "DESCRIPTION": "Enjoy world class digital assets management services with personalized support from our team of professionals."
+                },
+                "RISK": {
+                  "TITLE": "Low counterparty risk for Crypto OTC",
+                  "DESCRIPTION": "Enjoy guaranteed settlements for large-scale trades on\nCoinhako Privé."
+                },
+                "SECURE": {
+                  "TITLE": "Secure\nCrypto custodian",
+                  "DESCRIPTION": "Hold your Crypto with an institution you can trust. Coinhako Privé employs only best-in-class security in the digital and financial spaces."
+                }
+              }
+            },
+            "WHY": {
+              "TITLE": {
+                "NORMAL": "Why ",
+                "BOLD": "grow your Crypto assets",
+                "NORMAL_AFTER": " with us?"
+              },
+              "REASONS": {
+                "YEAR_OF_TRUST": {
+                  "TITLE": {
+                    "BOLD": "Years of trust",
+                    "NORMAL": "as a crypto custody provider"
+                  },
+                  "DESCRIPTION": "The Coinhako brand is renowned across Asia for its expertise in Digital Assets. We have provided marketing leading Crypto trading and wallet services since 2014."
+                },
+                "INSTITUTIONAL": {
+                  "TITLE": {
+                    "BOLD": "Institutional grade",
+                    "NORMAL": "Digital Assets management solutions"
+                  },
+                  "DESCRIPTION": "Coinhako Privé offers premium Digital Assets management services to suit the needs of our HNWI and institutional clients."
+                }
+              }
+            },
+            "INFORMATION": {
+              "TITLE": {
+                "BOLD": "Let our team",
+                "NORMAL": "of dedicated professionals help grow your Crypto assets"
+              },
+              "INPUTS": {
+                "FULL_NAME": {
+                  "LABEL": "Full name",
+                  "PLACEHOLDER": "Full name *",
+                  "ERROR": "Please let us know your full name"
+                },
+                "EMAIL_ADDRESS": {
+                  "LABEL": "Email address",
+                  "PLACEHOLDER": "Email address *",
+                  "ERROR": "Please let us know your exactly email"
+                },
+                "PHONE_NUMBER": {
+                  "LABEL": "Phone number",
+                  "PLACEHOLDER": "Phone number *",
+                  "ERROR": "Please let us know your exactly phone number"
+                },
+                "MESSAGE_TO_US": {
+                  "LABEL": "Message to us",
+                  "PLACEHOLDER": "Message to us"
+                },
+                "CHECKING_USER": "I am Coinhako user"
+              },
+              "BUTTONS": {
+                "BECOME_OUR_CLIENT": "Become Our Client"
+              },
+              "DONE": {
+                "THANK": "Thank you",
+                "EXTRA": "Your request is submitted successfully. Our team will be in touch with you shortly on the next steps."
+              }
+            },
+            "FOOTER": {
+              "SECTIONS": {
+                "EMAIL": {
+                  "TITLE": "EMAIL"
+                },
+                "ADDRESS": {
+                  "TITLE": "ADDRESS",
+                  "TEXT": "14, Robinson Road, #08-01A, Far East Finance Building, 048545."
+                },
+                "SERVICES": {
+                  "TITLE": "SERVICES",
+                  "ITEMS": {
+                    "BUY_BITCOIN": "Buy Bitcoin",
+                    "BUY_BITCOIN_CASH": "Buy Bitcoin Cash",
+                    "BUY_ETHER": "Buy Ether",
+                    "BUY_LITE_COIN": "Buy Litecoin",
+                    "BUY_RIPPLE": "Buy Ripple",
+                    "EARN": "Earn Crypto Interest"
+                  }
+                },
+                "COMPANY": {
+                  "TITLE": "COMPANY",
+                  "ITEMS": {
+                    "ABOUT_US": "About us",
+                    "PRIVACY": "Privacy Policy"
+                  }
+                },
+                "SUPPORT": {
+                  "TITLE": "SUPPORT",
+                  "ITEMS": {
+                    "FAQS": "FAQs",
+                    "HELP_DESK": "Helpdesk"
+                  }
+                }
+              },
+              "COPY_RIGHT": "© 2021, Coinhako. All Rights Reserved."
+            },
+            "DRAWER": {
+              "BUTTONS": {
+                "LOGIN": "Login",
+                "CONTACT": "Contact Us"
+              },
+              "ADDRESS": {
+                "TITLE": "Addresses",
+                "TEXT": "14, Robinson Road, #08-01A, Far East Finance Building, 048545."
+              },
+              "SERVICES": {
+                "TITLE": "Services",
+                "ITEMS": {
+                  "BUY_BITCOIN": "Buy Bitcoin",
+                  "BUY_BITCOIN_CASH": "Buy Bitcoin Cash",
+                  "BUY_ETHER": "Buy Ether",
+                  "BUY_LITE_COIN": "Buy Litecoin",
+                  "BUY_RIPPLE": "Buy Ripple",
+                  "EARN": "Earn Crypto Interest"
+                }
+              },
+              "COMPANY": {
+                "TITLE": "Company",
+                "ITEMS": {
+                  "ABOUT_US": "About us",
+                  "PRIVACY": "Privacy Policy"
+                }
+              },
+              "SUPPORT": {
+                "TITLE": "Support",
+                "ITEMS": {
+                  "FAQS": "FAQs",
+                  "HELP_DESK": "Helpdesk"
+                }
+              }
+            }
+          }
+        }
+      },
+      "SHELL": {
+        "UI": {
+          "FOOTER": {
+            "SECTIONS": {
+              "EMAIL": {
+                "TITLE": "EMAIL"
+              },
+              "ADDRESS": {
+                "TITLE": "ADDRESS",
+                "TEXT": "14, Robinson Road, #08-01A, Far East Finance Building, 048545."
+              },
+              "SERVICES": {
+                "TITLE": "SERVICES",
+                "ITEMS": {
+                  "BUY_BITCOIN": "Buy Bitcoin",
+                  "BUY_BITCOIN_CASH": "Buy Bitcoin Cash",
+                  "BUY_ETHER": "Buy Ether",
+                  "BUY_LITE_COIN": "Buy Litecoin",
+                  "BUY_RIPPLE": "Buy Ripple",
+                  "EARN": "Earn Crypto Interest"
+                }
+              },
+              "COMPANY": {
+                "TITLE": "COMPANY",
+                "ITEMS": {
+                  "ABOUT_US": "About us",
+                  "PRIVACY": "Privacy Policy"
+                }
+              },
+              "SUPPORT": {
+                "TITLE": "SUPPORT",
+                "ITEMS": {
+                  "FAQS": "FAQs",
+                  "HELP_DESK": "Helpdesk"
+                }
+              }
+            },
+            "COPY_RIGHT": "© 2021, Coinhako. All Rights Reserved."
+          },
+          "HEADER": {
+            "ROUTES": {
+              "HOME": "Home",
+              "OTC": "OTC Trading",
+              "PRIVATE": "Private Wealth Management",
+              "CRYPTO": "Crypto Custodian"
+            },
+            "BUTTONS": {
+              "CONTACT": "Contact Us",
+              "LOGIN": "Login"
+            }
+          }
+        }
+      }
+    },
+    "ORGS": {
+      "SETTINGS": {
+        "SECURITY": {
+          "SHARED": {
+            "UI": {
+              "TWO_FACTOR": {
+                "TITLE": "Two-factor Authentication (2FA)",
+                "KEY": {
+                  "TITLE": "Security key",
+                  "FYI": "Security Key can help you keep hackers out of your account. You will be required to use a Security Key to sign in to your account.",
+                  "UN_SUPPORTED": "Unsupported browser/device. Please use a different browser/device to use your security key.",
+                  "LAST_USED": "Last used",
+                  "BUTTONS": {
+                    "ADD": "Add security key",
+                    "EDIT": "Edit",
+                    "REMOVE": "Remove"
+                  },
+                  "LINKS": {
+                    "LEARN_MORE": "Learn more"
+                  },
+                  "MODALS": {
+                    "CONFIRM": {
+                      "TITLE": "Confirm password",
+                      "DESCRIPTION": "Before adding your security key, please enter your password for verification purposes.",
+                      "INPUTS": {
+                        "PASSWORD": {
+                          "LABEL": "Password",
+                          "PLACEHOLDER": "Enter your password",
+                          "ERROR": "Incorrect password"
+                        }
+                      },
+                      "BUTTONS": {
+                        "NEXT": "Next"
+                      }
+                    },
+                    "ADD": {
+                      "TITLE": "Register your security key",
+                      "STEPS": {
+                        "ADD": "Add security key",
+                        "COMPLETED": "Complete!"
+                      },
+                      "FYI": "Your Security Key is registered. From now on, you’ll use it to sign in with 2FA",
+                      "GUIDE": {
+                        "INSERT": "Insert your Security Key in your computer’s USB port or connect it with a USB cable.",
+                        "CONNECT": "Once connected, tap the button or gold disk if your key has one of them.",
+                        "TROUBLE": "Having trouble?"
+                      },
+                      "INPUTS": {
+                        "YUBIKEY": {
+                          "LABEL": "Yubikey name",
+                          "PLACEHOLDER": "Enter yubikey name"
+                        }
+                      },
+                      "BUTTONS": {
+                        "ADD": "Add security key",
+                        "CANCEL": "Cancel",
+                        "DONE": "Done"
+                      }
+                    },
+                    "EDIT": {
+                      "TITLE": "Edit security key",
+                      "INPUTS": {
+                        "YUBIKEY": {
+                          "LABEL": "Yubikey name",
+                          "PLACEHOLDER": "Enter yubikey name"
+                        }
+                      },
+                      "BUTTONS": {
+                        "DONE": "Done"
+                      },
+                      "ADDED": "ADDED",
+                      "LAST_USED": "LAST USED",
+                      "BROWSER": "BROWSER"
+                    },
+                    "REMOVE": {
+                      "TITLE": "Remove this key",
+                      "DESCRIPTION": "Remove this second step will make your account less secure. Are you sure you want to proceed?",
+                      "BUTTONS": {
+                        "REMOVE": "Remove",
+                        "CANCEL": "Cancel"
+                      }
+                    }
+                  }
+                }
+              },
+              "ACCOUNT": {
+                "TITLE": "Account",
+                "PASSWORD": {
+                  "TITLE": "Login password",
+                  "LAST_CHANGED": "Last changed",
+                  "BUTTONS": {
+                    "CHANGE": "Change"
+                  }
+                }
+              }
+            }
+          },
+          "SHELL": {
+            "MAIN": {
+              "TITLE": "Security"
+            }
+          }
+        },
+        "SHARED": {
+          "UI": {
+            "CHANGE_PASSWORD": {
+              "TITLE": "Change password",
+              "DESCRIPTION": "Changing your password will sign you out on your devices.",
+              "INPUTS": {
+                "CURRENT_PASSWORD": {
+                  "LABEL": "Current password",
+                  "PLACEHOLDER": "Enter your current password"
+                },
+                "NEW_PASSWORD": {
+                  "LABEL": "New password",
+                  "PLACEHOLDER": "Enter your new password"
+                },
+                "CONFIRM_PASSWORD": {
+                  "LABEL": "Confirm password",
+                  "PLACEHOLDER": "Confirm new password",
+                  "VALIDATIONS": {
+                    "MATCH": "Passwords don’t match"
+                  }
+                }
+              },
+              "POPOVERS": {
+                "VALIDATIONS": {
+                  "UPPERCASE": "An uppercase letter",
+                  "LOWERCASE": "A lowercase letter",
+                  "SPECIAL": "A special character",
+                  "NUMBER": "A number",
+                  "MINIMUM": "Minimum 10 characters"
+                }
+              },
+              "BUTTONS": {
+                "CHANGE": "Change password",
+                "CANCEL": "Cancel"
+              },
+              "ERRORS": {
+                "INVALID_CURRENT_PASSWORD": "Your input password is not correct! Please try again",
+                "SAME_WITH_CURRENT_PASSWORD": "Your input password is the same with current password! Please try difference"
+              },
+              "SUCCESS": "Your password has been changed successfully"
+            }
+          }
+        },
+        "PERSONAL_INFO": {
+          "SHELL": {
+            "MAIN": {
+              "TITLE": "Personal info",
+              "BASIC_INFO": {
+                "TITLE": "Basic info",
+                "FULL_NAME": "FULL NAME",
+                "EMAIL": "EMAIL",
+                "PHONE": "PHONE NUMBER",
+                "PASSWORD": "PASSWORD",
+                "CHANGE": "Change"
+              }
+            }
+          }
+        },
+        "API_TOKEN": {
+          "SHARED": {
+            "UI": {
+              "DISCARD": {
+                "TITLE": "Confirm discard changes",
+                "DESCRIPTION": "Are you sure you want to discard all changes?\nYour changes will not be saved.",
+                "BUTTONS": {
+                  "CONFIRM": "Discard all changes",
+                  "CANCEL": "Cancel"
+                }
+              },
+              "CONFIRM": {
+                "TITLE": "Reset form?",
+                "DESCRIPTION": "Do you want to reset this form and erase all the data you’ve entered so far?",
+                "UNDO": "This can not be undone.",
+                "BUTTONS": {
+                  "CONFIRM": "Reset form",
+                  "CANCEL": "Cancel"
+                },
+                "MESSAGES": {
+                  "SUCCESS": "Form has been successfully reset"
+                }
+              }
+            }
+          },
+          "VIEW": {
+            "TITLE": "API Token",
+            "WARNING": {
+              "MAX": "You have reached the limit for the number of tokens you can created at this time. Please try to revoke before generating new tokens.",
+              "TWO_FACTOR": {
+                "TEXT": "You have not enabled 2FA Authentication. Please add security key to increase your account security",
+                "LINK": "Add security key"
+              }
+            },
+            "BUTTONS": {
+              "GENERATE": "Generate token",
+              "EDIT": "Edit",
+              "REVOKE": "Revoke Token"
+            },
+            "HOW": "How do I use this token?",
+            "DESCRIPTION": "API tokens can be used to connect your trading terminal, accounting systems, or other infrastructure to your Privé account.",
+            "EMPTY": "No API tokens",
+            "COLUMNS": {
+              "NAME": {
+                "LABEL": "Token name"
+              },
+              "CREATED_ON": {
+                "LABEL": "Created On"
+              },
+              "IP": {
+                "LABEL": "IP Address",
+                "SUB": "addresses"
+              },
+              "PERMISSIONS": {
+                "LABEL": "Permissions",
+                "SUB": "permissions",
+                "ALL": "All"
+              },
+              "ACTIONS": {
+                "LABEL": "Actions"
+              }
+            },
+            "REVOKE": {
+              "TITLE": "Revoke Token",
+              "QUESTION": "Are you sure you want to revoke token",
+              "UNDO": "This action can not be undone.",
+              "BUTTONS": {
+                "REVOKE": "Revoke",
+                "CANCEL": "Cancel"
+              }
+            },
+            "MESSAGES": {
+              "REVOKE": "API token has been successfully revoked"
+            }
+          },
+          "EDIT": {
+            "TITLE": "Edit API token",
+            "BUTTONS": {
+              "RESET": "Reset",
+              "EDIT": "Save Changes"
+            },
+            "PARTS": {
+              "PERMISSIONS": {
+                "TITLE": "Permissions",
+                "SUB_TITLE": "Adjust permissions for IP addresses",
+                "READ": {
+                  "TITLE": "Read",
+                  "HISTORY": "History",
+                  "SPOT_PRICE": "Spot Price",
+                  "BALANCE": "Balance & risk exp"
+                },
+                "WRITE": {
+                  "TITLE": "Write",
+                  "RFQ": "RFQ",
+                  "EXECUTE_QUOTE": "Execute Quote",
+                  "CANCEL": "Cancel RFQ"
+                }
+              },
+              "IP": {
+                "TITLE": "Allowed IP addresses",
+                "ENTER": "Press “Enter” to add IP address",
+                "ERROR": {
+                  "EXISTED": "This IP address already exists",
+                  "UN_CORRECT": "Please enter a correct IP address"
+                }
+              }
+            },
+            "MESSAGES": {
+              "SUCCESS": "API token has been successfully modified"
+            },
+            "MODALS": {
+              "SAVE_CHANGES": {
+                "TITLE": "Save changes",
+                "DESCRIPTION": "The details of API token ",
+                "CHANGED": " has been changed.",
+                "QUESTION": "Do you want to save changes to this API token?",
+                "BUTTONS": {
+                  "SAVE": "Save changes",
+                  "CANCEL": "Don’t save"
+                }
+              }
+            }
+          },
+          "GENERATE": {
+            "TITLE": "Generate new API token",
+            "BUTTONS": {
+              "RESET": "Reset",
+              "GENERATE": "Generate"
+            },
+            "PARTS": {
+              "PERMISSIONS": {
+                "TITLE": "Permissions",
+                "SUB_TITLE": "Adjust permissions for IP addresses",
+                "READ": {
+                  "TITLE": "Read",
+                  "HISTORY": "History",
+                  "SPOT_PRICE": "Spot Price",
+                  "BALANCE": "Balance & risk exp"
+                },
+                "WRITE": {
+                  "TITLE": "Write",
+                  "RFQ": "RFQ",
+                  "EXECUTE_QUOTE": "Execute Quote",
+                  "CANCEL": "Cancel RFQ"
+                }
+              },
+              "IP": {
+                "TITLE": "Allowed IP addresses",
+                "ENTER": "Press “Enter” to add IP address",
+                "ERROR": {
+                  "EXISTED": "This IP address already exists",
+                  "UN_CORRECT": "Please enter a correct IP address"
+                }
+              }
+            },
+            "MESSAGES": {
+              "COPIED": "API token copied to clipboard",
+              "SUCCESS": "API token has been successfully generated"
+            },
+            "ERRORS": {
+              "ALL": "API token can not be generated at the moment. Please try again"
+            }
+          }
+        }
+      }
+    }
+  }
+}

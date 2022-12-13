@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/landing/shared/ui/carousel-slider",
+  "sourceRoot": "libs/landing/shared/ui/carousel-slider/src",
+  "prefix": "prive-landing-carousel-slider",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/landing/shared/ui/carousel-slider/src/test.ts",
+        "tsConfig": "libs/landing/shared/ui/carousel-slider/tsconfig.spec.json",
+        "karmaConfig": "libs/landing/shared/ui/carousel-slider/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/landing/shared/ui/carousel-slider/src/**/*.ts",
+          "libs/landing/shared/ui/carousel-slider/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

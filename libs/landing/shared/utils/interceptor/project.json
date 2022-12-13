@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/landing/shared/utils/interceptor",
+  "sourceRoot": "libs/landing/shared/utils/interceptor/src",
+  "prefix": "prive-landing",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/landing/shared/utils/interceptor/src/test.ts",
+        "tsConfig": "libs/landing/shared/utils/interceptor/tsconfig.spec.json",
+        "karmaConfig": "libs/landing/shared/utils/interceptor/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/landing/shared/utils/interceptor/src/**/*.ts",
+          "libs/landing/shared/utils/interceptor/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

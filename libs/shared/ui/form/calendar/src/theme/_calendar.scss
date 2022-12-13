@@ -1,0 +1,232 @@
+@import "libs/shared/resources/assets/src/lib/styles/theme/typography";
+
+.wrapper--calendar {
+  &--day {
+    @apply w-9 h-8 relative rounded-sm border border-solid flex items-center justify-center;
+    b {
+      @apply b4-medium;
+    }
+    &.state {
+      &-default {
+        @apply bg-transparent border-transparent;
+        b {
+          @apply text-prive-neutral-400;
+        }
+      }
+      &-mid {
+        @apply bg-prive-dark-blue-400 border-transparent;
+        b {
+          @apply text-prive-neutral-400;
+        }
+      }
+      &-selected {
+        @apply bg-prive-blue-500 border-transparent;
+        b {
+          @apply text-prive-neutral-white;
+        }
+      }
+    }
+    &--current {
+      @apply w-1 h-1 rounded-full bg-prive-sand-300 left-4 bottom-0.5 absolute;
+      &.disabled {
+        @apply bg-prive-neutral-800;
+      }
+    }
+    &:hover {
+      @apply bg-prive-blue-0.16 border-prive-blue-400;
+      b {
+        @apply text-prive-neutral-400;
+      }
+    }
+    &.disabled {
+      @apply bg-transparent;
+      b {
+        @apply text-prive-neutral-800;
+      }
+    }
+  }
+  &--year {
+    @apply w-15.5 h-8 relative rounded-sm border border-solid flex items-center justify-center;
+    b {
+      @apply b4-medium;
+    }
+    &.state {
+      &-default {
+        @apply bg-transparent border-transparent;
+        b {
+          @apply text-prive-neutral-400;
+        }
+      }
+      &-mid {
+        @apply bg-prive-dark-blue-400 border-transparent;
+        b {
+          @apply text-prive-neutral-400;
+        }
+      }
+      &-selected {
+        @apply bg-prive-blue-500 border-transparent;
+        b {
+          @apply text-prive-neutral-white;
+        }
+      }
+    }
+    &--current {
+      @apply w-1 h-1 rounded-full bg-prive-sand-300 left-4 bottom-0.5 absolute;
+      &.disabled {
+        @apply bg-prive-neutral-800;
+      }
+    }
+    &:hover {
+      @apply bg-prive-blue-0.16 border-prive-blue-400;
+      b {
+        @apply text-prive-neutral-400;
+      }
+    }
+    &.disabled {
+      @apply bg-transparent;
+      b {
+        @apply text-prive-neutral-800;
+      }
+    }
+  }
+  &--month {
+    @apply w-21 h-8 relative rounded-sm border border-solid flex items-center justify-center;
+    b {
+      @apply b4-medium;
+    }
+    &.state {
+      &-default {
+        @apply bg-transparent border-transparent;
+        b {
+          @apply text-prive-neutral-400;
+        }
+      }
+      &-mid {
+        @apply bg-prive-dark-blue-400 border-transparent;
+        b {
+          @apply text-prive-neutral-400;
+        }
+      }
+      &-selected {
+        @apply bg-prive-blue-500 border-transparent;
+        b {
+          @apply text-prive-neutral-white;
+        }
+      }
+    }
+    &--current {
+      @apply w-1 h-1 rounded-full bg-prive-sand-300 left-4 bottom-0.5 absolute;
+      &.disabled {
+        @apply bg-prive-neutral-800;
+      }
+    }
+    &:hover {
+      @apply bg-prive-blue-0.16 border-prive-blue-400;
+      b {
+        @apply text-prive-neutral-400;
+      }
+    }
+    &.disabled {
+      @apply bg-transparent;
+      b {
+        @apply text-prive-neutral-800;
+      }
+    }
+  }
+  &--hour {
+    @apply w-full h-8 flex items-center justify-center rounded-sm border-solid border;
+    b {
+      @apply b4-medium;
+    }
+    &.state {
+      &-default {
+        @apply bg-transparent border-transparent;
+        b {
+          @apply text-prive-neutral-400;
+        }
+      }
+      &-selected {
+        @apply bg-prive-dark-blue-400 border-transparent;
+        b {
+          @apply text-prive-neutral-white;
+        }
+      }
+    }
+    &:hover {
+      @apply bg-prive-blue-0.16 border-prive-blue-400;
+      b {
+        @apply text-prive-neutral-400;
+      }
+    }
+    &.disabled {
+      @apply bg-transparent;
+      b {
+        @apply text-prive-neutral-800;
+      }
+    }
+  }
+  &--second {
+    @apply w-full h-8 flex items-center justify-center rounded-sm border-solid border;
+    b {
+      @apply b4-medium;
+    }
+    &.state {
+      &-default {
+        @apply bg-transparent border-transparent;
+        b {
+          @apply text-prive-neutral-400;
+        }
+      }
+      &-selected {
+        @apply bg-prive-dark-blue-400 border-transparent;
+        b {
+          @apply text-prive-neutral-white;
+        }
+      }
+    }
+    &:hover {
+      @apply bg-prive-blue-0.16 border-prive-blue-400;
+      b {
+        @apply text-prive-neutral-400;
+      }
+    }
+    &.disabled {
+      @apply bg-transparent;
+      b {
+        @apply text-prive-neutral-800;
+      }
+    }
+  }
+  &--minute {
+    @apply w-full h-8 flex items-center justify-center rounded-sm border-solid border;
+    b {
+      @apply b4-medium;
+    }
+    &.state {
+      &-default {
+        @apply bg-transparent border-transparent;
+        b {
+          @apply text-prive-neutral-400;
+        }
+      }
+      &-selected {
+        @apply bg-prive-dark-blue-400 border-transparent;
+        b {
+          @apply text-prive-neutral-white;
+        }
+      }
+    }
+    &:hover {
+      @apply bg-prive-blue-0.16 border-prive-blue-400;
+      b {
+        @apply text-prive-neutral-400;
+      }
+    }
+    &.disabled {
+      @apply bg-transparent;
+      b {
+        @apply text-prive-neutral-800;
+      }
+    }
+  }
+}

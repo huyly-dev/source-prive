@@ -1,0 +1,17 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="ardr">
+<circle id="Ellipse 347" cx="32" cy="32" r="31" fill="#FEFEFE" stroke="#CBD5E1" stroke-width="2"/>
+<g id="ardr_2" clip-path="url(#clip_ardr_0)">
+<g id="Laag 2">
+<path id="Vector" d="M31.8259 9.00396L9.99994 47.1323H20.883L37.4559 18.7051L31.8259 9.00396Z" fill="#1562A1"/>
+<path id="Vector_2" d="M21.6569 47.2774L36.1543 38.8357L30.5819 31.9374L21.6569 47.2774Z" fill="#0C426C"/>
+<path id="Vector_3" d="M41.3075 25.6045L30.8546 31.3032L43.9462 47.2685H53.9977L41.3075 25.6045Z" fill="#3C87C7"/>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip_ardr_0">
+<rect width="44" height="38.28" fill="white" transform="translate(10 9)"/>
+</clipPath>
+</defs>
+</svg>

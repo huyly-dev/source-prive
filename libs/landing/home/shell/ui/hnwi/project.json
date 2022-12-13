@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/landing/home/shell/ui/hnwi",
+  "sourceRoot": "libs/landing/home/shell/ui/hnwi/src",
+  "prefix": "prive-landing-home-hnwi",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/landing/home/shell/ui/hnwi/src/test.ts",
+        "tsConfig": "libs/landing/home/shell/ui/hnwi/tsconfig.spec.json",
+        "karmaConfig": "libs/landing/home/shell/ui/hnwi/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/landing/home/shell/ui/hnwi/src/**/*.ts",
+          "libs/landing/home/shell/ui/hnwi/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

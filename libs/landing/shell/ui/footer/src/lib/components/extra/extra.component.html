@@ -1,0 +1,28 @@
+<div class="wrapper-landing-footer__extra">
+  <ng-container *ngFor="let section of firstSections">
+    <div class="wrapper-landing-footer__extra__section">
+      <span class="text-prive-blue-400 h9-semibold sm:h10-semibold md:h10-semibold lg:h10-semibold">{{section.title | translate}}</span>
+      <div class="wrapper-landing-footer__extra__section__items">
+        <ng-container *ngFor="let item of section.items">
+          <div class="wrapper-landing-footer__extra__section__items__each">
+            <a class="xl:b2-medium sm:b3 md:b3 lg:b3" target="_blank" rel="noreferrer" [href]="item.href">{{item.label | translate}}</a>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </ng-container>
+  <div class="wrapper-landing-footer__extra__second">
+    <ng-container *ngFor="let section of secondSections">
+      <div class="wrapper-landing-footer__extra__section">
+        <span class="text-prive-blue-400 h9-semibold sm:h10-semibold md:h10-semibold lg:h10-semibold">{{section.title | translate}}</span>
+        <div class="wrapper-landing-footer__extra__section__items">
+          <ng-container *ngFor="let item of section.items">
+            <div class="wrapper-landing-footer__extra__section__items__each">
+              <a class="xl:b2-medium sm:b3 md:b3 lg:b3" target="_blank" rel="noreferrer" [href]="item.href">{{item.label | translate}}</a>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>

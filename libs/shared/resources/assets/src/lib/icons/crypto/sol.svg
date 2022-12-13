@@ -1,0 +1,26 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="sol">
+<g id="crypto/sol">
+<circle id="Ellipse 342" cx="32" cy="32" r="31" fill="#FEFEFE" stroke="#CBD5E1" stroke-width="2"/>
+<g id="Group 3391">
+<path id="Vector" d="M19.9118 39.4464C20.1286 39.2297 20.4267 39.1032 20.7428 39.1032H49.4111C49.935 39.1032 50.1969 39.7355 49.8266 40.1058L44.1634 45.769C43.9466 45.9858 43.6485 46.1122 43.3324 46.1122H14.6641C14.1402 46.1122 13.8783 45.48 14.2486 45.1096L19.9118 39.4464Z" fill="url(#paint_sol_0_linear)"/>
+<path id="Vector_2" d="M19.9118 18.3019C20.1376 18.0852 20.4357 17.9587 20.7428 17.9587H49.4111C49.935 17.9587 50.1969 18.591 49.8266 18.9613L44.1634 24.6245C43.9466 24.8413 43.6485 24.9677 43.3324 24.9677H14.6641C14.1402 24.9677 13.8783 24.3355 14.2486 23.9651L19.9118 18.3019Z" fill="url(#paint_sol_1_linear)"/>
+<path id="Vector_3" d="M44.1634 28.8064C43.9466 28.5897 43.6485 28.4632 43.3324 28.4632H14.6641C14.1402 28.4632 13.8783 29.0955 14.2486 29.4658L19.9118 35.129C20.1286 35.3458 20.4267 35.4722 20.7428 35.4722H49.4111C49.935 35.4722 50.1969 34.84 49.8266 34.4696L44.1634 28.8064Z" fill="url(#paint2_linear)"/>
+</g>
+</g>
+</g>
+<defs>
+<linearGradient id="paint_sol_0_linear" x1="46.6724" y1="14.5757" x2="26.8317" y2="52.5787" gradientUnits="userSpaceOnUse">
+<stop stop-color="#00FFA3"/>
+<stop offset="1" stop-color="#DC1FFF"/>
+</linearGradient>
+<linearGradient id="paint_sol_1_linear" x1="37.997" y1="10.0463" x2="18.1562" y2="48.0494" gradientUnits="userSpaceOnUse">
+<stop stop-color="#00FFA3"/>
+<stop offset="1" stop-color="#DC1FFF"/>
+</linearGradient>
+<linearGradient id="paint2_linear" x1="42.3071" y1="12.2967" x2="22.4664" y2="50.2996" gradientUnits="userSpaceOnUse">
+<stop stop-color="#00FFA3"/>
+<stop offset="1" stop-color="#DC1FFF"/>
+</linearGradient>
+</defs>
+</svg>

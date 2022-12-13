@@ -1,0 +1,53 @@
+<div class="wrapper-landing-home__banner">
+  <div class="absolute top-0 left-0 w-screen h-screen opacity-50">
+    <ngt-canvas
+      #background
+      [shadows]="false"
+      [size]="{width: 1200, height: 600}"
+      [camera]="{fov: 45, far: 1000, near: 1, aspect: 1}"
+    >
+
+      <ng-container *ngIf="true">
+        <ngt-ambient-light [intensity]="0.8"></ngt-ambient-light>
+        <ngt-point-light [intensity]="1" [position]="[0, 6, 0]"></ngt-point-light>
+      </ng-container>
+      <ng-container *ngFor="let ver of vertices; let i = index">
+        <ngt-mesh [position]="ver.position" [scale]="ver.scale" (animateReady)="starAnimation($event.object, i)">
+          <ngt-sphere-geometry [args]="[0.5, 32, 32]"></ngt-sphere-geometry>
+          <ngt-mesh-basic-material
+            [parameters]='{color: "#ffffff", wireframe: true}'
+          ></ngt-mesh-basic-material>
+        </ngt-mesh>
+      </ng-container>
+    </ngt-canvas>
+  </div>
+  <div class="opacity-50">
+    <ngt-canvas
+      #earth
+      [shadows]="false"
+      [size]="{width: 600, height: 600}"
+      [camera]="{position: [-5,5,5], fov: 14}"
+      [scene]='{background: "#0F1B34" | color}'
+    >
+
+      <ng-container *ngIf="true">
+        <ngt-ambient-light [intensity]="0.8"></ngt-ambient-light>
+        <ngt-point-light [intensity]="1" [position]="[0, 6, 0]"></ngt-point-light>
+      </ng-container>
+
+      <ngt-mesh (animateReady)="turnAnimate($event.object)">
+        <ngt-sphere-geometry [args]="[]"></ngt-sphere-geometry>
+        <ngt-mesh-phong-material
+          [parameters]='{color: "#457DF5", wireframe: true}'
+        ></ngt-mesh-phong-material>
+      </ngt-mesh>
+    </ngt-canvas>
+  </div>
+  <h1 class="xl:l-h1 sm:l-h1-small md:l-h1-small lg:l-h1-large">Grow With A Trusted Partner In Asia For Digital Assets Management, Crypto Custody And More</h1>
+  <div class="wrapper-landing-home__banner__mouse">
+    <div class="wrapper-landing-home__banner__mouse__chevrons">
+      <div class="wrapper-landing-home__banner__mouse__chevrons__chevrondown"></div>
+      <div class="wrapper-landing-home__banner__mouse__chevrons__chevrondown"></div>
+    </div>
+  </div>
+</div>

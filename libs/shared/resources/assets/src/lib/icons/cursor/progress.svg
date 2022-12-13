@@ -1,0 +1,31 @@
+<svg width="24" height="36" viewBox="0 0 24 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Type=progress">
+<g id="cursor / busybutclickable">
+<g id="cursor / busybutclickable_2" filter="url(#filter_progress_0_d)">
+<g id="cursor">
+<mask id="mask_progress_0" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="12" width="18" height="19">
+<path id="cursor_2" fill-rule="evenodd" clip-rule="evenodd" d="M3 21.186C3 26.157 7.03 30.186 12 30.186C16.97 30.186 21 26.157 21 21.186C21 16.215 16.97 12.186 12 12.186C7.03 12.186 3 16.215 3 21.186Z" fill="white"/>
+</mask>
+<g mask="url(#mask_progress_0)">
+<path id="cursor_3" fill-rule="evenodd" clip-rule="evenodd" d="M3 12.186H12V21.186H3V12.186Z" fill="#3582E5"/>
+<path id="cursor_4" fill-rule="evenodd" clip-rule="evenodd" d="M12 21.186H21V30.186H12V21.186Z" fill="#3582E5"/>
+<path id="cursor_5" fill-rule="evenodd" clip-rule="evenodd" d="M12 12.186H21V21.186H12V12.186Z" fill="#4DC6FA"/>
+<path id="cursor_6" fill-rule="evenodd" clip-rule="evenodd" d="M3 21.186H12V30.186H3V21.186Z" fill="#4DC6FA"/>
+</g>
+</g>
+<path id="cursor_7" fill-rule="evenodd" clip-rule="evenodd" d="M3 1V12.188L5.969 9.322L6.129 9.183H11.165L3 1Z" fill="black"/>
+</g>
+</g>
+</g>
+<defs>
+<filter id="filter_progress_0_d" x="0" y="0" width="24" height="35.186" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="2"/>
+<feGaussianBlur stdDeviation="1.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.402655 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+</defs>
+</svg>

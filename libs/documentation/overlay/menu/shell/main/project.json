@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/documentation/overlay/menu/shell/main",
+  "sourceRoot": "libs/documentation/overlay/menu/shell/main/src",
+  "prefix": "prive-documentation-overlay-menu",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/documentation/overlay/menu/shell/main/src/test.ts",
+        "tsConfig": "libs/documentation/overlay/menu/shell/main/tsconfig.spec.json",
+        "karmaConfig": "libs/documentation/overlay/menu/shell/main/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/documentation/overlay/menu/shell/main/src/**/*.ts",
+          "libs/documentation/overlay/menu/shell/main/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

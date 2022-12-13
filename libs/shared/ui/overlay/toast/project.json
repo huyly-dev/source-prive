@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/shared/ui/overlay/toast",
+  "sourceRoot": "libs/shared/ui/overlay/toast/src",
+  "prefix": "prive-overlay-toast",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/shared/ui/overlay/toast/src/test.ts",
+        "tsConfig": "libs/shared/ui/overlay/toast/tsconfig.spec.json",
+        "karmaConfig": "libs/shared/ui/overlay/toast/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/ui/overlay/toast/src/**/*.ts",
+          "libs/shared/ui/overlay/toast/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

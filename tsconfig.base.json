@@ -1,0 +1,450 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@auth-forgot-password-shared-data-access-store": [
+        "libs/auth/forgot-password/shared/data-access/store/src/index.ts"
+      ],
+      "@auth-forgot-password-shell-main": [
+        "libs/auth/forgot-password/shell/main/src/index.ts"
+      ],
+      "@auth-forgot-password-shell-ui-confirm": [
+        "libs/auth/forgot-password/shell/ui/confirm/src/index.ts"
+      ],
+      "@auth-forgot-password-shell-ui-expired": [
+        "libs/auth/forgot-password/shell/ui/expired/src/index.ts"
+      ],
+      "@auth-forgot-password-shell-ui-reset": [
+        "libs/auth/forgot-password/shell/ui/reset/src/index.ts"
+      ],
+      "@auth-forgot-password-shell-ui-send": [
+        "libs/auth/forgot-password/shell/ui/send/src/index.ts"
+      ],
+      "@auth-login-shared-data-access-store": [
+        "libs/auth/login/shared/data-access/store/src/index.ts"
+      ],
+      "@auth-login-shell-main": ["libs/auth/login/shell/main/src/index.ts"],
+      "@auth-login-shell-ui-form": [
+        "libs/auth/login/shell/ui/form/src/index.ts"
+      ],
+      "@auth-login-shell-ui-two-factor": [
+        "libs/auth/login/shell/ui/two-factor/src/index.ts"
+      ],
+      "@auth-resend-unlock-instruction-shared-data-access-store": [
+        "libs/auth/resend-unlock-instruction/shared/data-access/store/src/index.ts"
+      ],
+      "@auth-resend-unlock-instruction-shell-main": [
+        "libs/auth/resend-unlock-instruction/shell/main/src/index.ts"
+      ],
+      "@auth-shared-data-access-store": [
+        "libs/auth/shared/data-access/store/src/index.ts"
+      ],
+      "@auth-shared-utils-constants": [
+        "libs/auth/shared/utils/constants/src/index.ts"
+      ],
+      "@auth-shared-utils-interceptor": [
+        "libs/auth/shared/utils/interceptor/src/index.ts"
+      ],
+      "@auth-shell-main": ["libs/auth/shell/main/src/index.ts"],
+      "@auth-shell-ui-layout": ["libs/auth/shell/ui/layout/src/index.ts"],
+      "@data-access-api": ["libs/shared/data-access/api/src/index.ts"],
+      "@data-access-common": ["libs/shared/data-access/common/src/index.ts"],
+      "@data-access-form": ["libs/shared/data-access/form/src/index.ts"],
+      "@data-access-overlay": ["libs/shared/data-access/overlay/src/index.ts"],
+      "@data-access-service": ["libs/shared/data-access/service/src/index.ts"],
+      "@data-access-store": ["libs/shared/data-access/store/src/index.ts"],
+      "@documentation-common-avatar-shared-data-access-store": [
+        "libs/documentation/common/avatar/shared/data-access/store/src/index.ts"
+      ],
+      "@documentation-common-avatar-shell-main": [
+        "libs/documentation/common/avatar/shell/main/src/index.ts"
+      ],
+      "@documentation-common-button-shared-data-access-store": [
+        "libs/documentation/common/button/shared/data-access/store/src/index.ts"
+      ],
+      "@documentation-common-button-shell-main": [
+        "libs/documentation/common/button/shell/main/src/index.ts"
+      ],
+      "@documentation-common-filter-shared-data-access-store": [
+        "libs/documentation/common/filter/shared/data-access/store/src/index.ts"
+      ],
+      "@documentation-common-filter-shell-main": [
+        "libs/documentation/common/filter/shell/main/src/index.ts"
+      ],
+      "@documentation-common-icon-shared-data-access-store": [
+        "libs/documentation/common/icon/shared/data-access/store/src/index.ts"
+      ],
+      "@documentation-common-icon-shell-main": [
+        "libs/documentation/common/icon/shell/main/src/index.ts"
+      ],
+      "@documentation-common-label-shared-data-access-store": [
+        "libs/documentation/common/label/shared/data-access/store/src/index.ts"
+      ],
+      "@documentation-common-label-shell-main": [
+        "libs/documentation/common/label/shell/main/src/index.ts"
+      ],
+      "@documentation-common-link-shared-data-access-store": [
+        "libs/documentation/common/link/shared/data-access/store/src/index.ts"
+      ],
+      "@documentation-common-link-shell-main": [
+        "libs/documentation/common/link/shell/main/src/index.ts"
+      ],
+      "@documentation-common-mask-shared-data-access-store": [
+        "libs/documentation/common/mask/shared/data-access/store/src/index.ts"
+      ],
+      "@documentation-common-mask-shell-main": [
+        "libs/documentation/common/mask/shell/main/src/index.ts"
+      ],
+      "@documentation-common-navigation-shared-data-access-store": [
+        "libs/documentation/common/navigation/shared/data-access/store/src/index.ts"
+      ],
+      "@documentation-common-navigation-shell-main": [
+        "libs/documentation/common/navigation/shell/main/src/index.ts"
+      ],
+      "@documentation-common-pagination-shared-data-access-store": [
+        "libs/documentation/common/pagination/shared/data-access/store/src/index.ts"
+      ],
+      "@documentation-common-pagination-shell-main": [
+        "libs/documentation/common/pagination/shell/main/src/index.ts"
+      ],
+      "@documentation-common-shell-main": [
+        "libs/documentation/common/shell/main/src/index.ts"
+      ],
+      "@documentation-common-switch-shared-data-access-store": [
+        "libs/documentation/common/switch/shared/data-access/store/src/index.ts"
+      ],
+      "@documentation-common-switch-shell-main": [
+        "libs/documentation/common/switch/shell/main/src/index.ts"
+      ],
+      "@documentation-common-tab-shared-data-access-store": [
+        "libs/documentation/common/tab/shared/data-access/store/src/index.ts"
+      ],
+      "@documentation-common-tab-shell-main": [
+        "libs/documentation/common/tab/shell/main/src/index.ts"
+      ],
+      "@documentation-common-table-shared-data-access-store": [
+        "libs/documentation/common/table/shared/data-access/store/src/index.ts"
+      ],
+      "@documentation-common-table-shell-main": [
+        "libs/documentation/common/table/shell/main/src/index.ts"
+      ],
+      "@documentation-common-toggle-shared-data-access-store": [
+        "libs/documentation/common/toggle/shared/data-access/store/src/index.ts"
+      ],
+      "@documentation-common-toggle-shell-main": [
+        "libs/documentation/common/toggle/shell/main/src/index.ts"
+      ],
+      "@documentation-form-amount-shared-data-access-store": [
+        "libs/documentation/form/amount/shared/data-access/store/src/index.ts"
+      ],
+      "@documentation-form-amount-shell-main": [
+        "libs/documentation/form/amount/shell/main/src/index.ts"
+      ],
+      "@documentation-form-calendar-shared-data-access-store": [
+        "libs/documentation/form/calendar/shared/data-access/store/src/index.ts"
+      ],
+      "@documentation-form-calendar-shell-main": [
+        "libs/documentation/form/calendar/shell/main/src/index.ts"
+      ],
+      "@documentation-form-check-box-shared-data-access-store": [
+        "libs/documentation/form/check-box/shared/data-access/store/src/index.ts"
+      ],
+      "@documentation-form-check-box-shell-main": [
+        "libs/documentation/form/check-box/shell/main/src/index.ts"
+      ],
+      "@documentation-form-combo-box-shared-data-access-store": [
+        "libs/documentation/form/combo-box/shared/data-access/store/src/index.ts"
+      ],
+      "@documentation-form-combo-box-shell-main": [
+        "libs/documentation/form/combo-box/shell/main/src/index.ts"
+      ],
+      "@documentation-form-dropdown-shared-data-access-store": [
+        "libs/documentation/form/dropdown/shared/data-access/store/src/index.ts"
+      ],
+      "@documentation-form-dropdown-shell-main": [
+        "libs/documentation/form/dropdown/shell/main/src/index.ts"
+      ],
+      "@documentation-form-input-shared-data-access-store": [
+        "libs/documentation/form/input/shared/data-access/store/src/index.ts"
+      ],
+      "@documentation-form-input-shell-main": [
+        "libs/documentation/form/input/shell/main/src/index.ts"
+      ],
+      "@documentation-form-radio-shared-data-access-store": [
+        "libs/documentation/form/radio/shared/data-access/store/src/index.ts"
+      ],
+      "@documentation-form-radio-shell-main": [
+        "libs/documentation/form/radio/shell/main/src/index.ts"
+      ],
+      "@documentation-form-shell-main": [
+        "libs/documentation/form/shell/main/src/index.ts"
+      ],
+      "@documentation-form-slider-shared-data-access-store": [
+        "libs/documentation/form/slider/shared/data-access/store/src/index.ts"
+      ],
+      "@documentation-form-slider-shell-main": [
+        "libs/documentation/form/slider/shell/main/src/index.ts"
+      ],
+      "@documentation-overlay-alert-shared-data-access-store": [
+        "libs/documentation/overlay/alert/shared/data-access/store/src/index.ts"
+      ],
+      "@documentation-overlay-alert-shell-main": [
+        "libs/documentation/overlay/alert/shell/main/src/index.ts"
+      ],
+      "@documentation-overlay-cdk-shared-data-access-store": [
+        "libs/documentation/overlay/cdk/shared/data-access/store/src/index.ts"
+      ],
+      "@documentation-overlay-cdk-shell-main": [
+        "libs/documentation/overlay/cdk/shell/main/src/index.ts"
+      ],
+      "@documentation-overlay-menu-shared-data-access-store": [
+        "libs/documentation/overlay/menu/shared/data-access/store/src/index.ts"
+      ],
+      "@documentation-overlay-menu-shell-main": [
+        "libs/documentation/overlay/menu/shell/main/src/index.ts"
+      ],
+      "@documentation-overlay-modal-shared-data-access-store": [
+        "libs/documentation/overlay/modal/shared/data-access/store/src/index.ts"
+      ],
+      "@documentation-overlay-modal-shell-main": [
+        "libs/documentation/overlay/modal/shell/main/src/index.ts"
+      ],
+      "@documentation-overlay-popover-shared-data-access-store": [
+        "libs/documentation/overlay/popover/shared/data-access/store/src/index.ts"
+      ],
+      "@documentation-overlay-popover-shell-main": [
+        "libs/documentation/overlay/popover/shell/main/src/index.ts"
+      ],
+      "@documentation-overlay-shell-main": [
+        "libs/documentation/overlay/shell/main/src/index.ts"
+      ],
+      "@documentation-overlay-snackbar-shared-data-access-store": [
+        "libs/documentation/overlay/snackbar/shared/data-access/store/src/index.ts"
+      ],
+      "@documentation-overlay-snackbar-shell-main": [
+        "libs/documentation/overlay/snackbar/shell/main/src/index.ts"
+      ],
+      "@documentation-overlay-toast-shared-data-access-store": [
+        "libs/documentation/overlay/toast/shared/data-access/store/src/index.ts"
+      ],
+      "@documentation-overlay-toast-shell-main": [
+        "libs/documentation/overlay/toast/shell/main/src/index.ts"
+      ],
+      "@documentation-overlay-tooltip-shared-data-access-store": [
+        "libs/documentation/overlay/tooltip/shared/data-access/store/src/index.ts"
+      ],
+      "@documentation-overlay-tooltip-shell-main": [
+        "libs/documentation/overlay/tooltip/shell/main/src/index.ts"
+      ],
+      "@documentation-shared-data-access-store": [
+        "libs/documentation/shared/data-access/store/src/index.ts"
+      ],
+      "@documentation-shared-data-access-variable": [
+        "libs/documentation/shared/data-access/variable/src/index.ts"
+      ],
+      "@documentation-shared-ui-code": [
+        "libs/documentation/shared/ui/code/src/index.ts"
+      ],
+      "@documentation-shared-ui-combo": [
+        "libs/documentation/shared/ui/combo/src/index.ts"
+      ],
+      "@documentation-shared-utils-constants": [
+        "libs/documentation/shared/utils/constants/src/index.ts"
+      ],
+      "@documentation-shell-main": [
+        "libs/documentation/shell/main/src/index.ts"
+      ],
+      "@documentation-shell-ui-layout": [
+        "libs/documentation/shell/ui/layout/src/index.ts"
+      ],
+      "@landing-crypto-shared-data-access-store": [
+        "libs/landing/crypto/shared/data-access/store/src/index.ts"
+      ],
+      "@landing-crypto-shell-main": [
+        "libs/landing/crypto/shell/main/src/index.ts"
+      ],
+      "@landing-home-shared-data-access-store": [
+        "libs/landing/home/shared/data-access/store/src/index.ts"
+      ],
+      "@landing-home-shell-main": ["libs/landing/home/shell/main/src/index.ts"],
+      "@landing-home-shell-ui-banner": [
+        "libs/landing/home/shell/ui/banner/src/index.ts"
+      ],
+      "@landing-home-shell-ui-coin": [
+        "libs/landing/home/shell/ui/coin/src/index.ts"
+      ],
+      "@landing-home-shell-ui-corporate": [
+        "libs/landing/home/shell/ui/corporate/src/index.ts"
+      ],
+      "@landing-home-shell-ui-experience": [
+        "libs/landing/home/shell/ui/experience/src/index.ts"
+      ],
+      "@landing-home-shell-ui-hnwi": [
+        "libs/landing/home/shell/ui/hnwi/src/index.ts"
+      ],
+      "@landing-home-shell-ui-individual": [
+        "libs/landing/home/shell/ui/individual/src/index.ts"
+      ],
+      "@landing-home-shell-ui-institutional": [
+        "libs/landing/home/shell/ui/institutional/src/index.ts"
+      ],
+      "@landing-home-shell-ui-investor": [
+        "libs/landing/home/shell/ui/investor/src/index.ts"
+      ],
+      "@landing-home-shell-ui-otc-preview": [
+        "libs/landing/home/shell/ui/otc-preview/src/index.ts"
+      ],
+      "@landing-otc-shared-data-access-store": [
+        "libs/landing/otc/shared/data-access/store/src/index.ts"
+      ],
+      "@landing-otc-shared-utils-animations": [
+        "libs/landing/otc/shared/utils/animations/src/index.ts"
+      ],
+      "@landing-otc-shell-main": ["libs/landing/otc/shell/main/src/index.ts"],
+      "@landing-otc-shell-ui-banner": [
+        "libs/landing/otc/shell/ui/banner/src/index.ts"
+      ],
+      "@landing-otc-shell-ui-how": [
+        "libs/landing/otc/shell/ui/how/src/index.ts"
+      ],
+      "@landing-otc-shell-ui-what": [
+        "libs/landing/otc/shell/ui/what/src/index.ts"
+      ],
+      "@landing-otc-shell-ui-why-coinhako": [
+        "libs/landing/otc/shell/ui/why-coinhako/src/index.ts"
+      ],
+      "@landing-otc-shell-ui-why-trading": [
+        "libs/landing/otc/shell/ui/why-trading/src/index.ts"
+      ],
+      "@landing-private-shared-data-access-store": [
+        "libs/landing/private/shared/data-access/store/src/index.ts"
+      ],
+      "@landing-private-shell-main": [
+        "libs/landing/private/shell/main/src/index.ts"
+      ],
+      "@landing-private-shell-ui-banner": [
+        "libs/landing/private/shell/ui/banner/src/index.ts"
+      ],
+      "@landing-private-shell-ui-digital": [
+        "libs/landing/private/shell/ui/digital/src/index.ts"
+      ],
+      "@landing-private-shell-ui-individual": [
+        "libs/landing/private/shell/ui/individual/src/index.ts"
+      ],
+      "@landing-private-shell-ui-member": [
+        "libs/landing/private/shell/ui/member/src/index.ts"
+      ],
+      "@landing-private-shell-ui-wealth": [
+        "libs/landing/private/shell/ui/wealth/src/index.ts"
+      ],
+      "@landing-shared-data-access-store": [
+        "libs/landing/shared/data-access/store/src/index.ts"
+      ],
+      "@landing-shared-ui-about": ["libs/landing/shared/ui/about/src/index.ts"],
+      "@landing-shared-ui-beach": ["libs/landing/shared/ui/beach/src/index.ts"],
+      "@landing-shared-ui-brand": ["libs/landing/shared/ui/brand/src/index.ts"],
+      "@landing-shared-ui-button": [
+        "libs/landing/shared/ui/button/src/index.ts"
+      ],
+      "@landing-shared-ui-carousel-slider": [
+        "libs/landing/shared/ui/carousel-slider/src/index.ts"
+      ],
+      "@landing-shared-ui-flow": ["libs/landing/shared/ui/flow/src/index.ts"],
+      "@landing-shared-ui-form": ["libs/landing/shared/ui/form/src/index.ts"],
+      "@landing-shared-ui-member": [
+        "libs/landing/shared/ui/member/src/index.ts"
+      ],
+      "@landing-shared-ui-swiper": [
+        "libs/landing/shared/ui/swiper/src/index.ts"
+      ],
+      "@landing-shared-utils-animations": [
+        "libs/landing/shared/utils/animations/src/index.ts"
+      ],
+      "@landing-shared-utils-constants": [
+        "libs/landing/shared/utils/constants/src/index.ts"
+      ],
+      "@landing-shared-utils-guard": [
+        "libs/landing/shared/utils/guard/src/index.ts"
+      ],
+      "@landing-shared-utils-interceptor": [
+        "libs/landing/shared/utils/interceptor/src/index.ts"
+      ],
+      "@landing-shell-main": ["libs/landing/shell/main/src/index.ts"],
+      "@landing-shell-ui-drawer": ["libs/landing/shell/ui/drawer/src/index.ts"],
+      "@landing-shell-ui-footer": ["libs/landing/shell/ui/footer/src/index.ts"],
+      "@landing-shell-ui-header": ["libs/landing/shell/ui/header/src/index.ts"],
+      "@landing-shell-ui-layout": ["libs/landing/shell/ui/layout/src/index.ts"],
+      "@main-shared-data-access-store": [
+        "libs/main/shared/data-access/store/src/index.ts"
+      ],
+      "@main-shared-data-access-variable": [
+        "libs/main/shared/data-access/variable/src/index.ts"
+      ],
+      "@main-shared-utils-interceptor": [
+        "libs/main/shared/utils/interceptor/src/index.ts"
+      ],
+      "@main-shell-main": ["libs/main/shell/main/src/index.ts"],
+      "@main-shell-ui-layout": ["libs/main/shell/ui/layout/src/index.ts"],
+      "@orgs-settings-shell-main": [
+        "libs/orgs/settings/shell/main/src/index.ts"
+      ],
+      "@orgs-settings-shell-main-ui-layout": [
+        "libs/orgs/settings/shell/ui/layout/src/index.ts"
+      ],
+      "@resources-assets": ["libs/shared/resources/assets/src/index.ts"],
+      "@resources-environments": [
+        "libs/shared/resources/environments/src/index.ts"
+      ],
+      "@ui-common-avatar": ["libs/shared/ui/common/avatar/src/index.ts"],
+      "@ui-common-button": ["libs/shared/ui/common/button/src/index.ts"],
+      "@ui-common-filter": ["libs/shared/ui/common/filter/src/index.ts"],
+      "@ui-common-icon": ["libs/shared/ui/common/icon/src/index.ts"],
+      "@ui-common-label": ["libs/shared/ui/common/label/src/index.ts"],
+      "@ui-common-link": ["libs/shared/ui/common/link/src/index.ts"],
+      "@ui-common-mask": ["libs/shared/ui/common/mask/src/index.ts"],
+      "@ui-common-navigation": [
+        "libs/shared/ui/common/navigation/src/index.ts"
+      ],
+      "@ui-common-pagination": [
+        "libs/shared/ui/common/pagination/src/index.ts"
+      ],
+      "@ui-common-switch": ["libs/shared/ui/common/switch/src/index.ts"],
+      "@ui-common-tab": ["libs/shared/ui/common/tab/src/index.ts"],
+      "@ui-common-table": ["libs/shared/ui/common/table/src/index.ts"],
+      "@ui-common-toggle": ["libs/shared/ui/common/toggle/src/index.ts"],
+      "@ui-form-calendar": ["libs/shared/ui/form/calendar/src/index.ts"],
+      "@ui-form-check-box": ["libs/shared/ui/form/check-box/src/index.ts"],
+      "@ui-form-combo-box": ["libs/shared/ui/form/combo-box/src/index.ts"],
+      "@ui-form-dropdown": ["libs/shared/ui/form/dropdown/src/index.ts"],
+      "@ui-form-input": ["libs/shared/ui/form/input/src/index.ts"],
+      "@ui-form-radio": ["libs/shared/ui/form/radio/src/index.ts"],
+      "@ui-form-slider": ["libs/shared/ui/form/slider/src/index.ts"],
+      "@ui-overlay-alert": ["libs/shared/ui/overlay/alert/src/index.ts"],
+      "@ui-overlay-cdk": ["libs/shared/ui/overlay/cdk/src/index.ts"],
+      "@ui-overlay-menu": ["libs/shared/ui/overlay/menu/src/index.ts"],
+      "@ui-overlay-modal": ["libs/shared/ui/overlay/modal/src/index.ts"],
+      "@ui-overlay-popover": ["libs/shared/ui/overlay/popover/src/index.ts"],
+      "@ui-overlay-snackbar": ["libs/shared/ui/overlay/snackbar/src/index.ts"],
+      "@ui-overlay-toast": ["libs/shared/ui/overlay/toast/src/index.ts"],
+      "@ui-overlay-tooltip": ["libs/shared/ui/overlay/tooltip/src/index.ts"],
+      "@utils-generator": ["libs/shared/utils/generator/src/index.ts"],
+      "@utils-observable": ["libs/shared/utils/observable/src/index.ts"],
+      "@utils-pattern": ["libs/shared/utils/pattern/src/index.ts"],
+      "@utils-validator": ["libs/shared/utils/validator/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

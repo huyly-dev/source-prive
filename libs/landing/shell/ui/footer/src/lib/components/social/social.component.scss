@@ -1,0 +1,15 @@
+.wrapper-landing-footer__social {
+  @apply flex absolute left-0;
+  @apply xl:gap-2 xl:bottom-8;
+  @apply lg:gap-2 lg:bottom-6;
+  @apply md:gap-8 md:bottom-4;
+  @apply sm:gap-8 sm:bottom-4;
+  &__item {
+    @apply w-8 h-8;
+    @apply flex items-center justify-center rounded-sm;
+    @apply text-prive-blue-50;
+    @apply bg-prive-neutral-0.16;
+    @apply cursor-pointer;
+    @apply hover:opacity-60;
+  }
+}

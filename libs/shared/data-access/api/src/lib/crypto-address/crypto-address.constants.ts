@@ -1,0 +1,1 @@
+export const CRYPTO_ADDRESS_API_NAME = 'CRYPTO_ADDRESS';

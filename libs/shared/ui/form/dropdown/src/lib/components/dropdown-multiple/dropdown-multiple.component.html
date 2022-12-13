@@ -1,0 +1,30 @@
+<ng-container *ngrxLet="state$; let state">
+  <div class="{{state.wrapperClass}} {{state.wrapperClass}}--direction-{{state.direction}}">
+    <div class="{{state.wrapperClass}}__label">
+      <b>{{state.label}}</b>
+    </div>
+    <div class="{{state.wrapperClass}}__container {{state.wrapperClass}}__container--size-{{state.size}}" [priveOverlayMenu]="menuOptions" [priveOverlayMenuPosition]="OverlayCdkPosition.BottomLeft"
+         (menuShowed)="expanded = true" (menuClosed)="expanded = false" (click)="focus()">
+      <div class="{{state.wrapperClass}}--container__label">
+        <prive-common-icon *ngIf="state.icon && state.iconPackage" [package]="state.iconPackage" [icon]="state.icon"
+                           [size]="state.size === FormDropdownSize.M ? CommonIconSize.XS : CommonIconSize.S"></prive-common-icon>
+        <input [value]="state.text" readonly>
+      </div>
+      <prive-common-icon class="{{state.wrapperClass}}__container__arrow" [package]="CommonIconPackage.Arrow"
+                         [icon]="CommonIconArrow.ArrowDropDown" [class.expanded]="state.expanded"
+                         [size]="CommonIconSize.S"></prive-common-icon>
+    </div>
+    <ng-template #menuOptions>
+      <prive-form-dropdown-options
+        [type]="FormDropdownOptionType.List"
+        [selectedList]="state.selected"
+        [size]="state.size"
+        [disabled]="state.disabled"
+        [options]="state.options"
+        [loading]="state.loading"
+        [template]="template"
+        (selectedListChange)="selectOption($event)"
+      ></prive-form-dropdown-options>
+    </ng-template>
+  </div>
+</ng-container>

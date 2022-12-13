@@ -1,0 +1,9 @@
+<ng-container *ngrxLet="state$; let state">
+  <div
+    class="{{state.wrapperClass}} {{state.wrapperClass}}--size-{{state.size}} {{state.extraClass}} {{state.iconPackage}}"
+    [class.rounded-full]="state.isOval"
+    [class.fixedWidth]="state.fixedWidth"
+    [inlineSVG]="state.icon | priveCommonIcon: state.iconPackage"
+  >
+  </div>
+</ng-container>

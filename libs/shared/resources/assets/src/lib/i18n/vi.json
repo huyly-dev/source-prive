@@ -1,0 +1,101 @@
+{
+  "APPS": {
+    "AUTH": {
+
+    },
+    "DAD": {
+
+    },
+    "LANDING": {
+
+    },
+    "ORGS": {
+
+    }
+  },
+  "LIBS": {
+    "COMMON": {
+      "BUTTON": {
+
+      },
+      "ICON": {
+
+      },
+      "LOZENGES": {
+
+      }
+    },
+    "CONFIG": {
+
+    },
+    "FORM": {
+      "CHECK_BOX": {
+
+      },
+      "COMBO_BOX": {
+
+      },
+      "DATE_PICKER": {
+
+      },
+      "DROPDOWN": {
+
+      },
+      "INPUT": {
+
+      },
+      "RADIO": {
+
+      },
+      "SLIDER": {
+
+      },
+      "TIME_PICKER": {
+
+      }
+    },
+    "OVERLAY": {
+      "ALERT": {
+
+      },
+      "TOOLTIP": {
+
+      },
+      "TOAST": {
+
+      },
+      "POPOVER": {
+
+      },
+      "MODAL": {
+        "COMPONENT": {
+          "BASE": {
+            "BUTTON": {
+              "CANCEL": "Huỷ",
+              "SAVE": "Lưu"
+            }
+          }
+        }
+      },
+      "CDK": {
+
+      },
+      "SNACKBAR": {
+        "COMPONENT": {
+          "BASE": {
+            "LINK": {
+              "UNDERSTOOD": "Tôi đã hiểu",
+              "NO_THANKS": "Không! Cảm ơn"
+            }
+          }
+        }
+      }
+    },
+    "SHARED": {
+
+    },
+    "UTILITY": {
+
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/shared/ui/form/dropdown",
+  "sourceRoot": "libs/shared/ui/form/dropdown/src",
+  "prefix": "prive-form-dropdown",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/shared/ui/form/dropdown/src/test.ts",
+        "tsConfig": "libs/shared/ui/form/dropdown/tsconfig.spec.json",
+        "karmaConfig": "libs/shared/ui/form/dropdown/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/ui/form/dropdown/src/**/*.ts",
+          "libs/shared/ui/form/dropdown/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

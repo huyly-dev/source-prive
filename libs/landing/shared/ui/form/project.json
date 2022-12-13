@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/landing/shared/ui/form",
+  "sourceRoot": "libs/landing/shared/ui/form/src",
+  "prefix": "prive-landing-form",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/landing/shared/ui/form/src/test.ts",
+        "tsConfig": "libs/landing/shared/ui/form/tsconfig.spec.json",
+        "karmaConfig": "libs/landing/shared/ui/form/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/landing/shared/ui/form/src/**/*.ts",
+          "libs/landing/shared/ui/form/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

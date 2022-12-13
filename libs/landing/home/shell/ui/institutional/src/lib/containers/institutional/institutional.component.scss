@@ -1,0 +1,21 @@
+.wrapper-landing-home__institutional {
+  @apply w-screen xl:h-[25.75rem] lg:h-[22rem] sm:h-[16.5rem] md:h-[16.5rem] relative overflow-hidden;
+  img {
+    @apply w-full h-full object-cover object-center;
+  }
+  &:before {
+    @apply content-[''] absolute h-full w-screen left-0 top-0;
+    background: rgba(33, 84, 192, 0.3);
+  }
+  &:after {
+    @apply content-[''] absolute h-full w-screen left-0 top-0;
+    background: linear-gradient(180deg, rgba(21, 38, 74, 0.24) 0%, rgba(21, 38, 74, 0.82) 100%);
+  }
+  &__content {
+    @apply flex absolute flex-col gap-6 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[1];
+    @apply xl:w-[31.25rem];
+    @apply lg:w-[24rem];
+    @apply sm:w-[20.5rem] sm:gap-4 sm:h-full sm:py-15;
+    @apply md:w-[20.5rem] md:gap-4 md:h-full md:py-15;
+  }
+}

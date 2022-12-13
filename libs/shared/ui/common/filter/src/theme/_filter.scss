@@ -1,0 +1,55 @@
+@import "libs/shared/resources/assets/src/lib/styles/theme/typography";
+
+.wrapper-common-filter {
+  @apply flex items-center rounded-sm w-max border border-solid gap-2 px-2.5 outline-none;
+  &--size {
+    &-s {
+      @apply h-8;
+    }
+  }
+
+  &--status {
+    &-primary {
+      &-blue {
+        @apply bg-transparent border-prive-dark-blue-200;
+        b {
+          @apply b3-medium text-prive-neutral-500;
+        }
+
+        .wrapper-common-icon {
+          @apply text-prive-neutral-500;
+        }
+
+        &:hover {
+          @apply bg-prive-dark-blue-400;
+        }
+
+        &.active {
+          @apply bg-prive-dark-blue-600 border-prive-blue-500;
+          b {
+            @apply text-prive-blue-300;
+          }
+
+          .wrapper-common-icon {
+            @apply text-prive-blue-300;
+          }
+
+          &:hover {
+            @apply bg-prive-dark-blue-400;
+          }
+        }
+
+        &.disabled {
+          @apply bg-prive-dark-blue-800 border-prive-neutral-800 hover:bg-prive-dark-blue-800;
+          b {
+            @apply text-prive-neutral-800;
+          }
+
+          .wrapper-common-icon {
+            @apply text-prive-neutral-800;
+          }
+        }
+      }
+    }
+  }
+}

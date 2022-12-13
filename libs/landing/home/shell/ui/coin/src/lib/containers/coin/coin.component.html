@@ -1,0 +1,15 @@
+<div class="wrapper-landing-home__coin">
+  <h3 class="xl:l-h3 lg:l-h3-large sm:l-h3-small md:l-h3-small text-prive-neutral-50 text-center">Supported digital assets</h3>
+  <div class="wrapper-landing-home__coin__run">
+    <div class="wrapper-landing-home__coin__run__content">
+      <ng-container *ngFor="let coin of coins">
+        <div class="wrapper-landing-home__coin__run__content__each">
+          <div class="xl:w-20 xl:h-20 lg:h-8 lg:w-8 md:h-8 md:w-8 sm:w-8 sm:h-8" [setSVGAttributes]="{class: 'w-full h-full'}" [inlineSVG]="coin.src"></div>
+          <div class="wrapper-landing-home__coin__run__content__each__label">
+            <p class="xl:h4 lg:b3 md:b3 sm:b3">{{coin.label}} <span>/ {{coin.prefix}}</span></p>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

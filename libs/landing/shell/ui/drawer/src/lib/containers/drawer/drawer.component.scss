@@ -1,0 +1,37 @@
+.wrapper-landing-drawer {
+  @apply fixed top-0 left-0;
+  @apply w-screen h-screen;
+  @apply overflow-hidden;
+  @apply z-20;
+
+  background: rgba(6, 21, 46, 0.7);
+
+  &__content {
+    @apply absolute top-0 right-0;
+    @apply w-full h-full;
+    @apply bg-prive-dark-blue-800;
+    @apply px-6;
+    @apply flex flex-col gap-8;
+
+    transition: transform .3s ease-in-out;
+
+    &.show {
+      transform: translateX(0);
+    }
+
+    &.hide {
+      transform: translateX(100%);
+    }
+  }
+
+  &.show {
+    transform: translateX(0);
+  }
+
+  &.hide {
+    transition: transform .3s ease-in-out;
+    background: transparent;
+    transform: translateX(100%);
+  }
+}
+

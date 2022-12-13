@@ -1,0 +1,40 @@
+.wrapper-landing-about {
+  @apply w-screen relative;
+  @apply xl:h-[35.875rem];
+  @apply lg:h-[31.875rem];
+  @apply md:h-[30rem];
+  @apply sm:h-[31.625rem];
+  &:before {
+    @apply content-[''] absolute top-0 left-0 w-full h-full;
+    background: rgba(0, 25, 78, 0.6);
+    backdrop-filter: blur(20px);
+  }
+
+  &__container {
+    @apply flex absolute h-full top-0 left-1/2 transform -translate-x-1/2;
+    @apply xl:w-300 xl:py-[6.25rem];
+    @apply lg:w-[59rem] lg:py-[6.25rem];
+    @apply md:w-screen md:gap-4 md:flex-col md:py-15;
+    @apply sm:w-screen sm:gap-10 sm:flex-col sm:py-10;
+    h2 {
+      @apply xl:w-[30rem];
+      @apply lg:w-[18.75rem];
+      @apply md:text-center;
+      @apply sm:text-center;
+      &.linear {
+        @apply bg-s1;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    .swiper-slide-shadow {
+      &-left {
+        @apply hidden;
+      }
+      &-right {
+        @apply hidden;
+      }
+    }
+  }
+}

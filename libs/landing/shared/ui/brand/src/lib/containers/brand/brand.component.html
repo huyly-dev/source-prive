@@ -1,0 +1,16 @@
+<ng-container *ngrxLet="state$; let state">
+  <div class="wrapper-landing-brand">
+    <div class="wrapper-landing-brand__container">
+      <h2 class="xl:l-h2 lg:l-h2-large md:l-h2-small sm:l-h2-small {{titleLinear ? 'linear' : 'text-prive-neutral-50'}}">We’ve been featured in</h2>
+      <div class="wrapper-landing-brand__container__items">
+        <ng-container *ngFor="let couple of state.couples">
+          <div class="wrapper-landing-brand__container__items__couple {{couple.extraClass}}">
+            <ng-container *ngFor="let brand of couple.brands">
+              <prive-landing-brand-item [brand]="brand"></prive-landing-brand-item>
+            </ng-container>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</ng-container>

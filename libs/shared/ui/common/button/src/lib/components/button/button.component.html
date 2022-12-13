@@ -1,0 +1,11 @@
+<ng-container *ngrxLet="state$; let state">
+  <button
+    class="{{state.wrapperClass}} {{state.wrapperClass}}--size-{{state.size}} {{state.extraClass}} {{state.wrapperClass}}--status-{{state.status}}"
+    [class.loading]="state.loading"
+    [class.disabled]="state.disabled"
+    [class.full-width]="state.fullWidth"
+    [disabled]="state.disabled || state.loading"
+  >
+    <b>{{state.content}}</b>
+  </button>
+</ng-container>

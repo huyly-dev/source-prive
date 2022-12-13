@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/auth/forgot-password/shared/ui/expired",
+  "sourceRoot": "libs/auth/forgot-password/shared/ui/expired/src",
+  "prefix": "prive-auth-forgot-password-expired",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/auth/forgot-password/shared/ui/expired/src/test.ts",
+        "tsConfig": "libs/auth/forgot-password/shared/ui/expired/tsconfig.spec.json",
+        "karmaConfig": "libs/auth/forgot-password/shared/ui/expired/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/auth/forgot-password/shared/ui/expired/src/**/*.ts",
+          "libs/auth/forgot-password/shared/ui/expired/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

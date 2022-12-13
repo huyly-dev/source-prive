@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/main/shared/utils/interceptor",
+  "sourceRoot": "libs/main/shared/utils/interceptor/src",
+  "prefix": "prive",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/main/shared/utils/interceptor/src/test.ts",
+        "tsConfig": "libs/main/shared/utils/interceptor/tsconfig.spec.json",
+        "karmaConfig": "libs/main/shared/utils/interceptor/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/main/shared/utils/interceptor/src/**/*.ts",
+          "libs/main/shared/utils/interceptor/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

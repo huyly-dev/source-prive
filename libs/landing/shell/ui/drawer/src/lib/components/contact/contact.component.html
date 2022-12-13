@@ -1,0 +1,20 @@
+<div class="wrapper-landing-drawer__contact">
+  <ng-container *ngFor="let section of sections">
+    <div class="wrapper-landing-drawer__contact__section">
+      <div class="wrapper-landing-drawer__contact__section__header" (click)="change(section.key)">
+        <span class="b2-medium">{{section.title | translate}}</span>
+        <prive-common-icon
+          [package]="CommonIconPackage.Arrow"
+          [icon]="active === section.key ? CommonIconArrow.ExpandLess : CommonIconArrow.ExpandMore"
+          [size]="CommonIconSize.S"
+          extraClass="text-prive-blue-100 cursor-pointer"
+        ></prive-common-icon>
+      </div>
+      <div class="wrapper-landing-drawer__contact__section__items" *ngIf="active === section.key">
+        <ng-container *ngFor="let item of section.items">
+          <a class="b3" [href]="item.href">{{item.label | translate}}</a>
+        </ng-container>
+      </div>
+    </div>
+  </ng-container>
+</div>

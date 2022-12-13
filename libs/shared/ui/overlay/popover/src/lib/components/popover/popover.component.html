@@ -1,0 +1,9 @@
+<ng-container *ngrxLet="state$; let state">
+  <div
+    class="{{state.wrapperClass}} {{state.wrapperClass}}--status-{{state.status}} {{state.wrapperClass}}--position-{{state.position}} {{state.wrapperClass}}--size-{{state.size}}"
+    [ngStyle]="state.style"
+    [class.existed-modal]="state.existedModal"
+  >
+    <ng-container [ngTemplateOutlet]="template"></ng-container>
+  </div>
+</ng-container>

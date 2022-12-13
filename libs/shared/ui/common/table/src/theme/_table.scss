@@ -1,0 +1,39 @@
+@import 'libs/shared/resources/assets/src/lib/styles/theme/typography';
+
+.wrapper-table {
+  @apply bg-prive-dark-blue-800;
+  @apply w-full h-full rounded-t-sm rounded-tr-sm;
+  &__header {
+    &__row {
+      &__column {
+        @apply p-4;
+        &__container {
+          @apply flex items-center;
+          @apply font-medium text-prive-neutral-500 text-b4;
+
+          span {
+            @apply h9-semibold text-prive-neutral-500;
+          }
+        }
+      }
+    }
+  }
+
+  &__body {
+    &__row {
+      @apply bg-prive-dark-blue-900;
+      @apply border-b border-solid border-prive-dark-blue-600;
+      &__column {
+        @apply h8 text-prive-neutral-200;
+        @apply px-4 py-5.5;
+      }
+    }
+  }
+
+  &__empty {
+    @apply w-full p-15 items-center justify-center flex flex-col gap-2;
+    span {
+      @apply b3 text-prive-neutral-500;
+    }
+  }
+}

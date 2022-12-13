@@ -1,0 +1,105 @@
+{
+  "projectType": "application",
+  "root": "apps/landing",
+  "sourceRoot": "apps/landing/src",
+  "prefix": "prive",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:webpack-browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/landing",
+        "index": "apps/landing/src/index.html",
+        "main": "apps/landing/src/main.ts",
+        "polyfills": "apps/landing/src/polyfills.ts",
+        "tsConfig": "apps/landing/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": ["apps/landing/src/favicon.ico", "apps/landing/src/assets"],
+        "styles": ["apps/landing/src/styles.scss"],
+        "scripts": [],
+        "customWebpackConfig": {
+          "path": "apps/landing/webpack.config.js"
+        }
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/landing/src/environments/environment.ts",
+              "with": "apps/landing/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all",
+          "customWebpackConfig": {
+            "path": "apps/landing/webpack.prod.config.js"
+          }
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@nrwl/angular:webpack-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "landing:build:production"
+        },
+        "development": {
+          "browserTarget": "landing:build:development"
+        }
+      },
+      "defaultConfiguration": "development",
+      "options": {
+        "port": 4300,
+        "publicHost": "http://localhost:4300"
+      }
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "landing:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/landing/src/**/*.ts",
+          "apps/landing/src/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "apps/landing/src/test.ts",
+        "tsConfig": "apps/landing/tsconfig.spec.json",
+        "karmaConfig": "apps/landing/karma.conf.js",
+        "polyfills": "apps/landing/src/polyfills.ts",
+        "styles": [],
+        "scripts": [],
+        "assets": []
+      }
+    }
+  },
+  "tags": []
+}

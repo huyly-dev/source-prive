@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/shared/data-access/service",
+  "sourceRoot": "libs/shared/data-access/service/src",
+  "prefix": "prive",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/shared/data-access/service/src/test.ts",
+        "tsConfig": "libs/shared/data-access/service/tsconfig.spec.json",
+        "karmaConfig": "libs/shared/data-access/service/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/data-access/service/src/**/*.ts",
+          "libs/shared/data-access/service/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

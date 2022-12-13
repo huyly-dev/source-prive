@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/shared/ui/common/pagination",
+  "sourceRoot": "libs/shared/ui/common/pagination/src",
+  "prefix": "prive-common-pagination",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/shared/ui/common/pagination/src/test.ts",
+        "tsConfig": "libs/shared/ui/common/pagination/tsconfig.spec.json",
+        "karmaConfig": "libs/shared/ui/common/pagination/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/ui/common/pagination/src/**/*.ts",
+          "libs/shared/ui/common/pagination/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

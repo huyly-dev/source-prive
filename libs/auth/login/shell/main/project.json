@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/auth/login/shell/main",
+  "sourceRoot": "libs/auth/login/shell/main/src",
+  "prefix": "prive-auth-login",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/auth/login/shell/main/src/test.ts",
+        "tsConfig": "libs/auth/login/shell/main/tsconfig.spec.json",
+        "karmaConfig": "libs/auth/login/shell/main/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/auth/login/shell/main/src/**/*.ts",
+          "libs/auth/login/shell/main/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

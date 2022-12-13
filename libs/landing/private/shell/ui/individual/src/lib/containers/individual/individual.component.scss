@@ -1,0 +1,13 @@
+.wrapper-landing-private-individual {
+  @apply flex flex-col gap-y-8 text-prive-neutral-50;
+  @apply sm:gap-y-4;
+  @apply md:gap-y-4;
+  @apply lg:gap-y-4;
+
+  &__content {
+    @apply flex gap-x-4 items-center;
+    @apply sm:gap-x-2;
+    @apply md:gap-x-2;
+    @apply lg:gap-x-2;
+  }
+}

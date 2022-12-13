@@ -1,0 +1,11 @@
+<ng-container *ngrxLet="state$; let state">
+  <div class="{{state.wrapperClass}} {{state.extraClass}} {{state.wrapperClass}}--style-{{state.style}} {{state.wrapperClass}}--style-{{state.style}}--status-{{state.status}} {{state.wrapperClass}}--style-{{state.style}}--size-{{state.size}}">
+    <prive-common-icon
+      *ngIf="state.icon && state.iconPackage"
+      [size]="IconSize.XS"
+      [icon]="state.icon"
+      [package]="state.iconPackage"
+    ></prive-common-icon>
+    <b>{{state.label}}</b>
+  </div>
+</ng-container>

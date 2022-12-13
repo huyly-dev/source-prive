@@ -1,0 +1,27 @@
+<div class="wrapper-landing-about">
+  <img class="w-full h-full object-cover object-center" alt="What people are saying about us"
+       lazyLoad="prive-assets/images/landing/about.png">
+  <ng-container *ngrxLet="state$; let state">
+    <div class="wrapper-landing-about__container">
+      <h2
+        class="xl:l-h2 lg:l-h2-large md:l-h2-small sm:l-h2-small {{state.titleLinear ? 'linear' : 'text-prive-neutral-50'}}">
+        What people are saying about us</h2>
+      <div class="grow-[1] relative h-full sm:hidden md:hidden">
+        <ng-container *ngFor="let card of state.cards">
+          <prive-landing-about-card [card]="card"></prive-landing-about-card>
+        </ng-container>
+      </div>
+      <div class="w-screen hidden relative sm:flex md:flex items-center justify-center">
+        <prive-landing-swiper class="w-full" [items]="state.cards">
+          <ng-template let-item="item">
+            <div class="w-full pt-8 flex justify-center">
+              <div class="w-[20.5rem]">
+                <prive-landing-about-card [card]="item" [inside]="true"></prive-landing-about-card>
+              </div>
+            </div>
+          </ng-template>
+        </prive-landing-swiper>
+      </div>
+    </div>
+  </ng-container>
+</div>

@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/shared/ui/common/table",
+  "sourceRoot": "libs/shared/ui/common/table/src",
+  "prefix": "prive-common-table",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/shared/ui/common/table/src/test.ts",
+        "tsConfig": "libs/shared/ui/common/table/tsconfig.spec.json",
+        "karmaConfig": "libs/shared/ui/common/table/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/ui/common/table/src/**/*.ts",
+          "libs/shared/ui/common/table/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,18 @@
+<ng-container *ngrxLet="state$; let state">
+  <a
+    class="{{state.wrapperClass}} {{state.extraClass}} {{state.wrapperClass}}--status-{{state.status}} {{state.wrapperClass}}--status-{{state.status}}--size-{{state.size}}"
+    [href]="state.disabled ? null : state.link"
+    [class.disabled]="state.disabled"
+    (click)="navigate($event)"
+  >
+    <b>{{state.content}}</b>
+    <prive-common-icon
+      *ngIf="state.status === CommonLinkStatus.Standalone && state.icon && state.iconPackage"
+      [icon]="state.icon"
+      [package]="state.iconPackage"
+      [isOval]="state.isOval"
+      [size]="state.size | priveCommonLinkIconSize"
+    ></prive-common-icon>
+    <div class="{{state.wrapperClass}}__underline" *ngIf="!state.disabled"></div>
+  </a>
+</ng-container>

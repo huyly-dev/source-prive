@@ -1,0 +1,15 @@
+<ng-container *ngrxLet="state$; let state">
+  <button
+    class="{{state.wrapperClass}} is-icon {{state.wrapperClass}}--size-{{state.size}} {{state.extraClass}} {{state.wrapperClass}}--status-{{state.status}}"
+    [class.loading]="state.loading"
+    [class.disabled]="state.disabled"
+    [disabled]="state.disabled || state.loading"
+  >
+    <prive-common-icon
+      [icon]="state.icon"
+      [package]="state.iconPackage"
+      [isOval]="state.isOval"
+      [size]="state.size | priveCommonButtonIconSize"
+    ></prive-common-icon>
+  </button>
+</ng-container>

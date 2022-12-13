@@ -1,0 +1,54 @@
+<ng-container *ngrxLet="state$; let state">
+  <div class="{{state.wrapperClass}} {{state.wrapperClass}}__style-{{state.style}} {{state.wrapperClass}}__status-{{state.status}}" [class.collapsed]="state.collapsed">
+    <ng-container [ngSwitch]="state.style">
+      <ng-container *ngSwitchCase="OverlayAlertStyle.Text">
+        <p [innerHTML]="state.text"></p>
+      </ng-container>
+      <ng-container *ngSwitchCase="OverlayAlertStyle.WithIcon">
+        <prive-common-icon [icon]="state.status | priveOverlayAlertBaseIcon" [package]="state.status | priveOverlayAlertBasePackage"
+                           [size]="CommonIconSize.S"></prive-common-icon>
+        <p [innerHTML]="state.text"></p>
+      </ng-container>
+      <ng-container *ngSwitchCase="OverlayAlertStyle.WithDismiss">
+        <div class="{{state.wrapperClass}}__content">
+          <prive-common-icon *ngIf="state.showStatusIcon" [icon]="state.status | priveOverlayAlertBaseIcon" [package]="state.status | priveOverlayAlertBasePackage"
+                             [size]="CommonIconSize.S"></prive-common-icon>
+          <p>{{state.title}}</p>
+        </div>
+        <div class="{{state.wrapperClass}}__action">
+          <ng-content></ng-content>
+          <prive-common-icon extraClass="cursor-pointer" [icon]="CommonIconGlobal.Close" [package]="CommonIconPackage.Global" (click)="close.emit()"
+                             [size]="CommonIconSize.S"></prive-common-icon>
+        </div>
+      </ng-container>
+      <ng-container *ngSwitchCase="OverlayAlertStyle.WithTitle">
+        <div class="{{state.wrapperClass}}__header">
+          <div class="{{state.wrapperClass}}__header__content">
+            <prive-common-icon [icon]="state.status | priveOverlayAlertBaseIcon" [package]="state.status | priveOverlayAlertBasePackage"
+                               [size]="CommonIconSize.S"></prive-common-icon>
+            <b>{{state.title}}</b>
+          </div>
+          <div class="{{state.wrapperClass}}__header__action">
+            <prive-common-icon extraClass="cursor-pointer" [icon]="CommonIconGlobal.Close" [package]="CommonIconPackage.Global" (click)="close.emit()"
+                               [size]="CommonIconSize.S"></prive-common-icon>
+          </div>
+        </div>
+        <p [innerHTML]="state.text"></p>
+      </ng-container>
+      <ng-container *ngSwitchCase="OverlayAlertStyle.WithAccordion">
+        <div class="{{state.wrapperClass}}__header">
+          <div class="{{state.wrapperClass}}__header__content">
+            <prive-common-icon [icon]="state.status | priveOverlayAlertBaseIcon" [package]="state.status | priveOverlayAlertBasePackage"
+                               [size]="CommonIconSize.S"></prive-common-icon>
+            <b>{{state.title}}</b>
+          </div>
+          <div class="{{state.wrapperClass}}__header__action" (click)="toggle()">
+            <prive-common-icon extraClass="cursor-pointer" [icon]="CommonIconArrow.ExpandLess" [package]="CommonIconPackage.Arrow"
+                               [size]="CommonIconSize.S"></prive-common-icon>
+          </div>
+        </div>
+        <p [innerHTML]="state.text"></p>
+      </ng-container>
+    </ng-container>
+  </div>
+</ng-container>

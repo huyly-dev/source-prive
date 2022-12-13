@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/auth/forgot-password/shared/ui/confirm",
+  "sourceRoot": "libs/auth/forgot-password/shared/ui/confirm/src",
+  "prefix": "prive-auth-forgot-password-confirm",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/auth/forgot-password/shared/ui/confirm/src/test.ts",
+        "tsConfig": "libs/auth/forgot-password/shared/ui/confirm/tsconfig.spec.json",
+        "karmaConfig": "libs/auth/forgot-password/shared/ui/confirm/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/auth/forgot-password/shared/ui/confirm/src/**/*.ts",
+          "libs/auth/forgot-password/shared/ui/confirm/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

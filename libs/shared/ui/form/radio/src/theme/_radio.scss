@@ -1,0 +1,76 @@
+@import "libs/shared/resources/assets/src/lib/styles/theme/typography";
+
+.wrapper-form-radio {
+  @apply flex gap-2;
+  &__item {
+    @apply flex gap-3.5 items-center py-0.5 pl-0.5 w-max;
+    &__button {
+      @apply flex items-center justify-center w-5 h-5 border-2 border-solid rounded-full relative outline-none;
+      &:before {
+        @apply w-2 h-2 rounded-full bg-transparent absolute left-1 top-1 content-[''];
+      }
+      &--state {
+        &-checked {
+          @apply border-prive-blue-500 bg-prive-blue-500;
+          &:before {
+            @apply bg-prive-neutral-white;
+          }
+
+          &:hover {
+            @apply border-prive-blue-400 bg-prive-blue-400;
+          }
+
+          &:active {
+            @apply border-prive-blue-100 bg-prive-blue-100;
+            &:before {
+              @apply bg-prive-blue-500;
+            }
+          }
+
+          &:focus-visible {
+            @apply bg-prive-blue-500 border-prive-blue-500;
+            box-shadow: 0 0 0 theme("spacing[0.75]") theme("colors[prive-blue].300");
+          }
+
+          &:disabled {
+            @apply bg-prive-neutral-800 border-prive-neutral-800;
+            &:before {
+              @apply bg-prive-neutral-600;
+            }
+          }
+        }
+
+        &-un-check {
+          @apply border-prive-dark-blue-50 bg-prive-dark-blue-700;
+          &:hover {
+            @apply border-prive-dark-blue-200 bg-prive-dark-blue-400;
+          }
+
+          &:active {
+            @apply border-prive-blue-100 bg-prive-blue-100;
+          }
+
+          &:focus-visible {
+            @apply bg-prive-dark-blue-700 border-prive-dark-blue-700;
+            box-shadow: 0 0 0 theme("spacing[0.75]") theme("colors[prive-blue].400");
+          }
+
+          &:disabled {
+            @apply bg-prive-neutral-800 border-prive-neutral-800;
+          }
+        }
+      }
+    }
+    &__label {
+      @apply b3 text-prive-neutral-100;
+    }
+  }
+  &--direction {
+    &-row {
+      @apply flex-row;
+    }
+    &-column {
+      @apply flex-col;
+    }
+  }
+}

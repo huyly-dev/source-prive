@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/auth/resend-unlock-instruction/shell/main",
+  "sourceRoot": "libs/auth/resend-unlock-instruction/shell/main/src",
+  "prefix": "prive-auth-resend-unlock-instruction",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/auth/resend-unlock-instruction/shell/main/src/test.ts",
+        "tsConfig": "libs/auth/resend-unlock-instruction/shell/main/tsconfig.spec.json",
+        "karmaConfig": "libs/auth/resend-unlock-instruction/shell/main/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/auth/resend-unlock-instruction/shell/main/src/**/*.ts",
+          "libs/auth/resend-unlock-instruction/shell/main/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

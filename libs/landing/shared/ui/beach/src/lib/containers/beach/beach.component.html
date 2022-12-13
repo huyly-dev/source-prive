@@ -1,0 +1,22 @@
+<div class="wrapper-landing-beach" [class]="extraClasses">
+  <div class="wrapper-landing-beach__container"
+       [class.flex-row-reverse]="reverse">
+    <div class="wrapper-landing-beach__content"
+         [ngClass]="reverse ? 'pr-6' : 'pl-6'">
+      <h2 class="xl:l-h2 sm:l-h2-small md:l-h2-small lg:l-h2-large"
+          [ngClass]="titleLinear ? 'linear' : 'text-prive-neutral-50'">
+        {{title}}
+      </h2>
+      <div class="wrapper-landing-beach__description">
+        <ng-content></ng-content>
+        <prive-landing-button-tertiary (click)="clickedBeachBtn.emit()"
+                                       extraClass="w-fit"
+                                       [content]="buttonText"></prive-landing-button-tertiary>
+      </div>
+    </div>
+    <div class="wrapper-landing-beach__img">
+      <img [alt]="title" [lazyLoad]="src">
+    </div>
+
+  </div>
+</div>

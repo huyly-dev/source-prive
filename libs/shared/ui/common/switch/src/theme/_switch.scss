@@ -1,0 +1,32 @@
+@import "libs/shared/resources/assets/src/lib/styles/theme/typography";
+
+.wrapper-common-switch {
+  @apply w-max p-px border border-solid rounded-sm bg-prive-dark-blue-600 border-prive-dark-blue-300 items-center flex outline-none;
+  &__item {
+    @apply py-0.5 px-3 bg-prive-dark-blue-600 rounded-xs outline-none;
+    b {
+      @apply b3-medium text-prive-neutral-500;
+    }
+
+    &.selected {
+      @apply bg-prive-blue-0.3;
+      b {
+        @apply text-prive-neutral-50;
+      }
+    }
+
+    &.disabled {
+      @apply bg-prive-dark-blue-600;
+      b {
+        @apply text-prive-dark-blue-100;
+      }
+    }
+
+  }
+  &__separator {
+    @apply w-px h-4 bg-prive-dark-blue-200 opacity-0;
+    &.show {
+      @apply opacity-100;
+    }
+  }
+}

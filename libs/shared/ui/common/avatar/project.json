@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/shared/ui/common/avatar",
+  "sourceRoot": "libs/shared/ui/common/avatar/src",
+  "prefix": "prive-common-avatar",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/shared/ui/common/avatar/src/test.ts",
+        "tsConfig": "libs/shared/ui/common/avatar/tsconfig.spec.json",
+        "karmaConfig": "libs/shared/ui/common/avatar/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/ui/common/avatar/src/**/*.ts",
+          "libs/shared/ui/common/avatar/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

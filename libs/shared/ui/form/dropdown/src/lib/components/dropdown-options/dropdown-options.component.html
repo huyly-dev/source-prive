@@ -1,0 +1,58 @@
+<ng-container *ngrxLet="state$; let state">
+  <div class="{{state.wrapperClass}} {{state.wrapperClass}}--size-{{state.size}}"
+       [class.loading]="state.loading"
+       [class.disabled]="state.disabled"
+       [class.selected]="!!state.selected || state.selectedList.length"
+  >
+    <ng-container *ngIf="!state.loading">
+      <ng-container *ngFor="let option of state.options">
+        <div
+          class="{{state.wrapperClass}}__item {{state.wrapperClass}}__item--size-{{state.size}}"
+          (click)="selectOption(option, $event)"
+          [class.disabled]="option.disabled"
+          [class.selected]="option | priveFormDropdownSelected: {
+            type: state.type,
+            selected: state.selected,
+            selectedList: state.selectedList,
+            condition: FormDropdownOptionCondition.Item
+        }">
+          <div
+            *ngIf="option | priveFormDropdownSelected: {
+              type: state.type,
+              selected: state.selected,
+              selectedList: state.selectedList,
+              condition: FormDropdownOptionCondition.Box
+          }"
+            class="{{state.wrapperClass}}__item--selected__box"></div>
+          <prive-common-icon
+            *ngIf="option | priveFormDropdownSelected: {
+            type: state.type,
+            selected: state.selected,
+            selectedList: state.selectedList,
+            condition: FormDropdownOptionCondition.Item
+          }"
+            [package]="CommonIconPackage.Check"
+            [icon]="CommonIconCheck.Check"
+            [fixedWidth]="true"
+            [size]="state.size === FormDropdownSize.M ? CommonIconSize.XS : CommonIconSize.S"
+            class="{{state.wrapperClass}}__item--selected__icon"
+          ></prive-common-icon>
+          <prive-common-icon *ngIf="option.icon && option.package" [icon]="option.icon" [package]="option.package" [fixedWidth]="true"
+                             [size]="state.size === FormDropdownSize.M ? CommonIconSize.XS : CommonIconSize.S"
+                             class="{{state.wrapperClass}}__item__icon"></prive-common-icon>
+          <ng-container *ngIf="template">
+            <ng-container *ngTemplateOutlet="template; context: {option: option, type: 'option', iconSize: state.size === FormDropdownSize.M ? CommonIconSize.XS : CommonIconSize.S}"></ng-container>
+          </ng-container>
+          <ng-container *ngIf="!template">
+            <b>{{option.label}}</b>
+          </ng-container>
+        </div>
+      </ng-container>
+    </ng-container>
+    <prive-common-icon class="{{state.wrapperClass}}__loading"
+                       [icon]="CommonIconLoading.SpinnerGap"
+                       [size]="CommonIconSize.S" [fixedWidth]="true"
+                       [package]="CommonIconPackage.Loading"
+    ></prive-common-icon>
+  </div>
+</ng-container>

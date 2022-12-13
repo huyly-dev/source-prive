@@ -1,0 +1,27 @@
+<ng-container *ngrxLet="state$; let state">
+  <div class="{{state.wrapperClass}} {{state.wrapperClass}}--style-{{state.style}} {{state.animationClass}} {{state.wrapperClass}}--size-{{state.size}} {{state.wrapperClass}}--style-{{state.style}}--status-{{state.status}}" [id]="'snackbar--zone--' + state.uuid">
+    <div class="{{state.wrapperClass}}__header">
+      <div class="{{state.wrapperClass}}__header__content">
+        <prive-common-icon [icon]="state.status | priveOverlaySnackbarIcon" [package]="state.status | priveOverlaySnackbarPackage"
+                           [size]="CommonIconSize.S"></prive-common-icon>
+        <b>{{state.title | translate}}</b>
+      </div>
+      <div class="{{state.wrapperClass}}__header__action">
+        <prive-common-icon extraClass="cursor-pointer" [icon]="CommonIconGlobal.Close" [package]="CommonIconPackage.Global"
+                           [size]="CommonIconSize.S" (click)="close()"></prive-common-icon>
+      </div>
+    </div>
+    <div class="{{state.wrapperClass}}__body">
+      <div class="{{state.wrapperClass}}__body__content">
+        <p>{{state.text | translate}}</p>
+      </div>
+      <div class="{{state.wrapperClass}}__body__action">
+        <prive-common-link [size]="CommonLinkSize.S" [content]="state.buttonLeftText | translate"
+                           (click)="close()"></prive-common-link>
+        <div class="{{state.wrapperClass}}__body__action__separator"></div>
+        <prive-common-link [size]="CommonLinkSize.S" [content]="state.buttonRightText | translate"
+                           (click)="close()"></prive-common-link>
+      </div>
+    </div>
+  </div>
+</ng-container>

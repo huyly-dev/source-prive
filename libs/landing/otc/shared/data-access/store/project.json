@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/landing/otc/shared/data-access/store",
+  "sourceRoot": "libs/landing/otc/shared/data-access/store/src",
+  "prefix": "prive-landing-otc",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/landing/otc/shared/data-access/store/src/test.ts",
+        "tsConfig": "libs/landing/otc/shared/data-access/store/tsconfig.spec.json",
+        "karmaConfig": "libs/landing/otc/shared/data-access/store/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/landing/otc/shared/data-access/store/src/**/*.ts",
+          "libs/landing/otc/shared/data-access/store/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

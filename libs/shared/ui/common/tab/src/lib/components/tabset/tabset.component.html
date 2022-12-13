@@ -1,0 +1,40 @@
+<ng-container *ngrxLet="state$; let state">
+  <div class="{{state.wrapperClass}}" [priveCommonTabMore]="state.selectedKey">
+    <div class="{{state.wrapperClass}}__navigation {{state.wrapperClass}}__navigation--style-{{state.style}} {{state.wrapperClass}}__navigation--style-{{state.style}}--size-{{state.size}}" (scroll)="scroll()">
+      <ng-container *ngFor="let tab of tabs; let i = index">
+        <ng-container *ngrxLet="tab.state$; let tabState">
+          <button
+            [id]="tabState.key"
+            class="{{state.wrapperClass}}__navigation__item {{state.wrapperClass}}__navigation__item--style-{{state.style}} {{state.wrapperClass}}__navigation__item--style-{{state.style}}--state-{{tabState.key === state.selectedKey ? 'active' : 'inactive'}}--size-{{state.size}} {{state.wrapperClass}}__navigation__item--style-{{state.style}}--state-{{tabState.key === state.selectedKey ? 'active' : 'inactive'}}"
+            (keypress)="selectTab(tabState)"
+            (click)="selectTab(tabState)"
+          >
+            <prive-common-icon
+              *ngIf="tabState.icon && tabState.iconPackage"
+              [icon]="tabState.icon"
+              [package]="tabState.iconPackage"
+              [size]="state.style === CommonTabStyle.Default ? CommonIconSize.XS : CommonIconSize.S"
+            ></prive-common-icon>
+            <b>{{tabState.title}}</b>
+          </button>
+        </ng-container>
+      </ng-container>
+    </div>
+    <button class="{{state.wrapperClass}}__more {{state.wrapperClass}}__more--style-{{state.style}} {{state.wrapperClass}}__more--style-{{state.style}}--size-{{state.size}}" [priveOverlayMenu]="more" [priveOverlayMenuPosition]="OverlayCdkPosition.BottomRight">
+      <prive-common-icon [icon]="CommonIconNavigation.MoreHoriz" [package]="CommonIconPackage.Navigation"></prive-common-icon>
+    </button>
+    <div class="{{state.wrapperClass}}__shadow {{state.wrapperClass}}__shadow--position-left {{state.wrapperClass}}__shadow--position-left--style-{{state.style}} {{state.wrapperClass}}__shadow--position-left--style-{{state.style}}--size-{{state.size}} {{state.wrapperClass}}__shadow--style-{{state.style}} {{state.wrapperClass}}__shadow--style-{{state.style}}--size-{{state.size}}"></div>
+    <div class="{{state.wrapperClass}}__shadow {{state.wrapperClass}}__shadow--position-right {{state.wrapperClass}}__shadow--position-right--style-{{state.style}} {{state.wrapperClass}}__shadow--position-right--style-{{state.style}}--size-{{state.size}} {{state.wrapperClass}}__shadow--style-{{state.style}} {{state.wrapperClass}}__shadow--size-{{state.size}}"></div>
+    <ng-template #more>
+      <prive-form-dropdown-options
+        [type]="FormDropdownOptionType.Single"
+        [options]="(tabs$ | async) || []"
+        [selected]="state.selectedKey"
+        (selectedChange)="selectTab($event.value)"
+      ></prive-form-dropdown-options>
+    </ng-template>
+    <div class="{{state.wrapperClass}}__content">
+      <ng-content select="prive-common-tab"></ng-content>
+    </div>
+  </div>
+</ng-container>

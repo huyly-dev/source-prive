@@ -1,0 +1,27 @@
+<svg width="17" height="22" viewBox="0 0 17 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Type=text">
+<g id="cursor / ibeam">
+<g id="cursor / ibeam_2" filter="url(#filter_text_0_d)">
+<path id="cursor" fill-rule="evenodd" clip-rule="evenodd" d="M8.01401 3L8.01401 14.993H9.00001V3H8.01401Z" fill="black"/>
+<path id="cursor_2" fill-rule="evenodd" clip-rule="evenodd" d="M7 9V9.984H10V9H7Z" fill="black"/>
+<g id="cursor_3">
+<path id="cursor_4" d="M9 3.5C9.19256 3.04209 9.84981 2.33692 10.2764 2.10339C10.68 1.88084 11.0951 1.69127 11.4918 1.59145C11.9772 1.46781 13 1.50536 13 1.50536" stroke="black"/>
+<path id="cursor_5" d="M8 3.5C7.82142 3.01964 7.08491 2.28308 6.75693 2.08271C6.36475 1.84481 5.92938 1.6911 5.52787 1.59136C5.03531 1.46784 4 1.50536 4 1.50536" stroke="black"/>
+<path id="cursor_6" d="M9 14.5C9.19256 14.9579 9.84981 15.6631 10.2764 15.8966C10.68 16.1192 11.0951 16.3087 11.4918 16.4086C11.9772 16.5322 13 16.4946 13 16.4946" stroke="black"/>
+<path id="cursor_7" d="M8 14.5C7.82142 14.9804 7.08491 15.7169 6.75693 15.9173C6.36475 16.1552 5.92938 16.3089 5.52787 16.4086C5.03531 16.5322 4 16.4946 4 16.4946" stroke="black"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<filter id="filter_text_0_d" x="0.981964" y="0" width="15.0363" height="22" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="2"/>
+<feGaussianBlur stdDeviation="1.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.402655 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+</defs>
+</svg>

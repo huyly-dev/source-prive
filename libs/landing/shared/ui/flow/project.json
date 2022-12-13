@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/landing/shared/ui/flow",
+  "sourceRoot": "libs/landing/shared/ui/flow/src",
+  "prefix": "prive-landing-flow",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/landing/shared/ui/flow/src/test.ts",
+        "tsConfig": "libs/landing/shared/ui/flow/tsconfig.spec.json",
+        "karmaConfig": "libs/landing/shared/ui/flow/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/landing/shared/ui/flow/src/**/*.ts",
+          "libs/landing/shared/ui/flow/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

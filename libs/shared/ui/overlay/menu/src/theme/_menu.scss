@@ -1,0 +1,9 @@
+.wrapper-overlay-menu {
+  @apply flex items-center justify-center fixed transition-all z-[998];
+  min-width: var(--cover);
+
+  &.existed-modal {
+    @apply z-[1000];
+  }
+
+}

@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/landing/home/shell/ui/banner",
+  "sourceRoot": "libs/landing/home/shell/ui/banner/src",
+  "prefix": "prive-landing-home-banner",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/landing/home/shell/ui/banner/src/test.ts",
+        "tsConfig": "libs/landing/home/shell/ui/banner/tsconfig.spec.json",
+        "karmaConfig": "libs/landing/home/shell/ui/banner/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/landing/home/shell/ui/banner/src/**/*.ts",
+          "libs/landing/home/shell/ui/banner/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

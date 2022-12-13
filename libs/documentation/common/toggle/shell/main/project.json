@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/documentation/common/toggle/shell/main",
+  "sourceRoot": "libs/documentation/common/toggle/shell/main/src",
+  "prefix": "prive-documentation-common-toggle",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/documentation/common/toggle/shell/main/src/test.ts",
+        "tsConfig": "libs/documentation/common/toggle/shell/main/tsconfig.spec.json",
+        "karmaConfig": "libs/documentation/common/toggle/shell/main/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/documentation/common/toggle/shell/main/src/**/*.ts",
+          "libs/documentation/common/toggle/shell/main/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

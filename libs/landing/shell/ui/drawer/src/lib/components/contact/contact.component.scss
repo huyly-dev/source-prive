@@ -1,0 +1,23 @@
+.wrapper-landing-drawer__contact {
+  @apply w-full;
+  @apply flex flex-col;
+  &__section {
+    @apply w-full py-5;
+    @apply flex flex-col gap-7;
+    @apply border-b border-solid border-prive-dark-blue-400;
+    &__header {
+      @apply w-full;
+      @apply flex items-center justify-between;
+      span {
+        @apply text-prive-blue-100;
+      }
+    }
+    &__items {
+      @apply w-full;
+      @apply flex flex-col gap-6;
+      a {
+        @apply text-prive-blue-100;
+      }
+    }
+  }
+}

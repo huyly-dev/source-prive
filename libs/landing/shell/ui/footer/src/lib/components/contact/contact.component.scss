@@ -1,0 +1,20 @@
+.wrapper-landing-footer__contact {
+  @apply flex flex-col gap-10;
+  @apply sm:gap-6;
+  @apply md:gap-6;
+  &__section {
+    @apply flex flex-col gap-6;
+    @apply sm:gap-4;
+    @apply md:gap-4;
+
+    &__items {
+      @apply flex flex-col gap-4;
+      &__each {
+        @apply text-prive-blue-100;
+        @apply max-w-96;
+        @apply md:max-w-76;
+        @apply sm:max-w-82 sm:text-prive-blue-50;
+      }
+    }
+  }
+}

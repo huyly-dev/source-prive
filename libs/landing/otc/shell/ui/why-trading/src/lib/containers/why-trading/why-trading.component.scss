@@ -1,0 +1,30 @@
+.wrapper-landing-otc-why-trading {
+  @apply max-w-[49.25rem] flex flex-col justify-center py-[6.25rem] gap-y-[5rem] m-auto text-prive-neutral-50;
+  @apply sm:max-w-[20.5rem] sm:py-[3.75rem] sm:gap-y-[3.75rem];
+  @apply md:max-w-[33.5rem] md:py-[3.75rem] md:gap-y-[3.75rem];
+  @apply lg:max-w-[39rem] lg:py-20 lg:gap-y-10;
+
+  &__item {
+    @apply w-full flex gap-x-[7.5rem] py-[2rem] border-t border-solid border-prive-dark-blue-200;
+    @apply sm:gap-x-[1.5rem] sm:py-6;
+    @apply md:gap-x-[1.5rem] md:py-6;
+    @apply lg:gap-x-[7.5rem] lg:py-6;
+
+    img {
+      @apply sm:w-[2rem] sm:h-[2rem];
+      @apply md:w-[2rem] md:h-[2rem];
+    }
+
+    &:last-child {
+      @apply border-b border-solid border-prive-dark-blue-200;
+    }
+  }
+
+  &--active-description {
+    @apply gap-y-[5.375rem];
+    @apply sm:gap-y-[4.5rem];
+    @apply md:gap-y-[4.5rem];
+    @apply lg:gap-y-[5.125rem];
+  }
+
+}

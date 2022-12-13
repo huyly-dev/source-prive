@@ -1,0 +1,30 @@
+<ng-container *ngIf="card">
+  <div class="wrapper-landing-about__card {{inside ? 'w-full h-[17rem]' : card.extraClass}}">
+    <div
+      class="wrapper-landing-about__card__mark {{inside ? 'top-0 right-6' : card.markClass}}"
+      inlineSVG="prive-assets/svgs/landing/message/quote.svg"
+      [setSVGAttributes]="{class: 'z-[1]'}"
+    ></div>
+    <div class="wrapper-landing-about__card__header">
+      <div class="wrapper-landing-about__card__header__avatar">
+        <img
+          alt="What people are saying about us"
+          [lazyLoad]="card.avatar"
+        >
+      </div>
+      <div class="wrapper-landing-about__card__header__information">
+        <img
+          width="89"
+          height="20"
+          alt="What people are saying about us - {{card.name}} - {{card.position}} - {{card.opinion}}"
+          [lazyLoad]="card.logo"
+        >
+        <div class="flex flex-col">
+          <b class="mr-3 h7-semibold sm:h7-bold md:h7-bold">{{card.name}}</b>
+          <span class="b3 sm:h7 md:h7">{{card.position}}</span>
+        </div>
+      </div>
+    </div>
+    <p class="b1 md:b3 lg:b3">{{card.opinion}}</p>
+  </div>
+</ng-container>

@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/shared/ui/common/icon",
+  "sourceRoot": "libs/shared/ui/common/icon/src",
+  "prefix": "prive-common-icon",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/shared/ui/common/icon/src/test.ts",
+        "tsConfig": "libs/shared/ui/common/icon/tsconfig.spec.json",
+        "karmaConfig": "libs/shared/ui/common/icon/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/ui/common/icon/src/**/*.ts",
+          "libs/shared/ui/common/icon/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,21 @@
+<svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Type=row-resize">
+<g id="cursor / resizeupdown">
+<g id="cursor / resizeupdown_2" filter="url(#filter_row_resize_0_d)">
+<path id="cursor" fill-rule="evenodd" clip-rule="evenodd" d="M10.9883 1L5.52731 6.962H9.00531V8H3.00031V8.019V11.961V11.981H9.00531V13.039H5.53931L11.0113 19L16.4733 13.039H12.9953V11.981H19.0003V8H12.9943V6.962H16.4613L10.9883 1Z" fill="white"/>
+<path id="cursor_2" fill-rule="evenodd" clip-rule="evenodd" d="M17.9609 9.0195H11.9799V5.9805H14.2399L10.9889 2.6615L7.7659 5.9805H10.0199V9.0195H4.0399H4.0199V10.9805H4.0399H10.0399V14.0195H7.7599L11.0109 17.3395L14.2339 14.0195H11.9809V10.9805H17.9609H17.9809V9.0195H17.9609Z" fill="black"/>
+</g>
+</g>
+</g>
+<defs>
+<filter id="filter_row_resize_0_d" x="0.000305176" y="0" width="22" height="24" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="2"/>
+<feGaussianBlur stdDeviation="1.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.402655 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+</defs>
+</svg>

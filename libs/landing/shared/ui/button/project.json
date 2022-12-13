@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/landing/shared/ui/button",
+  "sourceRoot": "libs/landing/shared/ui/button/src",
+  "prefix": "prive-landing-button",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/landing/shared/ui/button/src/test.ts",
+        "tsConfig": "libs/landing/shared/ui/button/tsconfig.spec.json",
+        "karmaConfig": "libs/landing/shared/ui/button/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/landing/shared/ui/button/src/**/*.ts",
+          "libs/landing/shared/ui/button/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

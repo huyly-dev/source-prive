@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/shared/ui/form/combo-box",
+  "sourceRoot": "libs/shared/ui/form/combo-box/src",
+  "prefix": "prive-form-combo-box",
+  "targets": {
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/shared/ui/form/combo-box/src/test.ts",
+        "tsConfig": "libs/shared/ui/form/combo-box/tsconfig.spec.json",
+        "karmaConfig": "libs/shared/ui/form/combo-box/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/ui/form/combo-box/src/**/*.ts",
+          "libs/shared/ui/form/combo-box/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
